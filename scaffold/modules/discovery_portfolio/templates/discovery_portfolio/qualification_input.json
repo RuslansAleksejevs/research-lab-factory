@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "qualification_id": "replace-with-qualification-id",
+  "assessed_at": "2026-01-01T00:00:00Z",
+  "assessed_by": ["replace-with-member-id"],
+  "exact_statement": "State the candidate precisely enough to search and falsify.",
+  "open_assessment": "UNASSESSED",
+  "significance_rationale": "Why a checked result would matter.",
+  "tractability_rationale": "Why a bounded modern-model trial is informative.",
+  "verification_plan": "How any apparent result would be independently checked.",
+  "cheap_falsifiers": ["First inexpensive disconfirming check."],
+  "artifact_paths": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "record_type": "research_release_request",
+  "release_id": "replace-release-id",
+  "release_version": "v1",
+  "title": "Replace with the human-readable release title",
+  "purpose": "Replace with the exact bounded purpose of this deterministic local package.",
+  "audience": "COAUTHOR",
+  "source_export_manifest_path": "research/repository_first/exports/replace-export-id/manifest.json",
+  "source_export_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "disclosure_review": {
+    "status": "REVIEWED",
+    "reviewed_at_utc": "2026-01-01T07:00:01Z",
+    "reviewer_role_ids": ["human-owner"],
+    "scope_note": "The exact audience, one-to-one file mappings, component declarations, and omissions were reviewed by a human."
+  },
+  "file_mappings": [
+    {
+      "source_path": "paper/main.tex",
+      "package_path": "manuscript/paper.tex",
+      "role": "MANUSCRIPT_SOURCE",
+      "purpose": "Exact reviewed manuscript source."
+    },
+    {
+      "source_path": "problems/active/replace-problem-id/problem.md",
+      "package_path": "claims/replace-claim-id.md",
+      "role": "CLAIM_STATEMENT",
+      "purpose": "Exact reviewed claim statement bound by the export."
+    },
+    {
+      "source_path": "research/checkpoints/replace-checkpoint.md",
+      "package_path": "claims/replace-checkpoint.md",
+      "role": "CHECKPOINT",
+      "purpose": "Exact reviewed Durable Research Memory checkpoint bound by the export."
+    }
+  ],
+  "component_declarations": [
+    {"component": "MANUSCRIPT", "status": "INCLUDED", "paths": ["manuscript/paper.tex"], "rationale": null},
+    {"component": "CLAIMS", "status": "INCLUDED", "paths": ["claims/replace-claim-id.md", "claims/replace-checkpoint.md"], "rationale": null},
+    {"component": "VERIFICATION", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No verification artifact is applicable to this bounded projection."},
+    {"component": "SOURCES", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No separate source record is applicable to this bounded projection."},
+    {"component": "REPRODUCIBILITY", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No separate reproducibility guide is applicable to this bounded projection."},
+    {"component": "CODE", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No source code is applicable to this bounded projection."},
+    {"component": "COMPUTATIONS", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No computation artifact is applicable to this bounded projection."},
+    {"component": "FORMALIZATION", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No formalization artifact is applicable to this bounded projection."},
+    {"component": "CONTRIBUTIONS", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No contribution record is applicable to this bounded projection."},
+    {"component": "REVISIONS", "status": "NOT_APPLICABLE", "paths": [], "rationale": "No revision history is applicable to this bounded projection."}
+  ],
+  "no_outbound_action": true,
+  "automatic_claim_promotion": false
+}

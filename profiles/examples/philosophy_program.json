@@ -1,0 +1,65 @@
+{
+  "bootstrap": {
+    "assumptions": [],
+    "inputs": [],
+    "intake_report": {
+      "ignored_items": [],
+      "unclassified_items": [],
+      "unreadable_items": []
+    },
+    "modules": [],
+    "profile_decisions": [
+      {
+        "basis": "Explicit philosophical inquiry program.",
+        "classification": "user_confirmed",
+        "confidence": "high",
+        "field": "lab.kind"
+      }
+    ],
+    "unresolved_questions": [
+      "Choose the precise philosophical question before substantive work."
+    ]
+  },
+  "integrations": {
+    "claude_terminal": {
+      "enabled": false
+    }
+  },
+  "lab": {
+    "deliverables": [
+      "research_report"
+    ],
+    "directory_name": "Lab — Philosophy Program",
+    "kind": "PHILOSOPHY_PROGRAM",
+    "language": "match-user",
+    "mission": "Develop careful reading and critical philosophical inquiry.",
+    "owners": [
+      "Researcher"
+    ],
+    "research_areas": [
+      "philosophy"
+    ],
+    "title": "Philosophy Research Program"
+  },
+  "research": {
+    "central_questions": [
+      "Which distinctions make the question more precise?"
+    ],
+    "conventions": [],
+    "default_track": "main",
+    "required_checks": [
+      "source locations",
+      "charitable reconstruction",
+      "serious objections"
+    ],
+    "specialist_roles": [],
+    "tracks": [
+      {
+        "description": "Read, reconstruct, object, revise.",
+        "id": "main",
+        "title": "Inquiry"
+      }
+    ]
+  },
+  "schema_version": 1
+}

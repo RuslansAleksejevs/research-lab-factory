@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "record_type": "adjacent_result",
+  "problem_id": "replace-problem-id",
+  "result_id": "replace-adjacent-result-id",
+  "campaign_id": "replace-campaign-id",
+  "recorded_at_utc": "2026-01-01T02:00:00Z",
+  "new_claim_id": "replace-new-claim-id",
+  "parent_claim_ids": ["replace-target-claim-id"],
+  "lineage_relation": "SPECIAL_CASE",
+  "registration_status": "NEW_UNVERIFIED_CLAIM",
+  "statement_path": "problems/active/replace-problem-id/problem.md",
+  "checkpoint_path": "research/checkpoints/replace-checkpoint.md"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "record_type": "expert_feedback_response",
+  "problem_id": "replace-problem-id",
+  "response_id": "replace-feedback-response-id",
+  "campaign_id": "replace-campaign-id",
+  "plan_id": "replace-feedback-plan-id",
+  "received_at_utc": "2026-01-02T00:00:00Z",
+  "ingest_mode": "USER_PROVIDED_LOCAL_IMPORT",
+  "original_path": "problems/active/replace-problem-id/repository_first/feedback_imports/replace-original.txt",
+  "original_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "observations_path": "problems/active/replace-problem-id/repository_first/feedback_imports/replace-observations.md",
+  "claim_implications": [
+    {
+      "finding_id": "replace-feedback-finding-id",
+      "claim_id": "replace-target-claim-id",
+      "claim_statement_version": "replace-exact-statement-version",
+      "claim_statement_path": "problems/active/replace-problem-id/problem.md",
+      "claim_statement_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "recommendation": "RECHECK",
+      "rationale": "Replace with the bounded reason for a fresh ordinary verification step."
+    }
+  ],
+  "automatic_claim_promotion": false,
+  "no_outbound_action": true
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "export_id": "replace-export-id",
+  "created_at_utc": "2026-01-01T07:00:00Z",
+  "purpose": "Replace with the exact bounded purpose of this local reviewed package.",
+  "claim_ids": [
+    "replace-target-claim-id"
+  ],
+  "claim_bindings": [
+    {
+      "claim_id": "replace-target-claim-id",
+      "claim_statement_version": "replace-exact-statement-version",
+      "claim_statement_path": "problems/active/replace-problem-id/problem.md",
+      "claim_statement_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "source_checkpoint_paths": [
+    "research/checkpoints/replace-checkpoint.md"
+  ],
+  "review": {
+    "status": "PENDING",
+    "reviewed_at_utc": null,
+    "reviewer_role_ids": [],
+    "scope_note": "Run prepare-export to bind the selected files, then review their exact versions and disclosure scope."
+  },
+  "included_files": [
+    {
+      "path": "paper/main.tex",
+      "purpose": "Exact reviewed manuscript source for a later local Research Artifact Release.",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bytes": 0
+    },
+    {
+      "path": "problems/active/replace-problem-id/problem.md",
+      "purpose": "Frozen exact claim statement.",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bytes": 0
+    },
+    {
+      "path": "research/checkpoints/replace-checkpoint.md",
+      "purpose": "Exact reviewed Durable Research Memory checkpoint for the release claim projection.",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bytes": 0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+name = "computation_formalization"
+sandbox_mode = "workspace-write"
+description = "Design and record reproducible checked computations with exact mathematical scope."
+
+developer_instructions = """
+Follow AGENTS.md and LAB_PROFILE.json. Record the mathematical model, parameter
+range, exact arithmetic, code, versions, command, inputs, output digest,
+reproducibility, and limits. Finite testing is evidence, not a universal proof,
+unless accompanied by a valid exhaustive certificate.
+"""

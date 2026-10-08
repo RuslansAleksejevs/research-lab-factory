@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "record_type": "historical_route_backfill",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "route_id": null,
+  "initial_status": null,
+  "backfilled_at": null,
+  "source_artifacts": []
+}

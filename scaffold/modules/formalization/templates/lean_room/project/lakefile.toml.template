@@ -1,0 +1,14 @@
+name = "{{PACKAGE_NAME}}"
+version = "0.1.0"
+defaultTargets = ["{{LEAN_LIBRARY_NAME}}"]
+
+[[lean_lib]]
+name = "{{LEAN_LIBRARY_NAME}}"
+
+# Delete this dependency block only for a contract-declared dependency-free
+# case. Otherwise render every field to an exact immutable revision.
+[[require]]
+name = "{{DEPENDENCY_NAME}}"
+git = "{{DEPENDENCY_GIT_URL}}"
+rev = "{{DEPENDENCY_IMMUTABLE_REVISION}}"
+

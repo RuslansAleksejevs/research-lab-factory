@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "source_audit_evidence",
+  "problem_id": "eval-valid-verified-proof",
+  "target_id": "EVAL-TARGET-REFLEXIVITY-v1",
+  "target_sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9",
+  "candidate_id": "EVAL-REFLEXIVITY-v1",
+  "candidate_sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c",
+  "artifact": "evals/regression/proof_search_valid_states/artifacts/source_audit.md",
+  "artifact_sha256": "9e359d557d57d8d0e257e5072f91d8eee7ad2614e39e7e60bde64bbd49ad2ce0",
+  "source_gate": "NOT_APPLICABLE",
+  "checked_claim_ids": [],
+  "unchecked_load_bearing_imports": [],
+  "not_applicable_reason": "The reflexivity proof imports no external theorem."
+}

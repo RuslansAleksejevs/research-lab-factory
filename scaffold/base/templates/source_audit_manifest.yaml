@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "source_audit_evidence",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "candidate_id": null,
+  "candidate_sha256": null,
+  "artifact": null,
+  "artifact_sha256": null,
+  "source_gate": null,
+  "checked_claim_ids": [],
+  "unchecked_load_bearing_imports": [],
+  "not_applicable_reason": null
+}

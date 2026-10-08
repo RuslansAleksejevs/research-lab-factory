@@ -1,0 +1,424 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/research_checkpoint.schema.json",
+  "title": "Durable Research Checkpoint Record v1",
+  "description": "A compact outcome envelope embedded in the canonical append-only Markdown checkpoint. It points to proof and evidence artifacts; it is not a second research ledger or a chain-of-thought record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "checkpoint_id",
+    "research_date",
+    "recorded_at_utc",
+    "outcome_status",
+    "target",
+    "scope",
+    "outcome",
+    "verification",
+    "continuation",
+    "discovery"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "checkpoint_id": {"$ref": "#/$defs/checkpointId"},
+    "research_date": {
+      "description": "Exact research date or inclusive date range. Calendar validity and start <= end are authoritatively enforced by scripts/research_memory.py in addition to this closed shape contract.",
+      "oneOf": [
+        {"$ref": "#/$defs/date"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {
+            "start": {"$ref": "#/$defs/date"},
+            "end": {"$ref": "#/$defs/date"}
+          }
+        }
+      ]
+    },
+    "recorded_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Exact UTC recording timestamp. The helper requires a real canonical YYYY-MM-DDTHH:MM:SSZ value.",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "outcome_status": {
+      "enum": [
+        "PROVED",
+        "REFUTED",
+        "PARTIAL",
+        "BLOCKED",
+        "INCONCLUSIVE",
+        "ABANDONED",
+        "SUPERSEDED"
+      ]
+    },
+    "target": {"$ref": "#/$defs/text"},
+    "scope": {"$ref": "#/$defs/text"},
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary"],
+      "properties": {
+        "summary": {"$ref": "#/$defs/text"},
+        "generality": {"$ref": "#/$defs/text"},
+        "remaining_unproved": {"$ref": "#/$defs/text"},
+        "outcome_class": {"$ref": "#/$defs/shortLine"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "summary"],
+      "properties": {
+        "state": {"$ref": "#/$defs/shortLine"},
+        "summary": {"$ref": "#/$defs/text"},
+        "independence": {"$ref": "#/$defs/text"},
+        "evidence": {"$ref": "#/$defs/nonemptyTextList"},
+        "limitations": {"$ref": "#/$defs/nonemptyTextList"}
+      }
+    },
+    "continuation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["next_action"],
+      "properties": {
+        "next_action": {"$ref": "#/$defs/text"},
+        "cheapest_falsifier": {"$ref": "#/$defs/text"},
+        "success_criterion": {"$ref": "#/$defs/text"},
+        "stop_condition": {"$ref": "#/$defs/text"},
+        "reopen_condition": {"$ref": "#/$defs/text"}
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topics"],
+      "properties": {
+        "topics": {"$ref": "#/$defs/nonemptyTagList"},
+        "objects": {"$ref": "#/$defs/nonemptyTagList"},
+        "methods": {"$ref": "#/$defs/nonemptyTagList"},
+        "keywords": {"$ref": "#/$defs/nonemptyTagList"},
+        "future_capabilities": {"$ref": "#/$defs/nonemptyTagList"}
+      }
+    },
+    "round_id": {"$ref": "#/$defs/id"},
+    "run_id": {"$ref": "#/$defs/id"},
+    "track": {"$ref": "#/$defs/line256"},
+    "problem_ids": {"$ref": "#/$defs/nonemptyIdList"},
+    "claim_ids": {"$ref": "#/$defs/nonemptyIdList"},
+    "target_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target_id"],
+        "properties": {
+          "target_id": {"$ref": "#/$defs/id"},
+          "kind": {"$ref": "#/$defs/line64"},
+          "sha256": {"$ref": "#/$defs/sha256"}
+        }
+      }
+    },
+    "related_checkpoints": {"$ref": "#/$defs/nonemptyCheckpointIdList"},
+    "supersedes": {"$ref": "#/$defs/nonemptyCheckpointIdList"},
+    "revision_reason": {"$ref": "#/$defs/text4096"},
+    "revision_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["finding", "preimage", "revision", "predecessor_checkpoints"],
+      "properties": {
+        "finding": {"$ref": "#/$defs/exactFileBinding"},
+        "preimage": {"$ref": "#/$defs/exactFileBinding"},
+        "revision": {"$ref": "#/$defs/exactFileBinding"},
+        "predecessor_checkpoints": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["checkpoint_id", "sha256"],
+            "properties": {
+              "checkpoint_id": {"$ref": "#/$defs/checkpointId"},
+              "sha256": {"$ref": "#/$defs/sha256"}
+            }
+          }
+        }
+      }
+    },
+    "source_status": {"$ref": "#/$defs/line256"},
+    "semantic_delta": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dependency", "before", "after", "change"],
+        "properties": {
+          "dependency": {"$ref": "#/$defs/line"},
+          "before": {"$ref": "#/$defs/text"},
+          "after": {"$ref": "#/$defs/text"},
+          "change": {
+            "enum": ["CLOSED", "REDUCED", "REFUTED", "UNCHANGED", "NEW_BLOCKER"]
+          }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["summary"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "summary": {"$ref": "#/$defs/text"},
+          "purpose": {"$ref": "#/$defs/text"},
+          "result": {"$ref": "#/$defs/text"},
+          "artifact_paths": {"$ref": "#/$defs/nonemptyPathList"}
+        }
+      }
+    },
+    "counterexamples": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target", "example", "verification"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "target": {"$ref": "#/$defs/text"},
+          "example": {"$ref": "#/$defs/text"},
+          "verification": {"$ref": "#/$defs/text"},
+          "artifact_paths": {"$ref": "#/$defs/nonemptyPathList"}
+        }
+      }
+    },
+    "worked": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["task", "result"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "task": {"$ref": "#/$defs/text"},
+          "result": {"$ref": "#/$defs/text"},
+          "verification": {"$ref": "#/$defs/text"},
+          "artifact_paths": {"$ref": "#/$defs/nonemptyPathList"}
+        }
+      }
+    },
+    "failed": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["attempt", "exact_reason"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "attempt": {"$ref": "#/$defs/text"},
+          "exact_reason": {"$ref": "#/$defs/text"},
+          "useful_residue": {"$ref": "#/$defs/text"},
+          "reopen_trigger": {"$ref": "#/$defs/text"},
+          "artifact_paths": {"$ref": "#/$defs/nonemptyPathList"}
+        }
+      }
+    },
+    "obstructions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "missing_capability", "reopen_trigger"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "description": {"$ref": "#/$defs/text"},
+          "missing_capability": {"$ref": "#/$defs/text"},
+          "reopen_trigger": {"$ref": "#/$defs/text"},
+          "evidence": {"$ref": "#/$defs/text"}
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "statement", "status"],
+        "properties": {
+          "claim_id": {"$ref": "#/$defs/id"},
+          "statement": {"$ref": "#/$defs/text"},
+          "status": {"$ref": "#/$defs/shortLine"},
+          "source_status": {"$ref": "#/$defs/text"},
+          "verification": {"$ref": "#/$defs/text"},
+          "artifact_paths": {"$ref": "#/$defs/nonemptyPathList"}
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "role"],
+        "properties": {
+          "path": {"$ref": "#/$defs/path"},
+          "role": {"$ref": "#/$defs/compactText"},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "status": {"$ref": "#/$defs/shortLine"}
+        }
+      }
+    },
+    "useful_residue": {"$ref": "#/$defs/nonemptyTextList"},
+    "visibility_limitations": {"$ref": "#/$defs/nonemptyTextList"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"outcome_status": {"const": "SUPERSEDED"}},
+        "required": ["outcome_status"]
+      },
+      "then": {"required": ["supersedes", "revision_reason", "revision_binding"]}
+    },
+    {
+      "if": {"required": ["supersedes"]},
+      "then": {"required": ["revision_reason", "revision_binding"]}
+    },
+    {
+      "if": {"required": ["revision_reason"]},
+      "then": {"required": ["supersedes"]}
+    },
+    {
+      "if": {"required": ["revision_binding"]},
+      "then": {"required": ["supersedes", "revision_reason"]}
+    }
+  ],
+  "$defs": {
+    "exactFileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"$ref": "#/$defs/path"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "checkpointId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,190}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Lexical schema date; the helper additionally rejects impossible calendar dates.",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16384
+    },
+    "line": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^\\r\\n\\t\\u0000-\\u001F\\u007F]+$"
+    },
+    "shortLine": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[^\\r\\n\\t\\u0000-\\u001F\\u007F]+$"
+    },
+    "line64": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[^\\r\\n\\t\\u0000-\\u001F\\u007F]+$"
+    },
+    "line256": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[^\\r\\n\\t\\u0000-\\u001F\\u007F]+$"
+    },
+    "compactText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "text4096": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "nonemptyIdList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/id"}
+    },
+    "nonemptyCheckpointIdList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/checkpointId"}
+    },
+    "nonemptyTextList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/compactText"}
+    },
+    "nonemptyTagList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/line"}
+    },
+    "nonemptyPathList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/path"}
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Human-AI Interaction Card
+
+- Human-supplied problem:
+- Human-supplied ideas:
+- Human directional intervention and reason:
+- Strategy before -> after:
+- AI-generated ideas:
+- AI-generated proof components:
+- Main-goal dependency delta:
+- Repeated blocker / redundant-lemma fingerprint:
+- Semantic-stall decision:
+- Detailed informal proof blueprint:
+- Formalization build, trust, and correspondence status:
+- Human corrections:
+- External verification:
+- Parallel LLM launch prompt:
+- External LLM responses:
+- Cross-model critique:
+- Approach registry, search rounds, and independence lineage:
+- Final human responsibility:
+- Acceptance decision and exact evidence relied upon:
+- Unresolved concerns:

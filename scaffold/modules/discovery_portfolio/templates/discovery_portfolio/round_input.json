@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "round_id": "replace-with-round-id",
+  "started_at": "2026-01-01T00:00:00Z",
+  "completed_at": "2026-01-01T00:00:00Z",
+  "conducted_by": ["replace-with-member-id"],
+  "objective": "One discriminating objective.",
+  "methods": "Methods actually tried.",
+  "observations": "What was observed, including negative evidence.",
+  "strongest_result": "Strongest result, explicitly provisional unless dossier gates say otherwise.",
+  "remaining_gap": "Exact remaining barrier.",
+  "semantic_progress": false,
+  "proposed_decision": "CONTINUE",
+  "artifact_paths": []
+}

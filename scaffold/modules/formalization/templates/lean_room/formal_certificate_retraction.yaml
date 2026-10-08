@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_formal_certificate_retraction",
+  "retraction_id": null,
+  "certificate_id": null,
+  "certificate_artifact": null,
+  "certificate_sha256": null,
+  "case_id": null,
+  "recorded_at": null,
+  "recorded_by": null,
+  "reason_class": null,
+  "exact_defect": null,
+  "first_failing_gate": null,
+  "supporting_artifacts": [],
+  "known_dependent_artifacts": [],
+  "dependent_statuses_reassessed": false,
+  "reassessment_artifact": null,
+  "notes": null
+}
+

@@ -1,0 +1,8 @@
+{
+  "capability": "durable-research-memory",
+  "checkpoint_path_prefix": "research/checkpoints/",
+  "helper_path": "scripts/research_memory.py",
+  "index_path": "research/checkpoint_index.json",
+  "protocol_version": 1,
+  "schema_version": 1
+}

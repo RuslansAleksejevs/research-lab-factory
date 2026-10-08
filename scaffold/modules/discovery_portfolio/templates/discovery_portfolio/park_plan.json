@@ -1,0 +1,13 @@
+{
+  "exact_barrier": "The exact present blocker, not a generic statement of difficulty.",
+  "resume_status": "TRIAL_ACTIVE",
+  "reopen_triggers": [
+    {
+      "trigger_id": "model-capability-recheck",
+      "kind": "MODEL_CAPABILITY_CHANGE",
+      "condition": "A named new model passes the discriminating capability test.",
+      "evidence_required": "A dated local artifact recording the model and test outcome.",
+      "baseline": "Current model/capability boundary and failed discriminating test."
+    }
+  ]
+}

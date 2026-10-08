@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_correspondence_verdict",
+  "problem_id": null,
+  "case_id": null,
+  "auditor_id": null,
+  "auditor_run_id": null,
+  "attested_at": null,
+  "bindings": {
+    "contract_sha256": null,
+    "target_sha256": null,
+    "source_tree_sha256": null,
+    "candidate_run_id": null,
+    "independent_run_id": null
+  },
+  "checks": {
+    "quantifier_order_checked": false,
+    "types_and_domains_checked": false,
+    "hypotheses_checked": false,
+    "conclusion_checked": false,
+    "conventions_and_normalizations_checked": false,
+    "edge_cases_checked": false,
+    "direction_back_to_frozen_target_established": false,
+    "anti_targets_ruled_out": false
+  },
+  "required_attack_classes": [
+    "statement_weakening",
+    "hidden_stronger_hypotheses",
+    "vacuity",
+    "inconsistent_assumptions",
+    "swapped_quantifiers",
+    "wrong_domains",
+    "unused_hypotheses",
+    "implicit_instances",
+    "empty_types",
+    "wrong_namespace_or_declaration"
+  ],
+  "adversarial_checks": [],
+  "open_correspondence_obligations": [],
+  "unresolved_objections": [],
+  "highest_gap_class": null,
+  "exact_certificate_scope": null,
+  "explicit_nonclaims": [],
+  "verdict": "DRAFT"
+}

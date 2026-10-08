@@ -1,0 +1,56 @@
+{
+  "_expected_failure_fragment": "conditional result records exact assumptions",
+  "schema_version": 1,
+  "problem_id": "negative-conditional-empty",
+  "orchestration_profile": "LIGHT",
+  "mode": "PROJECT_AWARE",
+  "global_status": "CONDITIONAL_RESULT",
+  "current_round": 1,
+  "information_partitions_recorded": false,
+  "statement_frozen": true,
+  "attack_surface_ready": true,
+  "approach_registry_ready": true,
+  "independent_refutation_active": false,
+  "candidate_route_id": "NEG-A1",
+  "candidate_proof_id": "NEG-A1-conditional-v1",
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": null,
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_version": "conditional-v1",
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": "A conditional theorem.",
+    "strongest_artifact": "workflows/proof_protocol.md",
+    "exact_remaining_gaps": ["An assumption remains unproved."],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "conditional route",
+      "idea_fingerprint": "conditional::route::v1",
+      "status": "CANDIDATE",
+      "gap_class": "GS3",
+      "independence_lineage": "single generator",
+      "strongest_artifact": "workflows/proof_protocol.md",
+      "exact_gap": "unproved assumption",
+      "source_gate": "OPEN",
+      "verification_gate": "NOT_READY",
+      "novelty_gate": "OPEN"
+    }
+  ],
+  "last_checkpoint": "negative"
+}

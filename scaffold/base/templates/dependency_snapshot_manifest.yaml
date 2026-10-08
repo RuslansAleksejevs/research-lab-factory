@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "record_type": "candidate_dependency_snapshot",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "candidate_id": null,
+  "candidate_sha256": null,
+  "candidate_route_id": null,
+  "routes": []
+}

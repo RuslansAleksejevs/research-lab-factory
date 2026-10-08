@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "record_type": "source_use",
+  "problem_id": "replace-problem-id",
+  "use_id": "replace-source-use-id",
+  "campaign_id": "replace-campaign-id",
+  "claim_id": "replace-target-claim-id",
+  "claim_statement_path": "problems/active/replace-problem-id/problem.md",
+  "claim_statement_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "claim_hypotheses": ["Replace with every exact hypothesis of the claim."],
+  "recorded_at_utc": "2026-01-01T05:00:00Z",
+  "source_path": "sources/originals/replace-source.pdf",
+  "original_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "bibliographic_identity": {
+    "citation_key": "replace-citation-key",
+    "title": "Replace with the exact source title",
+    "authors": ["Replace Author"],
+    "identifiers": [{"scheme": "OTHER", "value": "replace-stable-identifier"}]
+  },
+  "version": {
+    "version_label": "Replace with version or edition identity",
+    "publication_date": null,
+    "edition": null
+  },
+  "anchors": [
+    {
+      "anchor_type": "THEOREM",
+      "locator": "Theorem replace-number, page replace-page",
+      "scope_note": "Replace with the exact theorem scope actually used."
+    }
+  ],
+  "scope": {
+    "source_scope": "Replace with the source theorem's exact statement and hypotheses.",
+    "claim_scope": "Replace with the laboratory claim's exact statement and hypotheses.",
+    "used_for": ["Replace with the exact dependency or comparison."],
+    "does_not_establish": ["This source-use record does not establish correctness, novelty, or significance."]
+  },
+  "interface_search": {
+    "hypotheses": ["Replace with the source-side hypotheses relevant to an interface."],
+    "outputs": ["Replace with the exact object, theorem, construction, or data the source supplies."],
+    "invariants": ["Replace with a preserved or computable invariant, or leave this array empty."],
+    "representations": ["Replace with the source representation that exposes the interface."],
+    "known_bottlenecks": ["Replace with a known obstruction or leave this array empty."],
+    "candidate_bridge_obligations": ["Replace with one exact bridge obligation or leave this array empty."]
+  },
+  "relation": "SPECIALIZATION",
+  "relation_audit": {
+    "audited_relation": "SPECIALIZATION",
+    "auditor_role_id": "independent-verifier",
+    "source_scope": "Replace with the broader source scope.",
+    "claim_scope": "Replace with the narrower claim scope.",
+    "hypothesis_delta": "Replace with the exact added or specialized hypotheses.",
+    "conclusion_delta": "Replace with the exact conclusion comparison.",
+    "translation_map_path": null,
+    "evidence_paths": ["problems/active/replace-problem-id/source_facts.md"]
+  }
+}

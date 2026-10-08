@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "record_type": "attack_surface_exit_evidence",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "candidate_id": null,
+  "candidate_sha256": null,
+  "artifact": null,
+  "artifact_sha256": null,
+  "attack_ids": [],
+  "unresolved_failures": [],
+  "status": null
+}

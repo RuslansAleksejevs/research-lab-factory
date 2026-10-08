@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "record_type": "failure_family",
+  "problem_id": "replace-problem-id",
+  "family_id": "replace-failure-family-id",
+  "campaign_id": "replace-campaign-id",
+  "recorded_at_utc": "2026-01-01T03:00:00Z",
+  "compressed_from_count": 1,
+  "member_run_ids": ["replace-run-id"],
+  "mechanism_summary": "Replace with the common failed mechanism, not a list of repeated prose.",
+  "distinguishing_observation": "Replace with the test that distinguishes this family from another one.",
+  "exact_failure_reason": "Replace with the exact unresolved obstruction or falsifying observation.",
+  "evidence_paths": ["problems/active/replace-problem-id/attempts/replace-run.md"],
+  "reactivation_conditions": ["Reactivate only after a concrete representation or capability change addresses the obstruction."],
+  "denominator": {
+    "vector": {
+      "status": "KNOWN",
+      "value": "input=40000; output=10000; wall=3600; tool_calls=20",
+      "unknown_reason": null,
+      "evidence_paths": ["problems/active/replace-problem-id/attempts/replace-run.md"]
+    },
+    "model": {
+      "status": "UNKNOWN",
+      "value": null,
+      "unknown_reason": "The exact served model revision was not exposed.",
+      "evidence_paths": []
+    },
+    "harness": {
+      "status": "KNOWN",
+      "value": "replace-local-harness replace-version",
+      "unknown_reason": null,
+      "evidence_paths": ["problems/active/replace-problem-id/computations/replace-command-manifest.json"]
+    }
+  },
+  "aggregate_actual_denominator": {
+    "input_tokens": 40000,
+    "output_tokens": 10000,
+    "reasoning_tokens": null,
+    "wall_time_seconds": 3600,
+    "tool_calls": 20,
+    "model_invocations": 2,
+    "harness_runs": 1,
+    "unknown_fields": ["reasoning_tokens"]
+  },
+  "checkpoint_path": "research/checkpoints/replace-checkpoint.md"
+}

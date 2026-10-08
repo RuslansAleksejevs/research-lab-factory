@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "allowed_statuses": [
+    "UNKNOWN",
+    "PLAUSIBLE_UNVERIFIED",
+    "CONDITIONAL",
+    "VERIFIED_INTERNAL",
+    "VERIFIED_USING_CITED_RESULTS",
+    "FORMALLY_VERIFIED",
+    "REFUTED",
+    "FAILED_ATTEMPT",
+    "UNRESOLVED"
+  ],
+  "results": []
+}

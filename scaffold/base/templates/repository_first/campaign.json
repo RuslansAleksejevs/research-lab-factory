@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "record_type": "campaign",
+  "problem_id": "replace-problem-id",
+  "campaign_id": "replace-campaign-id",
+  "title": "Replace with a bounded campaign title",
+  "created_at_utc": "2026-01-01T00:00:00Z",
+  "target_claim_ids": ["replace-target-claim-id"],
+  "initial_phase": "BREADTH_SEARCH",
+  "roles": [
+    {
+      "role_id": "human-owner",
+      "role_kind": "HUMAN_REVIEWER",
+      "actor_class": "HUMAN",
+      "actor_id": "replace-human-owner",
+      "responsibilities": ["Own governance and make release decisions."]
+    },
+    {
+      "role_id": "independent-verifier",
+      "role_kind": "INDEPENDENT_VERIFIER",
+      "actor_class": "CODEX_AGENT",
+      "actor_id": "replace-independent-verifier",
+      "responsibilities": ["Audit exact claims independently of generation."]
+    },
+    {
+      "role_id": "research-operator",
+      "role_kind": "CLAIM_GENERATOR",
+      "actor_class": "CODEX_AGENT",
+      "actor_id": "replace-research-operator",
+      "responsibilities": ["Run the bounded search plan and preserve provenance."]
+    }
+  ],
+  "governance": {
+    "human_owned": true,
+    "human_owner_role_ids": ["human-owner"],
+    "decision_scope": "GOVERNANCE_ONLY"
+  },
+  "objective": "Replace with the exact campaign objective without implying truth.",
+  "stop_conditions": ["Stop at the recorded budget or exact obstruction."]
+}

@@ -1,0 +1,104 @@
+{
+  "bootstrap": {
+    "assumptions": [
+      {
+        "basis": "Default factory boundary.",
+        "confidence": "high",
+        "statement": "This laboratory is scoped to one coherent article."
+      }
+    ],
+    "initial_problem": {
+      "statement": "Replace this provisional statement after inspecting the article materials.",
+      "title": "Establish or refute the central claim",
+      "track": "main"
+    },
+    "inputs": [],
+    "intake_report": {
+      "ignored_items": [],
+      "unclassified_items": [],
+      "unreadable_items": []
+    },
+    "modules": [
+      "paper",
+      "computation"
+    ],
+    "profile_decisions": [
+      {
+        "basis": "The factory boundary is one article or one coherent research program per laboratory.",
+        "classification": "factory_default",
+        "confidence": "high",
+        "field": "lab.kind"
+      },
+      {
+        "basis": "The beginner example omits advanced budgeted campaigns; they can be selected for a later project when useful.",
+        "classification": "factory_default",
+        "confidence": "high",
+        "field": "bootstrap.modules.deep_research_goal"
+      },
+      {
+        "basis": "The example has no supplied theorem text, so the initial target is explicitly provisional.",
+        "classification": "assumption",
+        "confidence": "high",
+        "field": "bootstrap.initial_problem"
+      }
+    ],
+    "unresolved_questions": [
+      "The exact target must be frozen before a serious proof search."
+    ]
+  },
+  "integrations": {
+    "claude_terminal": {
+      "enabled": false
+    }
+  },
+  "lab": {
+    "areas": [
+      "pure mathematics"
+    ],
+    "article_title": "A Working Mathematical Article",
+    "collaborators": [],
+    "deliverables": [
+      "paper"
+    ],
+    "directory_name": "Lab — Example Article",
+    "in_scope": [
+      "The article and its load-bearing lemmas."
+    ],
+    "language": "match-user",
+    "mission": "Develop, test, verify, and write the central claims of one coherent article.",
+    "out_of_scope": [
+      "Unrelated research programs."
+    ],
+    "owners": [
+      "Researcher"
+    ],
+    "title": "Example Article Research Laboratory"
+  },
+  "research": {
+    "central_questions": [
+      "Determine the strongest correct form of the proposed main result."
+    ],
+    "conventions": [],
+    "default_track": "main",
+    "required_checks": [
+      "quantifiers and hypotheses",
+      "domains and codomains",
+      "edge and degenerate cases",
+      "source dependencies"
+    ],
+    "source_priorities": [
+      "primary sources",
+      "current draft as internal project material"
+    ],
+    "specialist_roles": [],
+    "terminology": [],
+    "tracks": [
+      {
+        "description": "Proof, refutation, and exact-gap work for the central claim.",
+        "id": "main",
+        "title": "Main theorem"
+      }
+    ]
+  },
+  "schema_version": 1
+}

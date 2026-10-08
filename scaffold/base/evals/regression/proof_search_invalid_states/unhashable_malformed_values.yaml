@@ -1,0 +1,65 @@
+{
+  "_expected_failure_fragment": "has allowed global_status",
+  "schema_version": 1,
+  "problem_id": "negative-unhashable-values",
+  "orchestration_profile": [],
+  "mode": [],
+  "global_status": [],
+  "current_round": "zero",
+  "information_partitions_recorded": false,
+  "statement_frozen": false,
+  "attack_surface_ready": false,
+  "approach_registry_ready": false,
+  "independent_refutation_active": false,
+  "candidate_route_id": [],
+  "candidate_proof_id": [],
+  "historical_verifiers": [
+    {
+      "id": [],
+      "independence_level": [],
+      "completed": false,
+      "decisive": false,
+      "verdict": [],
+      "report": null
+    }
+  ],
+  "independent_verifier": {
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": [],
+    "completed": false,
+    "verdict": [],
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_version": null,
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [false],
+    "strongest_result": null,
+    "strongest_artifact": null,
+    "exact_remaining_gaps": [false],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false
+  },
+  "routes": [
+    {
+      "id": [],
+      "family": [],
+      "idea_fingerprint": [],
+      "status": [],
+      "gap_class": [],
+      "independence_lineage": [],
+      "strongest_artifact": null,
+      "exact_gap": [],
+      "source_gate": [],
+      "verification_gate": [],
+      "novelty_gate": []
+    }
+  ],
+  "last_checkpoint": null
+}

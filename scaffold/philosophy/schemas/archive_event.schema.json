@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:philosophy-lab:archive-event:v1",
+  "title": "Immutable research archive event, version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "sequence", "timestamp", "recorded_at", "timestamp_source", "origin", "kind", "actor", "session_id", "run_id", "operation_id", "attempt_id", "parents", "inputs", "outputs", "bindings", "model", "cost", "payload", "delivery_key", "request_sha256", "previous_sha256", "sha256"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"$ref": "#/$defs/id"},
+    "sequence": {"type": "integer", "minimum": 1, "maximum": 999999999999},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "timestamp_source": {"enum": ["supplied-event-time", "archive-clock-event-time-unknown"]},
+    "origin": {"type": "object", "required": ["archive_id"], "properties": {"archive_id": {"$ref": "#/$defs/id"}}},
+    "kind": {"$ref": "#/$defs/id"},
+    "actor": {"type": "object", "required": ["id", "role"], "properties": {"id": {"$ref": "#/$defs/id"}, "role": {"$ref": "#/$defs/id"}}},
+    "session_id": {"$ref": "#/$defs/id"},
+    "run_id": {"$ref": "#/$defs/id"},
+    "operation_id": {"$ref": "#/$defs/id"},
+    "attempt_id": {"$ref": "#/$defs/id"},
+    "parents": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "inputs": {"$ref": "#/$defs/digests"},
+    "outputs": {"$ref": "#/$defs/digests"},
+    "bindings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["method", "instruction", "config", "input"],
+      "properties": {"method": {"$ref": "#/$defs/digests"}, "instruction": {"$ref": "#/$defs/digests"}, "config": {"$ref": "#/$defs/digests"}, "input": {"$ref": "#/$defs/digests"}}
+    },
+    "model": {"$ref": "#/$defs/observation"},
+    "cost": {"$ref": "#/$defs/observation"},
+    "payload": {"type": "object"},
+    "delivery_key": {"type": "string", "minLength": 1, "maxLength": 500},
+    "request_sha256": {"$ref": "#/$defs/digest"},
+    "previous_sha256": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/digest"}]},
+    "sha256": {"$ref": "#/$defs/digest"}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$"},
+    "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "digests": {"type": "array", "items": {"$ref": "#/$defs/digest"}},
+    "observation": {"oneOf": [
+      {"type": "object", "required": ["status", "reason"], "properties": {"status": {"const": "unknown"}, "reason": {"type": "string", "minLength": 1}}},
+      {"type": "object", "required": ["status", "value"], "properties": {"status": {"const": "known"}, "value": {}}}
+    ]}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:philosophy-lab:candidate-birth:v1",
+  "title": "Typed candidate.created payload (enclosed by archive_event.schema.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["timeline_version", "candidate_id", "artifact_type", "artifact_sha256", "epoch_event_id", "run_start_event_id", "stage_id", "selection_round_id", "actor_origin", "genesis", "parent_candidate_events", "birth", "independence"],
+  "properties": {
+    "timeline_version": {"const": 1},
+    "candidate_id": {"$ref": "#/$defs/id"},
+    "artifact_type": {"enum": ["essay", "thesis", "idea", "other"]},
+    "artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "epoch_event_id": {"$ref": "#/$defs/id"},
+    "run_start_event_id": {"$ref": "#/$defs/id"},
+    "stage_id": {"$ref": "#/$defs/id"},
+    "selection_round_id": {"$ref": "#/$defs/id"},
+    "actor_origin": {"enum": ["AI", "HUMAN"]},
+    "genesis": {"enum": ["ORIGINAL", "DERIVED", "MERGED", "IMPORTED"]},
+    "parent_candidate_events": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+    "birth": {"oneOf": [
+      {"type": "object", "additionalProperties": false, "required": ["status", "value", "source"], "properties": {
+        "status": {"const": "known"}, "value": {"type": "string", "format": "date-time"}, "source": {"type": "string", "minLength": 1}}},
+      {"type": "object", "additionalProperties": false, "required": ["status", "reason"], "properties": {
+        "status": {"const": "unknown"}, "reason": {"type": "string", "minLength": 1}}}
+    ]},
+    "independence": {"const": "UNASSESSED"}
+  },
+  "allOf": [
+    {"if": {"properties": {"genesis": {"const": "ORIGINAL"}}}, "then": {"properties": {"parent_candidate_events": {"maxItems": 0}}}},
+    {"if": {"properties": {"genesis": {"const": "DERIVED"}}}, "then": {"properties": {"parent_candidate_events": {"minItems": 1, "maxItems": 1}}}},
+    {"if": {"properties": {"genesis": {"const": "MERGED"}}}, "then": {"properties": {"parent_candidate_events": {"minItems": 2}}}}
+  ],
+  "$defs": {"id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$"}},
+  "$comment": "research_timeline.py also checks causal parent closure, stable identity, exact artifact/output binding, matching run and epoch version objects, origin, timestamp consistency and sourced independent assessments. recorded_at belongs to the immutable event envelope, not this payload."
+}

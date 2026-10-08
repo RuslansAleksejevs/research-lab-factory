@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "record_type": "expert_feedback_plan",
+  "problem_id": "replace-problem-id",
+  "plan_id": "replace-feedback-plan-id",
+  "campaign_id": "replace-campaign-id",
+  "created_at_utc": "2026-01-01T07:00:00Z",
+  "claim_ids": ["replace-target-claim-id"],
+  "claim_bindings": [
+    {
+      "claim_id": "replace-target-claim-id",
+      "claim_statement_version": "replace-exact-statement-version",
+      "claim_statement_path": "problems/active/replace-problem-id/problem.md",
+      "claim_statement_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "expert_profile": "Replace with the bounded expertise sought; do not put contact coordinates here.",
+  "questions": ["Replace with one exact question that does not imply a claim status."],
+  "package_manifest_path": "research/repository_first/exports/replace-export-id/manifest.json",
+  "package_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "review": {
+    "status": "REVIEWED",
+    "reviewed_at_utc": "2026-01-01T07:00:00Z",
+    "reviewer_role_ids": ["human-owner"],
+    "scope_note": "The local package was reviewed for exact scope and exclusions."
+  },
+  "human_trigger": {
+    "triggered_by_role_id": "human-owner",
+    "triggered_at_utc": "2026-01-01T07:00:00Z",
+    "disclosure_scope": "Only the reviewed hash-bound export and the listed exact claim preimages may be disclosed.",
+    "follow_up_owner_role_id": "human-owner"
+  },
+  "execution_state": "LOCAL_ONLY_NOT_SENT",
+  "no_outbound_action": true
+}

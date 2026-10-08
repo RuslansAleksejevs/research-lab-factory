@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+research/archive/
+runs/
+exports/
+00_INBOX_TO_ANALYZE/

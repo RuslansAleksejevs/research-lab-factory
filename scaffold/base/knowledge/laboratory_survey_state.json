@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "latest_survey_id": null,
+  "latest_report": null,
+  "latest_manifest": null,
+  "latest_inventory": null,
+  "basis_sha256": null,
+  "report_sha256": null,
+  "completed_at_utc": null,
+  "mode": null,
+  "freshness": "NONE",
+  "coverage": "NONE"
+}

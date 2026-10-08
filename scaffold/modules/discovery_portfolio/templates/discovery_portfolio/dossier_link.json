@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "link_id": "replace-with-link-id",
+  "problem_id": "replace-with-existing-problem-id",
+  "reason": "Why this exact dossier is the proof-search container.",
+  "linked_by": ["replace-with-member-id"]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_case_freeze",
+  "case_id": null,
+  "problem_id": null,
+  "freeze_id": null,
+  "gate": null,
+  "frozen_at": null,
+  "frozen_by": null,
+  "input_contract": {
+    "artifact": null,
+    "sha256": null
+  },
+  "lr0_projection": {
+    "canonical_json_artifact": null,
+    "sha256": null,
+    "fields": [
+      "schema_version",
+      "record_type",
+      "case_id",
+      "problem_id",
+      "orchestration_profile",
+      "created_at",
+      "created_by",
+      "supersedes_case_id",
+      "room_state_at_creation",
+      "room_state_binding_at_creation",
+      "status_semantics",
+      "target_binding",
+      "obligation_binding",
+      "informal_claim",
+      "formal_target",
+      "encoding",
+      "trusted_boundary",
+      "correspondence_obligations",
+      "lineage",
+      "acceptance_criterion",
+      "stop_conditions"
+    ]
+  },
+  "project_tree": {
+    "root": "project",
+    "inventory_artifact": null,
+    "inventory_sha256": null,
+    "tree_sha256": null,
+    "excluded_paths": [
+      ".lake/"
+    ],
+    "symlinks_rejected": null
+  },
+  "output_contract": {
+    "snapshot_artifact": null,
+    "stored_frozen_contract_sha256": null,
+    "recomputed_with_digest_field_null": null
+  },
+  "prior_lr0_payload_sha256": null,
+  "lr0_payload_unchanged_at_lr1": null,
+  "result": null,
+  "failure_summary": null
+}

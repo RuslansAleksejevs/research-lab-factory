@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_formalization_contract",
+  "case_id": null,
+  "problem_id": null,
+  "orchestration_profile": null,
+  "created_at": null,
+  "created_by": null,
+  "supersedes_case_id": null,
+  "room_state_at_creation": null,
+  "room_state_binding_at_creation": {
+    "sequence": null,
+    "artifact_sha256": null
+  },
+  "status": "DRAFT",
+  "status_semantics": "DRAFT | FROZEN; LR0 locks the critical projection while status remains DRAFT; supersession is recorded externally",
+  "target_binding": {
+    "target_id": null,
+    "artifact": null,
+    "artifact_sha256": null,
+    "statement_date": null
+  },
+  "obligation_binding": {
+    "artifact": null,
+    "artifact_sha256": null,
+    "obligation_ids": []
+  },
+  "informal_claim": {
+    "statement": null,
+    "quantifiers": [],
+    "hypotheses": [],
+    "conclusion": null,
+    "ambient_objects_and_types": [],
+    "parameters_and_domains": [],
+    "conventions": [],
+    "edge_cases": [],
+    "anti_targets": []
+  },
+  "formal_target": {
+    "proof_assistant": "Lean 4",
+    "source_file": null,
+    "namespace": null,
+    "declaration_name": null,
+    "declaration_kind": null,
+    "exact_type": null,
+    "pretty_print_command": null,
+    "axiom_print_command": null
+  },
+  "encoding": {
+    "objects": [],
+    "relations_and_predicates": [],
+    "maps": [],
+    "parameters": [],
+    "normalizations": [],
+    "bridge_lemmas": [],
+    "known_loss_or_strengthening": []
+  },
+  "environment": {
+    "lean_toolchain": null,
+    "lean_toolchain_artifact": "project/lean-toolchain",
+    "lean_toolchain_sha256": null,
+    "lakefile_artifact": "project/lakefile.toml",
+    "lakefile_sha256": null,
+    "lake_manifest_artifact": null,
+    "lake_manifest_sha256": null,
+    "dependency_free": null,
+    "dependencies": [],
+    "source_tree_inventory": null,
+    "source_tree_sha256": null,
+    "excluded_build_paths": [
+      ".lake/"
+    ],
+    "allowed_build_commands": [],
+    "network_allowed_during_certificate_build": false
+  },
+  "trusted_boundary": {
+    "checker": "Lean 4 kernel",
+    "permitted_axioms": [],
+    "permitted_axiom_rationales": {},
+    "permitted_nonstandard_features": [],
+    "prohibited_constructs": [
+      "unresolved template tokens",
+      "sorry",
+      "admit",
+      "sorryAx",
+      "undeclared project axiom",
+      "unauthorized native_decide",
+      "unauthorized unsafe or foreign code",
+      "unpinned dependency"
+    ],
+    "authorized_exceptions": [],
+    "trusted_dependencies": [],
+    "residual_risks": []
+  },
+  "correspondence_obligations": [],
+  "lineage": {
+    "generator_run_ids": [],
+    "material_repair_run_ids": [],
+    "coordinator_run_ids": [],
+    "prohibited_decisive_auditor_run_ids": [],
+    "generator_agent_ids": [],
+    "material_repair_agent_ids": [],
+    "coordinator_agent_ids": [],
+    "prohibited_decisive_auditor_agent_ids": [],
+    "information_exposure_summary": null,
+    "information_exposure_artifact": null,
+    "information_exposure_sha256": null
+  },
+  "acceptance_criterion": {
+    "required_gates": [
+      "LR0",
+      "LR1",
+      "LR2",
+      "LR3",
+      "LR4",
+      "LR5"
+    ],
+    "certificate_scope": null,
+    "explicit_nonclaims": [],
+    "lr0_readiness_attestations": {
+      "informal_target_complete": false,
+      "formal_target_exact": false,
+      "encoding_reviewed": false,
+      "trust_boundary_reviewed": false,
+      "lineage_and_exposure_recorded": false,
+      "correspondence_plan_complete": false,
+      "certificate_scope_and_nonclaims_complete": false,
+      "stop_conditions_complete": false
+    }
+  },
+  "stop_conditions": [],
+  "freeze": {
+    "lr0_contract_frozen": false,
+    "lr0_frozen_at": null,
+    "lr0_frozen_by": null,
+    "lr0_payload_sha256": null,
+    "lr1_sources_frozen": false,
+    "lr1_frozen_at": null,
+    "lr1_frozen_by": null,
+    "frozen_source_tree_sha256": null,
+    "frozen_contract_sha256": null,
+    "canonical_json_profile": "UTF-8 JSON; recursively sorted object keys; compact separators; Unicode preserved; one trailing newline"
+  }
+}

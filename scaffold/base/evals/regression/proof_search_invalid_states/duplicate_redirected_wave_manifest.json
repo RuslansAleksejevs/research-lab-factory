@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "record_type": "proof_search_wave",
+  "wave_type": "REDIRECTED",
+  "problem_id": "eval-valid-exhausted-waiver",
+  "target_id": "EVAL-TARGET-EXHAUSTION-v1",
+  "target_sha256": "43a6052952a0c513f18c5bbcd87b71bb41615957495aa23200b578fcc6bda7fd",
+  "round_number": 2,
+  "report": "evals/regression/proof_search_valid_states/artifacts/redirected_wave_report.md",
+  "report_sha256": "4b780deaa26e40b22ce91c479c3a24c319b00e782cec0237198d121539b930de",
+  "route_ids": ["EVAL-B1"],
+  "mechanisms_tested": ["fixture-only bounded mechanism"],
+  "failure_artifacts": [
+    "evals/regression/proof_search_valid_states/artifacts/proof_obligations.md"
+  ],
+  "initial_wave_manifest": "evals/regression/proof_search_valid_states/artifacts/initial_wave_manifest.json",
+  "initial_wave_manifest_sha256": "c9cd4da7474d66709db7ddb3b005d81d1bd0f0da7f18699cddcb97abfca45268",
+  "triggering_failure_artifacts": [
+    "evals/regression/proof_search_valid_states/artifacts/proof_obligations.md"
+  ],
+  "mechanism_delta": ["fixture-only bounded mechanism"],
+  "discriminating_question": "Repeat the same mechanism under a new filename?"
+}

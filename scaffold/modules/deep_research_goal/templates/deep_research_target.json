@@ -1,0 +1,16 @@
+{
+  "acceptance_criteria": [
+    "Discharge the exact frozen obligation."
+  ],
+  "anti_targets": [
+    "A weaker statement does not count."
+  ],
+  "kind": "EXACT_MATHEMATICAL_TARGET",
+  "problem_id": "example-problem",
+  "schema_version": 1,
+  "statement": "Prove or refute the exact frozen target T.",
+  "target_id": "EXAMPLE-TARGET",
+  "traps": [
+    "Do not assume the desired conclusion."
+  ]
+}

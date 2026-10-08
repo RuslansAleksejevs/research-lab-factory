@@ -1,0 +1,368 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/lab_profile.schema.json",
+  "title": "Portable Mathematical Research Lab Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_status", "template", "lab", "research", "source_policy", "communication", "recorded_assumptions", "profile_decisions", "bootstrap_intake_report", "unresolved_profile_questions", "bootstrap_materials"],
+  "dependentRequired": {
+    "user_policy": ["repository_first"],
+    "repository_first": ["user_policy"]
+  },
+  "properties": {
+    "integrations": {
+      "type": "object", "additionalProperties": false, "required": ["claude_terminal"],
+      "properties": {"claude_terminal": {
+        "type": "object", "additionalProperties": false, "required": ["enabled"],
+        "properties": {"enabled": {"type": "boolean"}}
+      }}
+    },
+    "schema_version": {"const": 1},
+    "profile_status": {"enum": ["READY", "PROVISIONAL"]},
+    "template": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": {"const": "math-research-lab-template"},
+        "version": {"type": "string", "minLength": 1}
+      }
+    },
+    "user_policy": {"$ref": "#/$defs/userPolicyBinding"},
+    "repository_first": {"$ref": "#/$defs/repositoryFirstProfile"},
+    "lab": {
+      "type": "object",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "PHILOSOPHY_PROGRAM"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "research_areas"
+            ],
+            "not": {
+              "required": [
+                "areas"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "areas"
+            ],
+            "not": {
+              "required": [
+                "research_areas"
+              ]
+            }
+          }
+        }
+      ],
+      "additionalProperties": false,
+      "required": ["id", "directory_name", "title", "article_title", "kind", "mission", "owners", "collaborators", "language", "deliverables", "in_scope", "out_of_scope", "modules"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "directory_name": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "article_title": {"type": "string"},
+        "kind": {"enum": ["ARTICLE_OR_COHERENT_PROGRAM", "DISCOVERY_PORTFOLIO", "PHILOSOPHY_PROGRAM"]},
+        "mission": {"type": "string", "minLength": 1},
+        "owners": {"type": "array", "items": {"type": "string"}},
+        "collaborators": {"type": "array", "items": {"type": "string"}},
+        "language": {"type": "string"},
+        "areas": {"type": "array", "items": {"type": "string"}},
+        "research_areas": {"type": "array", "items": {"type": "string"}},
+        "deliverables": {"type": "array", "items": {"type": "string"}},
+        "in_scope": {"type": "array", "items": {"type": "string"}},
+        "out_of_scope": {"type": "array", "items": {"type": "string"}},
+        "modules": {"type": "array", "items": {"type": "string"}},
+        "collaboration": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/$defs/collaboration"}
+          ]
+        }
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["central_questions", "tracks", "default_track", "terminology", "conventions", "required_checks", "source_priorities", "specialist_roles", "initial_problem", "status_policy"],
+      "properties": {
+        "central_questions": {"type": "array", "items": {"type": "string"}},
+        "tracks": {"type": "array", "items": {"type": "object"}},
+        "default_track": {"type": "string"},
+        "terminology": {"type": "array", "items": {"type": "string"}},
+        "conventions": {"type": "array", "items": {"type": "string"}},
+        "required_checks": {"type": "array", "items": {"type": "string"}},
+        "source_priorities": {"type": "array", "items": {"type": "string"}},
+        "specialist_roles": {"type": "array", "items": {"type": "object"}},
+        "initial_problem": {"type": ["object", "null"]},
+        "status_policy": {"type": "object"}
+      }
+    },
+    "source_policy": {"type": "object"},
+    "communication": {"type": "object"},
+    "recorded_assumptions": {"type": "array", "items": {"type": "object"}},
+    "profile_decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "classification", "basis", "confidence"],
+        "properties": {
+          "field": {"type": "string", "minLength": 1},
+          "classification": {
+            "enum": ["user_confirmed", "evidence_backed_inference", "factory_default", "assumption"]
+          },
+          "basis": {"type": "string", "minLength": 1},
+          "confidence": {"enum": ["low", "medium", "high"]}
+        }
+      }
+    },
+    "bootstrap_intake_report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unreadable_items", "unclassified_items", "ignored_items"],
+      "properties": {
+        "unreadable_items": {"$ref": "#/$defs/intakeItems"},
+        "unclassified_items": {"$ref": "#/$defs/intakeItems"},
+        "ignored_items": {"$ref": "#/$defs/intakeItems"}
+      }
+    },
+    "unresolved_profile_questions": {"type": "array", "items": {"type": "string"}},
+    "bootstrap_materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stored_name", "kind", "trust_tier", "sha256"],
+        "properties": {
+          "stored_name": {"type": "string"},
+          "kind": {"type": "string"},
+          "trust_tier": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "lab": {
+            "properties": {
+              "kind": {
+                "const": "PHILOSOPHY_PROGRAM"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "lab": {
+            "properties": {
+              "modules": {
+                "maxItems": 0
+              },
+              "collaboration": {
+                "type": "null"
+              }
+            }
+          },
+          "repository_first": {
+            "properties": {
+              "enabled": {
+                "const": false
+              }
+            }
+          },
+          "research": {
+            "properties": {
+              "initial_problem": {
+                "type": "null"
+              },
+              "status_policy": {
+                "type": "object",
+                "required": [
+                  "initial_position_status",
+                  "position_statuses",
+                  "argument_statuses",
+                  "source_verification_required",
+                  "disagreement_preserved"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "initial_position_status": {
+                    "const": "UNEXAMINED"
+                  },
+                  "position_statuses": {
+                    "const": [
+                      "UNEXAMINED",
+                      "EXPLORING",
+                      "TENTATIVE",
+                      "ADOPTED",
+                      "REVISED",
+                      "SUSPENDED"
+                    ]
+                  },
+                  "argument_statuses": {
+                    "const": [
+                      "DRAFT",
+                      "RECONSTRUCTED",
+                      "UNDER_CRITICISM",
+                      "REVISED",
+                      "SET_ASIDE"
+                    ]
+                  },
+                  "source_verification_required": {
+                    "const": true
+                  },
+                  "disagreement_preserved": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "userPolicyBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "profile_id",
+        "revision",
+        "portable_view",
+        "portable_sections",
+        "private_exclusions"
+      ],
+      "properties": {
+        "schema_version": {"const": 1},
+        "profile_id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+        "revision": {"type": "integer", "minimum": 1},
+        "portable_view": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"const": "USER_PREFERENCES.md"},
+            "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "portable_sections": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "revision", "marker"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+              "revision": {"type": "integer", "minimum": 1},
+              "marker": {"type": "string", "pattern": "^[a-z][a-z0-9-]*:v[1-9][0-9]*$"}
+            }
+          }
+        },
+        "private_exclusions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "revision", "copy_policy"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+              "revision": {"type": "integer", "minimum": 1},
+              "copy_policy": {"const": "NEVER_COPY_TO_LABS_OR_CORE_BUNDLES"}
+            }
+          }
+        }
+      }
+    },
+    "repositoryFirstProfile": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled"],
+          "properties": {"enabled": {"const": false}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "canonical_repository_visibility",
+            "raw_material_policy",
+            "export_policy",
+            "process_steward"
+          ],
+          "properties": {
+            "enabled": {"const": true},
+            "canonical_repository_visibility": {"const": "PRIVATE"},
+            "raw_material_policy": {"const": "LOCAL_UNTRACKED"},
+            "export_policy": {"const": "REVIEWED_ONLY"},
+            "process_steward": {"type": "string", "minLength": 1, "maxLength": 256}
+          }
+        }
+      ]
+    },
+    "collaboration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["members", "steward_id", "governance", "authorship_policy", "integration_mode", "cycle_policy", "meeting_capture", "repository"],
+      "properties": {
+        "members": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "display_name", "role", "github_handle"],
+            "properties": {
+              "id": {"type": "string"},
+              "display_name": {"type": "string"},
+              "role": {"enum": ["STEWARD", "CO_OWNER"]},
+              "github_handle": {"type": ["string", "null"]}
+            }
+          }
+        },
+        "steward_id": {"type": "string"},
+        "governance": {"type": "object"},
+        "authorship_policy": {"const": "ALL_MEMBERS_EXPECTED_COAUTHORS"},
+        "integration_mode": {"const": "PULL_REQUEST"},
+        "cycle_policy": {"const": "MEETING_REAUTHORIZED"},
+        "meeting_capture": {"type": "string"},
+        "repository": {"type": "object"}
+      }
+    },
+    "intakeItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "reason"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

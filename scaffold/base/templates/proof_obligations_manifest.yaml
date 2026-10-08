@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "proof_obligations_evidence",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "candidate_id": null,
+  "candidate_sha256": null,
+  "artifact": null,
+  "artifact_sha256": null,
+  "obligation_ids": [],
+  "open_obligation_ids": [],
+  "highest_gap_class": null,
+  "all_substantive_closed": false
+}

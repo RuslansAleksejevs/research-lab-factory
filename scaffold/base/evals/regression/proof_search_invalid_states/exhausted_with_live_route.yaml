@@ -1,0 +1,56 @@
+{
+  "_expected_failure_fragment": "exhausted state has no live routes",
+  "schema_version": 1,
+  "problem_id": "negative-exhausted-live",
+  "orchestration_profile": "FULL",
+  "mode": "PROJECT_AWARE",
+  "global_status": "EXHAUSTED_CURRENT_MECHANISMS",
+  "current_round": 2,
+  "information_partitions_recorded": false,
+  "statement_frozen": true,
+  "attack_surface_ready": true,
+  "approach_registry_ready": true,
+  "independent_refutation_active": false,
+  "candidate_route_id": null,
+  "candidate_proof_id": null,
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": null,
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_version": null,
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": "No proof found by the recorded mechanisms.",
+    "strongest_artifact": "workflows/hard_math_search_orchestration.md",
+    "exact_remaining_gaps": ["One active route remains."],
+    "exhaustion_rationale": "Initial and redirected waves were recorded.",
+    "redirected_wave_completed": true
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "still live",
+      "idea_fingerprint": "live::route::v1",
+      "status": "PARKED",
+      "gap_class": "GS1",
+      "independence_lineage": "independent seed",
+      "strongest_artifact": null,
+      "exact_gap": "bounded repair remains",
+      "source_gate": "OPEN",
+      "verification_gate": "NOT_READY",
+      "novelty_gate": "OPEN"
+    }
+  ],
+  "last_checkpoint": "negative"
+}

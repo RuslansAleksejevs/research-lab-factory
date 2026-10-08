@@ -1,0 +1,10 @@
+{
+  "actions": [
+    "propose-rounds",
+    "run-rounds",
+    "collect-rounds"
+  ],
+  "projection_path_template": "research/rounds/{round_id}/control_room_status.json",
+  "protocol_version": 1,
+  "schema_version": 1
+}

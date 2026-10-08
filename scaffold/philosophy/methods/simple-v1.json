@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "simple-v1",
+  "status": "ENGINEERING_BASELINE",
+  "origin": "AI_PROPOSED",
+  "rationale": "One complete modest cycle makes archival coverage and continuation reviewable before methodological comparison.",
+  "effective_from": "first round explicitly binding this version",
+  "comparability": "No superiority claim; compare later methods on new questions with recorded resources.",
+  "stages": ["question", "sources", "contribution", "critique", "decision"],
+  "independent_critique": "A separate recorded AI session receives exact artifacts. Separation does not certify intellectual independence.",
+  "budget": "One modest explicit round; no paid API or automatic campaign. This is not a permanent scale ceiling."
+}

@@ -1,0 +1,51 @@
+{
+  "authorization": {
+    "approved_at": "2026-01-01T00:00:00Z",
+    "approved_by": [
+      "researcher"
+    ],
+    "approved_total_seconds": null,
+    "kind": "CAMPAIGN_APPROVAL"
+  },
+  "created_at": "2026-01-01T00:00:00Z",
+  "goal_id": "example-scout",
+  "marathon": null,
+  "mode": "SCOUT",
+  "schema_version": 1,
+  "search_policy": {
+    "counterexample_search_required": true,
+    "initial_routes": [
+      {
+        "mechanism": "source-map and assumption audit",
+        "mechanism_family": "OTHER",
+        "route_id": "source-map"
+      }
+    ],
+    "keep_incompatible_routes_alive": true,
+    "stopping_conditions": [
+      "Stop when twelve leads have been qualified or the 1800-second cap is reached."
+    ]
+  },
+  "source_policy": {
+    "allowed_source_paths": [],
+    "citation_required": true,
+    "human_leads_allowed": true,
+    "public_web_search_allowed": true
+  },
+  "target": {
+    "acceptance_criteria": [
+      "Return source-bound candidates with cheap falsifiers and explicit uncertainty."
+    ],
+    "anti_targets": [
+      "Do not start a proof campaign or claim novelty."
+    ],
+    "artifact_path": null,
+    "kind": "SELECTION_QUESTION",
+    "problem_id": null,
+    "statement": "Which source-bound candidates merit a separately authorized bounded trial?",
+    "target_id": null,
+    "traps": [
+      "Do not rank candidates by prestige or prose volume."
+    ]
+  }
+}

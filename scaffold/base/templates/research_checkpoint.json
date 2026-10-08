@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "checkpoint_id": "20260805T010000Z-example-partial",
+  "research_date": {
+    "start": "2026-08-04",
+    "end": "2026-08-04"
+  },
+  "recorded_at_utc": "2026-08-05T01:00:00Z",
+  "outcome_status": "PARTIAL",
+  "round_id": "round-example-01",
+  "run_id": "run-example-01",
+  "track": "primary",
+  "problem_ids": [
+    "problem-example"
+  ],
+  "claim_ids": [
+    "claim-example-lemma"
+  ],
+  "target_bindings": [
+    {
+      "target_id": "claim-example-lemma",
+      "kind": "CLAIM"
+    }
+  ],
+  "source_status": "LOCAL_UNVERIFIED",
+  "target": "Determine whether the stated comparison map is injective under the exact hypotheses recorded in the problem dossier.",
+  "scope": "Only the finite, torsion-free case in the dossier normalization; no claim is made for omitted coefficients or for novelty.",
+  "outcome": {
+    "summary": "The comparison reduces to one explicit kernel calculation, and the kernel vanishes in degrees zero and one.",
+    "generality": "Established only in degrees zero and one under the stated finite, torsion-free hypotheses.",
+    "remaining_unproved": "The degree-two kernel calculation and an independent check remain open.",
+    "outcome_class": "EXACT_LEMMA"
+  },
+  "verification": {
+    "state": "SELF_CHECKED",
+    "summary": "The reduction and low-degree calculations were checked twice against the definitions in the linked artifact.",
+    "independence": "No independent verifier has inspected the calculation.",
+    "limitations": [
+      "No literature or novelty check was run."
+    ]
+  },
+  "semantic_delta": [
+    {
+      "dependency": "low-degree kernel vanishing",
+      "before": "Unresolved in every degree.",
+      "after": "Closed in degrees zero and one; degree two remains load-bearing.",
+      "change": "REDUCED"
+    }
+  ],
+  "failed": [
+    {
+      "id": "route-direct-splitting",
+      "attempt": "Construct a splitting directly from the chosen generators.",
+      "exact_reason": "The proposed formula is not invariant under the second defining relation.",
+      "useful_residue": "The failed formula identifies the exact correction term required in degree two.",
+      "reopen_trigger": "Reopen if a relation-compatible correction term is constructed.",
+      "artifact_paths": [
+        "research/attempts/example-calculation.md"
+      ]
+    }
+  ],
+  "obstructions": [
+    {
+      "id": "degree-two-check",
+      "description": "The remaining degree-two kernel has not been calculated.",
+      "missing_capability": "A relation-aware symbolic calculation or an independent hand computation.",
+      "reopen_trigger": "A checked degree-two computation becomes available.",
+      "evidence": "The unresolved matrix is written explicitly in the linked calculation."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim-example-lemma",
+      "statement": "The comparison map is injective in degrees zero and one under the stated hypotheses.",
+      "status": "CANDIDATE",
+      "source_status": "LOCAL_UNVERIFIED",
+      "verification": "Self-checked only; no ledger promotion is authorized.",
+      "artifact_paths": [
+        "research/attempts/example-calculation.md"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "research/attempts/example-calculation.md",
+      "role": "Canonical calculation and exact remaining matrix.",
+      "status": "LOCAL_UNVERIFIED"
+    }
+  ],
+  "useful_residue": [
+    "The failed splitting isolates a correction term that can discriminate the next route."
+  ],
+  "continuation": {
+    "next_action": "Compute the degree-two kernel from the explicit matrix and request an independent check.",
+    "cheapest_falsifier": "Find one nonzero vector in the displayed degree-two kernel.",
+    "success_criterion": "Either exhibit such a vector or prove the displayed matrix has trivial kernel.",
+    "stop_condition": "Stop after the degree-two kernel is decided or after the matrix is shown to be ill-posed.",
+    "reopen_condition": "Reopen the direct-splitting route only if a relation-compatible correction term is found."
+  },
+  "discovery": {
+    "topics": [
+      "comparison maps",
+      "low-degree injectivity"
+    ],
+    "objects": [
+      "graded modules",
+      "kernel matrix"
+    ],
+    "methods": [
+      "explicit calculation",
+      "presentation by generators and relations"
+    ],
+    "keywords": [
+      "degree two",
+      "injectivity"
+    ],
+    "future_capabilities": [
+      "independent verifier",
+      "relation-aware symbolic calculation"
+    ]
+  },
+  "visibility_limitations": [
+    "Only persisted artifacts named above are visible to a later whole-lab survey."
+  ]
+}

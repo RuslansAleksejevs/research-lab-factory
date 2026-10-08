@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intake Discovery Candidate"
+  short_description: "Capture one bounded unverified mathematical lead"
+  default_prompt: "Use $intake-discovery-candidate to add one bounded lead without starting a proof campaign."

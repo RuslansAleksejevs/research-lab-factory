@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "record_type": "blocked_route_reopen",
+  "problem_id": "eval-valid-verified-proof",
+  "target_id": "EVAL-TARGET-REFLEXIVITY-v1",
+  "target_sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9",
+  "route_id": "EVAL-A1",
+  "blocked_gap_id": "EVAL-GAP-PROOF-MISSING",
+  "blocked_gap_class": "GS3",
+  "blocked_gap_statement_sha256": "e4dbc1cc253f00a4482d2af84f27bed38c64424218bbb63ec78039e973b9a832",
+  "reopen_basis": "DIRECT_CHECKED_CLOSURE",
+  "result_status": "CANDIDATE",
+  "result_candidate_id": "EVAL-REFLEXIVITY-v1",
+  "result_candidate_sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c",
+  "evidence": "evals/regression/proof_search_valid_states/artifacts/reopen_evidence.md",
+  "evidence_sha256": "65a66a7827c7bd62f95130133f7c1f596306454e47f392c94d6d935c4691298c"
+}

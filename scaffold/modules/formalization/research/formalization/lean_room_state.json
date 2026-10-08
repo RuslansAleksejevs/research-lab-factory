@@ -1,0 +1,8 @@
+{
+  "actor": "factory",
+  "reason": "Optional Lean Room installed disabled; explicit user activation is required",
+  "schema_version": 1,
+  "sequence": 0,
+  "state": "disabled",
+  "updated_at_utc": "2026-07-15T05:44:43Z"
+}

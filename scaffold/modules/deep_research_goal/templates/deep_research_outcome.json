@@ -1,0 +1,37 @@
+{
+  "compute": {
+    "candidate_appeared": false,
+    "elapsed_wall_seconds": 1000,
+    "input_tokens": null,
+    "model_attempts": 1,
+    "output_tokens": null,
+    "route_attempts": 1,
+    "route_ids_attempted": [],
+    "usage_source": "UNAVAILABLE",
+    "verification_wall_seconds": 150,
+    "verifier_attempts": 1
+  },
+  "goal_id": "example-scout",
+  "outcome_class": "NO_STRICT_REDUCTION",
+  "outcome_id": "example-outcome",
+  "plan_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "recorded_at": "2026-01-01T00:20:00Z",
+  "schema_version": 1,
+  "semantic_delta": {
+    "discharged": [],
+    "falsified": [],
+    "left_open": [],
+    "narrowed": []
+  },
+  "strict_uncertainty_reduction": false,
+  "verification": {
+    "decisive_verifier_independent": false,
+    "evidence_paths": [],
+    "generator_ids": [],
+    "independence_level": null,
+    "kernel_state_path": null,
+    "material_reviser_ids": [],
+    "remaining_highest_gap": "No exact obligation was reduced.",
+    "verifier_ids": []
+  }
+}

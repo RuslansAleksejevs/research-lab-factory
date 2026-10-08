@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qualify Discovery Candidate"
+  short_description: "Qualify and trial one candidate safely"
+  default_prompt: "Use $qualify-discovery-candidate to qualify one lead, bind serious work to a problem dossier, and record an explicit decision."

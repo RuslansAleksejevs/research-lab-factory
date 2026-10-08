@@ -1,0 +1,101 @@
+{
+  "_expected_failure_fragment": "I3 verifier ID is disjoint from generator/material-repair IDs",
+  "schema_version": 1,
+  "problem_id": "negative-i3-same-run",
+  "orchestration_profile": "FULL",
+  "mode": "VERIFICATION",
+  "global_status": "UNDER_AUDIT",
+  "current_round": 0,
+  "information_partitions_recorded": false,
+  "statement_frozen": true,
+  "attack_surface_ready": true,
+  "approach_registry_ready": true,
+  "independent_refutation_active": false,
+  "candidate_route_id": "NEG-A1",
+  "candidate_proof_id": "GEN-A1-v1",
+  "candidate_artifact_sha256": "6e6158baecc8a7238c20adc95fabaef991ac8e5989cb9a428c48420ee04bb3af",
+  "candidate_lineage": {
+    "originating_run_ids": [
+      "GENERATOR-RUN-1",
+      "EXTERNAL-RUN-1",
+      "REPAIR-RUN-1"
+    ],
+    "material_repair_run_ids": [
+      "GENERATOR-RUN-1",
+      "EXTERNAL-RUN-1",
+      "REPAIR-RUN-1",
+      "HISTORICAL-VERIFIER-1"
+    ],
+    "lineage_artifact": "problems/active/example-target/candidate_lineage.md",
+    "lineage_artifact_sha256": "5ca641bc1a2a5c66d5f1787be036a64c63afbff90ae3d6d42e7ff4127fecbf13"
+  },
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "id": "REPAIR-RUN-1",
+    "candidate_id": "GEN-A1-v1",
+    "candidate_artifact_sha256": "6e6158baecc8a7238c20adc95fabaef991ac8e5989cb9a428c48420ee04bb3af",
+    "report_sha256": null,
+    "exposure_log": "evals/regression/proof_search_invalid_states/artifacts/same_run_exposure_log.md",
+    "exposure_log_sha256": "677b0639dab83a86952b8e192e71039501f5e906a7d0fadb58550508bb50e57f",
+    "required": true,
+    "assigned": true,
+    "independent_of_candidate": true,
+    "independence_level": "I3",
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_id": "GEN-A1-v1",
+    "candidate_artifact": "research_reports/example-candidate/main.tex",
+    "candidate_artifact_sha256": "6e6158baecc8a7238c20adc95fabaef991ac8e5989cb9a428c48420ee04bb3af",
+    "proof_obligations": "research_reports/example-candidate/proof_obligation_closure.md",
+    "source_audit": "research_reports/example-candidate/source_crosswalk.md",
+    "attack_surface_exit": "problems/active/example-target/attack_surface.md"
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": null,
+    "strongest_artifact": null,
+    "exact_remaining_gaps": [],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false,
+    "redirected_wave_waiver": false,
+    "redirected_wave_waiver_reason": null,
+    "redirected_wave_waiver_evidence": null,
+    "initial_wave_report": null,
+    "redirected_wave_report": null
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "same-run verifier",
+      "idea_fingerprint": "same-run::verification::v1",
+      "status": "UNDER_AUDIT",
+      "gap_class": "GS0",
+      "independence_lineage": "verifier ID intentionally collides with repair ID",
+      "strongest_artifact": "research_reports/example-candidate/main.tex",
+      "candidate_id": "GEN-A1-v1",
+      "strongest_artifact_sha256": "6e6158baecc8a7238c20adc95fabaef991ac8e5989cb9a428c48420ee04bb3af",
+      "parent_route_ids": [],
+      "inherited_gaps": [],
+      "merged_into": null,
+      "transitions": [
+        {
+          "round": 0,
+          "from_status": null,
+          "to_status": "UNDER_AUDIT",
+          "reason": "negative fixture",
+          "evidence": "problems/active/example-target/search_rounds/20260710-round-00-architecture-backfill.md",
+          "reopen_basis": null,
+          "reopen_evidence": null
+        }
+      ],
+      "exact_gap": "",
+      "source_gate": "CLOSED",
+      "verification_gate": "I3_ASSIGNED",
+      "novelty_gate": "OPEN"
+    }
+  ],
+  "last_checkpoint": "negative"
+}

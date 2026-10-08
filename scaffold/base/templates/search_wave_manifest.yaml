@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "record_type": "proof_search_wave",
+  "wave_type": null,
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "round_number": null,
+  "report": null,
+  "report_sha256": null,
+  "route_ids": [],
+  "mechanisms_tested": [],
+  "failure_artifacts": [],
+  "initial_wave_manifest": null,
+  "initial_wave_manifest_sha256": null,
+  "triggering_failure_artifacts": [],
+  "mechanism_delta": [],
+  "discriminating_question": null
+}

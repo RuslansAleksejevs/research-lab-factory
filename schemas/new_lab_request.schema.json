@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/new_lab_request.schema.json",
+  "title": "New Mathematical Research Lab Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "lab", "research", "bootstrap"],
+  "properties": {
+    "integrations": {
+      "type": "object", "additionalProperties": false, "required": ["claude_terminal"],
+      "properties": {"claude_terminal": {
+        "type": "object", "additionalProperties": false, "required": ["enabled"],
+        "properties": {"enabled": {"type": "boolean"}}
+      }}
+    },
+    "schema_version": {"const": 1},
+    "repository_first": {"$ref": "#/$defs/repositoryFirstRequest"},
+    "lab": {
+      "type": "object",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "PHILOSOPHY_PROGRAM"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "research_areas"
+            ],
+            "not": {
+              "required": [
+                "areas"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "areas"
+            ],
+            "not": {
+              "required": [
+                "research_areas"
+              ]
+            }
+          }
+        }
+      ],
+      "additionalProperties": false,
+      "required": ["directory_name", "title", "mission", "owners", "language", "deliverables"],
+      "properties": {
+        "directory_name": {"type": "string", "minLength": 1, "maxLength": 180},
+        "title": {"type": "string", "minLength": 1},
+        "article_title": {"type": "string"},
+        "kind": {"enum": ["ARTICLE_OR_COHERENT_PROGRAM", "DISCOVERY_PORTFOLIO", "PHILOSOPHY_PROGRAM"]},
+        "mission": {"type": "string", "minLength": 1},
+        "owners": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "collaborators": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "language": {"type": "string", "minLength": 2},
+        "areas": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "research_areas": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+        "deliverables": {"type": "array", "items": {"enum": ["paper", "research_report", "talk", "computation", "formalization"]}, "minItems": 1, "uniqueItems": true},
+        "in_scope": {"type": "array", "items": {"type": "string"}},
+        "out_of_scope": {"type": "array", "items": {"type": "string"}},
+        "collaboration": {"$ref": "#/$defs/collaboration"}
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["central_questions", "tracks", "default_track", "conventions", "required_checks", "specialist_roles"],
+      "properties": {
+        "central_questions": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+        "tracks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "title", "description"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+              "title": {"type": "string", "minLength": 1},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "default_track": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+        "terminology": {"type": "array", "items": {"type": "string"}},
+        "conventions": {"type": "array", "items": {"type": "string"}},
+        "required_checks": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
+        "source_priorities": {"type": "array", "items": {"type": "string"}},
+        "specialist_roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "description", "checks"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+              "description": {"type": "string", "minLength": 1},
+              "checks": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["modules", "inputs", "intake_report", "profile_decisions", "assumptions", "unresolved_questions"],
+      "properties": {
+        "local_layer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "expected_sha256"],
+          "properties": {
+            "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+            "expected_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "modules": {
+          "type": "array",
+          "items": {"enum": ["paper", "talks", "computation", "formalization", "external_llm", "deep_research_goal", "discovery_portfolio", "team_collaboration"]},
+          "uniqueItems": true
+        },
+        "initial_problem": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "track", "statement"],
+              "properties": {
+                "title": {"type": "string", "minLength": 1},
+                "track": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+                "statement": {"type": "string"}
+              }
+            }
+          ]
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "kind"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "kind": {"enum": ["draft", "reference", "note", "code", "data", "other"]},
+              "trust_tier": {"enum": ["A", "B", "C", "D"]},
+              "expected_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        },
+        "intake_report": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["unreadable_items", "unclassified_items", "ignored_items"],
+          "properties": {
+            "unreadable_items": {"$ref": "#/$defs/intakeItems"},
+            "unclassified_items": {"$ref": "#/$defs/intakeItems"},
+            "ignored_items": {"$ref": "#/$defs/intakeItems"}
+          }
+        },
+        "profile_decisions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["field", "classification", "basis", "confidence"],
+            "properties": {
+              "field": {"type": "string", "minLength": 1},
+              "classification": {
+                "enum": ["user_confirmed", "evidence_backed_inference", "factory_default", "assumption"]
+              },
+              "basis": {"type": "string", "minLength": 1},
+              "confidence": {"enum": ["low", "medium", "high"]}
+            }
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["statement", "basis", "confidence"],
+            "properties": {
+              "statement": {"type": "string", "minLength": 1},
+              "basis": {"type": "string"},
+              "confidence": {"enum": ["low", "medium", "high"]}
+            }
+          }
+        },
+        "unresolved_questions": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "lab": {
+            "properties": {
+              "kind": {
+                "const": "PHILOSOPHY_PROGRAM"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "bootstrap": {
+            "properties": {
+              "modules": {
+                "maxItems": 0
+              }
+            },
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "local_layer"
+                  ]
+                },
+                {
+                  "required": [
+                    "initial_problem"
+                  ]
+                }
+              ]
+            }
+          },
+          "repository_first": {
+            "properties": {
+              "enabled": {
+                "const": false
+              }
+            }
+          },
+          "lab": {
+            "properties": {
+              "deliverables": {
+                "items": {
+                  "enum": [
+                    "paper",
+                    "research_report",
+                    "talk"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "repositoryFirstRequest": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled"],
+          "properties": {"enabled": {"const": false}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "canonical_repository_visibility",
+            "raw_material_policy",
+            "export_policy",
+            "process_steward"
+          ],
+          "properties": {
+            "enabled": {"const": true},
+            "canonical_repository_visibility": {"const": "PRIVATE"},
+            "raw_material_policy": {"const": "LOCAL_UNTRACKED"},
+            "export_policy": {"const": "REVIEWED_ONLY"},
+            "process_steward": {"type": "string", "minLength": 1, "maxLength": 256}
+          }
+        }
+      ]
+    },
+    "collaboration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["members", "steward_id", "governance", "authorship_policy", "integration_mode", "cycle_policy", "meeting_capture", "repository"],
+      "properties": {
+        "members": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "display_name", "role", "github_handle"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+              "display_name": {"type": "string", "minLength": 1},
+              "role": {"enum": ["STEWARD", "CO_OWNER"]},
+              "github_handle": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$"}
+            }
+          }
+        },
+        "steward_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+        "governance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["research_decisions", "spinout_decisions", "publication_decisions", "process_decisions"],
+          "properties": {
+            "research_decisions": {"const": "CONSENSUS"},
+            "spinout_decisions": {"const": "CONSENSUS"},
+            "publication_decisions": {"const": "CONSENSUS"},
+            "process_decisions": {"const": "STEWARD"}
+          }
+        },
+        "authorship_policy": {"const": "ALL_MEMBERS_EXPECTED_COAUTHORS"},
+        "integration_mode": {"const": "PULL_REQUEST"},
+        "cycle_policy": {"const": "MEETING_REAUTHORIZED"},
+        "meeting_capture": {"enum": ["MANUAL_SUMMARY_REVISIT_AFTER_FIRST_CYCLE", "NOTES_OR_TRANSCRIPT", "LIVE_STRUCTURED_MINUTES"]},
+        "repository": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["provider", "visibility", "setup_state"],
+          "properties": {
+            "provider": {"const": "GITHUB"},
+            "visibility": {"enum": ["UNDECIDED", "PRIVATE", "PUBLIC"]},
+            "setup_state": {"const": "NOT_CONFIGURED"}
+          }
+        }
+      }
+    },
+    "intakeItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "reason"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

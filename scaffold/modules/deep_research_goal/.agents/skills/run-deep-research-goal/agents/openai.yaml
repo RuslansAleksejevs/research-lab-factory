@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Deep Research Goal"
+  short_description: "Run a budgeted, verified research campaign"
+  default_prompt: "Use $run-deep-research-goal to prepare and execute one exact Scout, Trial, Deep, or explicitly authorized Marathon campaign."

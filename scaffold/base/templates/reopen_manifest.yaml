@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "record_type": "blocked_route_reopen",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "route_id": null,
+  "blocked_gap_id": null,
+  "blocked_gap_class": null,
+  "blocked_gap_statement_sha256": null,
+  "reopen_basis": null,
+  "result_status": null,
+  "result_candidate_id": null,
+  "result_candidate_sha256": null,
+  "evidence": null,
+  "evidence_sha256": null
+}

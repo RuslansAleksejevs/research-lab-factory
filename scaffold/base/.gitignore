@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+output/*
+!output/README.md
+tmp/*
+!tmp/README.md
+runs/traces/*
+!runs/traces/README.md
+
+# repository-first-local-raw-archive:v1
+# Raw execution bodies stay local. Their bounded manifests, existing
+# checkpoints, and claim dossiers carry tracked provenance.
+research/raw_runs/archive/
+# /repository-first-local-raw-archive:v1

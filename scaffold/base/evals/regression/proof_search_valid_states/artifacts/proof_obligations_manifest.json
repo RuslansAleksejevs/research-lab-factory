@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "proof_obligations_evidence",
+  "problem_id": "eval-valid-verified-proof",
+  "target_id": "EVAL-TARGET-REFLEXIVITY-v1",
+  "target_sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9",
+  "candidate_id": "EVAL-REFLEXIVITY-v1",
+  "candidate_sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c",
+  "artifact": "evals/regression/proof_search_valid_states/artifacts/proof_obligations.md",
+  "artifact_sha256": "cfe49884713b4bf155d0172fccaddb27bf520398d3db66780bc56990d1377b0d",
+  "obligation_ids": ["EVAL-O1"],
+  "open_obligation_ids": [],
+  "highest_gap_class": "GS0",
+  "all_substantive_closed": true
+}

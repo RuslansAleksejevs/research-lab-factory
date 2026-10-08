@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "decision_id": "replace-with-decision-id",
+  "decision": "CONTINUE",
+  "to_status": "QUALIFYING",
+  "decided_at": "2026-01-01T00:00:00Z",
+  "decided_by": ["replace-with-member-id"],
+  "rationale": "Evidence-based resource-allocation rationale.",
+  "supporting_artifact_paths": [],
+  "park": null,
+  "reopen": null,
+  "spinout": null
+}

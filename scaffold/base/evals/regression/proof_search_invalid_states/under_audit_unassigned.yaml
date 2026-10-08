@@ -1,0 +1,56 @@
+{
+  "_expected_failure_fragment": "UNDER_AUDIT has assigned I3 verifier",
+  "schema_version": 1,
+  "problem_id": "negative-under-audit-unassigned",
+  "orchestration_profile": "FULL",
+  "mode": "VERIFICATION",
+  "global_status": "UNDER_AUDIT",
+  "current_round": 1,
+  "information_partitions_recorded": false,
+  "statement_frozen": true,
+  "attack_surface_ready": true,
+  "approach_registry_ready": true,
+  "independent_refutation_active": false,
+  "candidate_route_id": "NEG-A1",
+  "candidate_proof_id": "NEG-A1-v1",
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": true,
+    "independence_level": "I3",
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_version": "v1",
+    "proof_obligations": "workflows/proof_protocol.md",
+    "source_audit": "workflows/hard_math_search_orchestration.md",
+    "attack_surface_exit": "templates/attack_surface.md"
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": null,
+    "strongest_artifact": null,
+    "exact_remaining_gaps": [],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "candidate",
+      "idea_fingerprint": "candidate::audit::v1",
+      "status": "UNDER_AUDIT",
+      "gap_class": "GS0",
+      "independence_lineage": "generator separate from intended verifier",
+      "strongest_artifact": "workflows/hard_math_search_orchestration.md",
+      "exact_gap": "",
+      "source_gate": "CLOSED",
+      "verification_gate": "I3_ASSIGNED",
+      "novelty_gate": "OPEN"
+    }
+  ],
+  "last_checkpoint": "negative"
+}

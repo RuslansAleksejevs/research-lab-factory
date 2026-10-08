@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_dependency_snapshot_v2",
+  "protocol_version": "lean-room-v2-source-snapshot-phase-a",
+  "snapshot_id": null,
+  "created_at": null,
+  "created_by": null,
+  "source_workspace_recorded": false,
+  "lake_manifest": {
+    "artifact": "lake-manifest.json",
+    "sha256": null,
+    "version": null,
+    "root_package_name": null,
+    "fixed_toolchain": null
+  },
+  "dependency_graph_sha256": null,
+  "dependency_closure_sha256": null,
+  "policies": {
+    "source_only": true,
+    "git_metadata_present": false,
+    "precompiled_artifacts_present": false,
+    "cache_mode": "none",
+    "network_allowed_during_certificate_build": false,
+    "override_mode": "generated_path_overrides",
+    "package_configuration_execution_review_required": true,
+    "tracked_internal_symlinks_materialized_as_regular_files": true,
+    "uninitialized_gitlinks_materialized_as_unavailable_empty_directories": true
+  },
+  "packages": [
+    {
+      "name": null,
+      "safe_directory": null,
+      "source_kind": "git",
+      "source_url": null,
+      "resolved_revision": null,
+      "git_tree_oid": null,
+      "input_revision": null,
+      "scope": null,
+      "subdir": null,
+      "config_file": null,
+      "config_sha256": null,
+      "manifest_file": null,
+      "manifest_sha256": null,
+      "source_inventory": null,
+      "source_inventory_sha256": null,
+      "source_tree_sha256": null,
+      "source_tree_profile": "lean-room-dependency-tree-v2-files-gitlink-omissions-sha256",
+      "gitlink_omissions": [],
+      "gitlink_omissions_sha256": null,
+      "symlink_normalizations": [],
+      "symlink_normalizations_sha256": null,
+      "toolchain": null,
+      "executable_config": null,
+      "review_required": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "record_type": "verifier_exposure",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "candidate_id": null,
+  "candidate_sha256": null,
+  "verifier_id": null,
+  "originating_run_ids": [],
+  "material_repair_run_ids": [],
+  "audit_packet": null,
+  "audit_packet_sha256": null,
+  "packet_entries": [],
+  "exposure_log": null,
+  "exposure_log_sha256": null,
+  "material_withheld": [],
+  "assigned_by": null,
+  "assigned_at": null
+}

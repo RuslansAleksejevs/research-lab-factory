@@ -1,0 +1,7 @@
+{
+  "candidate_state_source": "portfolio/candidates/*/candidate.json + events/*.json",
+  "event_history": "APPEND_ONLY_HASH_CHAIN",
+  "mathematical_status_policy": "NO_AUTOMATIC_PROMOTION",
+  "proof_search_container": "problem dossier",
+  "schema_version": 1
+}

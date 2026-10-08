@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "gap_discharge",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "child_route_id": null,
+  "source_route_id": null,
+  "source_gap_id": null,
+  "source_gap_class": null,
+  "source_gap_statement_sha256": null,
+  "discharge_basis": null,
+  "evidence": null,
+  "evidence_sha256": null
+}

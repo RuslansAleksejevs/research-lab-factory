@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "candidate_id": "replace-with-stable-id",
+  "title": "Short candidate title",
+  "track": "replace-with-profile-track-id",
+  "lead": "Exact lead or question to qualify; no truth claim is implied.",
+  "why_now": "Why this deserves a bounded qualification pass now.",
+  "created_by": ["replace-with-member-id"],
+  "created_at": "2026-01-01T00:00:00Z",
+  "problem_id": null,
+  "origin": "USER_SUPPLIED",
+  "origin_artifact_paths": [],
+  "cohort_id": null
+}

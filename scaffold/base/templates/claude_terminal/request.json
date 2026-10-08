@@ -1,0 +1,22 @@
+{
+  "id": "replace-with-approved-round",
+  "purpose": "research",
+  "tasks": [
+    {
+      "id": "research",
+      "problem_id": "replace-with-frozen-problem-id",
+      "prompt": "REPLACE with the exact approved scope. Report sources honestly in source-status.json; for self-contained work use sources: [] and a nonblank no_external_sources_reason. Save useful progress even if the final report is unfinished.",
+      "model": "claude-opus-5-5",
+      "effort": "max",
+      "public_web": false,
+      "research_checks": true,
+      "inputs": [],
+      "required_outputs": [
+        "report.md",
+        "source-status.json"
+      ]
+    }
+  ],
+  "max_wall_seconds": 3600,
+  "max_output_bytes": 67108864
+}

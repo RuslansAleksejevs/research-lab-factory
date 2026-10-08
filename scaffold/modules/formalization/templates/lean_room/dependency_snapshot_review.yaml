@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_dependency_snapshot_review_v2",
+  "protocol_version": "lean-room-v2-source-snapshot-phase-a",
+  "review_id": null,
+  "reviewed_at": null,
+  "reviewed_by": null,
+  "snapshot_binding": {
+    "artifact": null,
+    "sha256": null,
+    "snapshot_id": null,
+    "dependency_graph_sha256": null,
+    "dependency_closure_sha256": null
+  },
+  "verdict": "PENDING",
+  "checks": {
+    "lake_manifest_schema_and_graph_checked": false,
+    "every_resolved_git_revision_checked": false,
+    "every_source_inventory_and_tree_digest_checked": false,
+    "toolchain_compatibility_checked": false,
+    "package_configuration_files_reviewed": false,
+    "no_git_directory_or_lake_cache_metadata_in_snapshot": false,
+    "no_unbound_symlink_special_or_hardlinked_input": false,
+    "tracked_symlink_normalizations_reviewed_and_accepted_per_package": false,
+    "no_precompiled_or_executable_binary_input": false,
+    "no_lfs_pointer_or_populated_gitlink_input": false,
+    "gitlink_omissions_reviewed_and_accepted_per_package": false,
+    "reviewed_source_adjacent_hash_sidecars": false,
+    "network_free_build_plan_checked": false,
+    "expanded_trusted_boundary_accepted": false
+  },
+  "package_configuration_reviews": [],
+  "derived_source_hash_sidecars": [],
+  "open_issues": [],
+  "residual_risks": [
+    "Source hashes bind observed bytes but do not authenticate upstream authorship.",
+    "Package configuration and elaborator code remain executable, untrusted input until guarded Phase-B execution and independent review.",
+    "A recorded tracked symlink is published as an exact target byte-and-mode copy, not with its original symlink filesystem identity or resolution semantics.",
+    "Inert tracked binary assets remain hash-bound package inputs; this review excludes precompiled and executable binary artifacts, not every non-text file.",
+    "Each gitlink omission is unavailable submodule source represented only by a bound empty directory; Phase A cannot inspect or certify that omitted source.",
+    "Phase B may proceed with a gitlink omission only after explicit package review and must fail closed if configuration or build resolution requires the omitted path.",
+    "A source-adjacent Lake .hash sidecar is permitted only when this review names its exact bound source and tracked trace; the runner grants literal-file write access only to a precreated disposable sidecar and binds its final content without making tracked source bytes writable.",
+    "Phase A performs no Lean/Lake build and cannot make a dependency-bearing case certificate-eligible."
+  ],
+  "phase_b_execution_authorized": false,
+  "certificate_eligible": false,
+  "automatic_math_status_change": false
+}

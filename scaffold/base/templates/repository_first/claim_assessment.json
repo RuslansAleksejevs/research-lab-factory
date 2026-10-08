@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "record_type": "claim_assessment",
+  "problem_id": "replace-problem-id",
+  "assessment_id": "replace-assessment-id",
+  "campaign_id": "replace-campaign-id",
+  "claim_id": "replace-target-claim-id",
+  "assessed_at_utc": "2026-01-01T04:00:00Z",
+  "axes": {
+    "correctness": {
+      "axis": "correctness",
+      "status": "UNKNOWN",
+      "assessor_role_ids": ["independent-verifier"],
+      "rationale": "The proof boundary still has an unresolved obligation.",
+      "evidence_paths": ["problems/active/replace-problem-id/proof_obligations.md"]
+    },
+    "novelty": {
+      "axis": "novelty",
+      "status": "NOT_ASSESSED",
+      "assessor_role_ids": ["human-owner"],
+      "rationale": "No exact-problem literature audit has been completed.",
+      "evidence_paths": []
+    },
+    "significance": {
+      "axis": "significance",
+      "status": "UNKNOWN",
+      "assessor_role_ids": ["human-owner"],
+      "rationale": "Significance requires a separate mathematical-taste assessment.",
+      "evidence_paths": []
+    },
+    "independent_verification": {
+      "axis": "independent_verification",
+      "status": "NOT_RUN",
+      "assessor_role_ids": ["independent-verifier"],
+      "rationale": "The independent verifier has not yet run the frozen packet.",
+      "evidence_paths": []
+    },
+    "human_rederivation_comprehension": {
+      "axis": "human_rederivation_comprehension",
+      "status": "NOT_RUN",
+      "assessor_role_ids": ["human-owner"],
+      "rationale": "No human re-derivation session has been recorded.",
+      "evidence_paths": []
+    },
+    "formalization_coverage": {
+      "axis": "formalization_coverage",
+      "status": "NONE",
+      "assessor_role_ids": ["human-owner"],
+      "rationale": "No formal declaration currently covers this claim.",
+      "evidence_paths": []
+    },
+    "release_readiness": {
+      "axis": "release_readiness",
+      "status": "NOT_READY",
+      "assessor_role_ids": ["human-owner"],
+      "rationale": "Correctness, novelty, verification, and comprehension gates remain open.",
+      "evidence_paths": []
+    }
+  },
+  "governance_note": "NO_AXIS_AUTOMATICALLY_PROMOTES_A_CLAIM"
+}

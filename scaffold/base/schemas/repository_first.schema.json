@@ -1,0 +1,656 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/repository_first.schema.json",
+  "title": "Repository-first local records, exports, and observations",
+  "description": "Closed structural union. scripts/repository_first.py enforces the cross-record, path, hash, no-outbound, and no-promotion invariants using only the Python standard library.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {}, "record_type": {}, "problem_id": {}, "campaign_id": {},
+    "title": {}, "created_at_utc": {}, "target_claim_ids": {},
+    "initial_phase": {}, "roles": {}, "governance": {}, "objective": {}, "stop_conditions": {},
+    "change_id": {}, "sequence": {}, "previous_change_id": {}, "from_phase": {}, "to_phase": {},
+    "changed_at_utc": {}, "changed_by_role_id": {}, "transition_kind": {}, "input_artifact_paths": {},
+    "active_role_ids": {}, "budget": {}, "exit_condition": {}, "prior_failure_family_ids": {},
+    "search_policy_delta": {}, "reason": {}, "checkpoint_path": {}, "checkpoint_id": {},
+    "checkpoint_sha256": {}, "claim_dossier_anchor_path": {}, "claim_dossier_anchor_sha256": {}, "result_id": {},
+    "recorded_at_utc": {}, "new_claim_id": {}, "parent_claim_ids": {}, "lineage_relation": {},
+    "registration_status": {}, "statement_path": {}, "family_id": {}, "compressed_from_count": {},
+    "member_run_ids": {}, "mechanism_summary": {}, "distinguishing_observation": {},
+    "exact_failure_reason": {}, "evidence_paths": {}, "reactivation_conditions": {}, "denominator": {},
+    "aggregate_actual_denominator": {}, "run_id": {}, "role_id": {}, "phase": {},
+    "started_at_utc": {}, "completed_at_utc": {}, "outcome_class": {}, "claim_ids": {},
+    "significant_prompts": {}, "execution_provenance": {}, "verification_boundary": {},
+    "raw_archive": {}, "output_artifact_paths": {}, "claim_dossier_path": {}, "assessment_id": {},
+    "claim_id": {}, "assessed_at_utc": {}, "axes": {}, "governance_note": {}, "use_id": {},
+    "claim_statement_path": {}, "claim_statement_sha256": {}, "claim_hypotheses": {}, "source_path": {}, "original_sha256": {},
+    "bibliographic_identity": {}, "version": {}, "anchors": {}, "scope": {}, "relation": {},
+    "relation_audit": {}, "interface_search": {}, "coverage_id": {}, "coverage_matrix": {}, "formal_theorem_scope": {},
+    "environment": {}, "axioms": {}, "external_certificates": {}, "replay": {}, "plan_id": {},
+    "expert_profile": {}, "questions": {}, "claim_bindings": {}, "package_manifest_path": {}, "package_manifest_sha256": {}, "review": {}, "human_trigger": {},
+    "execution_state": {}, "no_outbound_action": {}, "response_id": {}, "received_at_utc": {},
+    "ingest_mode": {}, "original_path": {}, "observations_path": {}, "claim_implications": {},
+    "automatic_claim_promotion": {}, "export_id": {}, "package_root": {}, "purpose": {},
+    "source_checkpoint_paths": {}, "included_files": {}, "exclusions": {},
+    "manifest_payload_sha256": {}, "observation_id": {}, "period": {}, "collection_boundaries": {},
+    "source_records": {}, "source_set_sha256": {}, "metrics": {}, "axis_status_counts": {},
+    "denominator_unknown_counts": {}, "limitations": {}
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/campaign"},
+    {"$ref": "#/$defs/phaseChange"},
+    {"$ref": "#/$defs/adjacentResult"},
+    {"$ref": "#/$defs/failureFamily"},
+    {"$ref": "#/$defs/rawRunManifest"},
+    {"$ref": "#/$defs/claimAssessment"},
+    {"$ref": "#/$defs/sourceUse"},
+    {"$ref": "#/$defs/verificationCoverage"},
+    {"$ref": "#/$defs/expertFeedbackPlan"},
+    {"$ref": "#/$defs/expertFeedbackResponse"},
+    {"$ref": "#/$defs/exportPackageManifest"},
+    {"$ref": "#/$defs/effectivenessObservation"}
+  ],
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"},
+    "checkpointId": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,190}$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "timestamp": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "shortText": {"type": "string", "minLength": 1, "maxLength": 1024},
+    "text": {"type": "string", "minLength": 1, "maxLength": 16384},
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)(?!.*(?:^|/)\\.git(?:/|$))[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "checkpointPath": {
+      "type": "string",
+      "maxLength": 512,
+      "pattern": "^research/checkpoints/[^/\\\\\\u0000-\\u001F\\u007F]+$"
+    },
+    "idArray": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/id"}
+    },
+    "textArray": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/shortText"}
+    },
+    "pathArray": {
+      "type": "array",
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/path"}
+    },
+    "phase": {
+      "enum": ["BREADTH_SEARCH", "MECHANISM_DEVELOPMENT", "CONSOLIDATION", "ADVERSARIAL_VALIDATION", "HUMAN_REDERIVATION", "FORMALIZATION", "EXPOSITION", "PAUSED", "CLOSED"]
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role_id", "role_kind", "actor_class", "actor_id", "responsibilities"],
+      "properties": {
+        "role_id": {"$ref": "#/$defs/id"},
+        "role_kind": {"enum": ["COORDINATOR", "CLAIM_GENERATOR", "COUNTEREXAMPLE_HUNTER", "SOURCE_AUDITOR", "INDEPENDENT_VERIFIER", "FORMALIZER", "HUMAN_REVIEWER", "COMPUTATION_OPERATOR"]},
+        "actor_class": {"enum": ["HUMAN", "CODEX_AGENT", "LOCAL_TOOL"]},
+        "actor_id": {"$ref": "#/$defs/id"},
+        "responsibilities": {"$ref": "#/$defs/textArray"}
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["human_owned", "human_owner_role_ids", "decision_scope"],
+      "properties": {
+        "human_owned": {"const": true},
+        "human_owner_role_ids": {"$ref": "#/$defs/idArray"},
+        "decision_scope": {"const": "GOVERNANCE_ONLY"}
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_token_budget", "output_token_budget", "reasoning_token_budget", "wall_time_seconds", "tool_call_budget", "unknown_reason"],
+      "properties": {
+        "input_token_budget": {"type": ["integer", "null"], "minimum": 0},
+        "output_token_budget": {"type": ["integer", "null"], "minimum": 0},
+        "reasoning_token_budget": {"type": ["integer", "null"], "minimum": 0},
+        "wall_time_seconds": {"type": ["integer", "null"], "minimum": 0},
+        "tool_call_budget": {"type": ["integer", "null"], "minimum": 0},
+        "unknown_reason": {"type": ["string", "null"], "maxLength": 1024}
+      }
+    },
+    "versionedIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity", "version_status", "exact_version", "unknown_reason"],
+      "properties": {
+        "identity": {"$ref": "#/$defs/shortText"},
+        "version_status": {"enum": ["EXACT", "UNKNOWN"]},
+        "exact_version": {"type": ["string", "null"], "maxLength": 1024},
+        "unknown_reason": {"type": ["string", "null"], "maxLength": 1024}
+      }
+    },
+    "actualDenominator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_tokens", "output_tokens", "reasoning_tokens", "wall_time_seconds", "tool_calls", "model_invocations", "harness_runs", "unknown_fields"],
+      "properties": {
+        "input_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "output_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "reasoning_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "wall_time_seconds": {"type": ["integer", "null"], "minimum": 0},
+        "tool_calls": {"type": ["integer", "null"], "minimum": 0},
+        "model_invocations": {"type": ["integer", "null"], "minimum": 0},
+        "harness_runs": {"type": ["integer", "null"], "minimum": 0},
+        "unknown_fields": {"type": "array", "maxItems": 7, "uniqueItems": true, "items": {"enum": ["input_tokens", "output_tokens", "reasoning_tokens", "wall_time_seconds", "tool_calls", "model_invocations", "harness_runs"]}}
+      }
+    },
+    "campaign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "campaign_id", "title", "created_at_utc", "target_claim_ids", "initial_phase", "roles", "governance", "objective", "stop_conditions"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "campaign"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "title": {"$ref": "#/$defs/shortText"},
+        "created_at_utc": {"$ref": "#/$defs/timestamp"},
+        "target_claim_ids": {"$ref": "#/$defs/idArray"},
+        "initial_phase": {"$ref": "#/$defs/phase"},
+        "roles": {"type": "array", "minItems": 1, "maxItems": 32, "items": {"$ref": "#/$defs/role"}},
+        "governance": {"$ref": "#/$defs/governance"},
+        "objective": {"$ref": "#/$defs/text"},
+        "stop_conditions": {"$ref": "#/$defs/textArray"}
+      }
+    },
+    "phaseChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "change_id", "campaign_id", "sequence", "previous_change_id", "from_phase", "to_phase", "changed_at_utc", "changed_by_role_id", "transition_kind", "input_artifact_paths", "active_role_ids", "budget", "exit_condition", "prior_failure_family_ids", "search_policy_delta", "reason", "checkpoint_path"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "phase_change"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "change_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "sequence": {"type": "integer", "minimum": 1, "maximum": 10000},
+        "previous_change_id": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/id"}]},
+        "from_phase": {"$ref": "#/$defs/phase"},
+        "to_phase": {"$ref": "#/$defs/phase"},
+        "changed_at_utc": {"$ref": "#/$defs/timestamp"},
+        "changed_by_role_id": {"$ref": "#/$defs/id"},
+        "transition_kind": {"enum": ["PROGRESS", "PIVOT", "RETRY_AFTER_FAILURE", "PAUSE", "RESUME", "CLOSE"]},
+        "input_artifact_paths": {"type": "array", "minItems": 1, "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "active_role_ids": {"$ref": "#/$defs/idArray"},
+        "budget": {"$ref": "#/$defs/budget"},
+        "exit_condition": {"$ref": "#/$defs/text"},
+        "prior_failure_family_ids": {"type": "array", "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "search_policy_delta": {"type": ["string", "null"], "maxLength": 16384},
+        "reason": {"$ref": "#/$defs/text"},
+        "checkpoint_path": {"$ref": "#/$defs/checkpointPath"}
+      }
+    },
+    "adjacentResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "result_id", "campaign_id", "recorded_at_utc", "new_claim_id", "parent_claim_ids", "lineage_relation", "registration_status", "statement_path", "checkpoint_path"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "adjacent_result"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "result_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "recorded_at_utc": {"$ref": "#/$defs/timestamp"},
+        "new_claim_id": {"$ref": "#/$defs/id"},
+        "parent_claim_ids": {"$ref": "#/$defs/idArray"},
+        "lineage_relation": {"enum": ["COROLLARY", "SPECIAL_CASE", "GENERALIZATION", "COUNTEREXAMPLE", "OBSTRUCTION", "METHOD", "TRANSLATION", "OTHER"]},
+        "registration_status": {"const": "NEW_UNVERIFIED_CLAIM"},
+        "statement_path": {"$ref": "#/$defs/path"},
+        "checkpoint_path": {"$ref": "#/$defs/checkpointPath"}
+      }
+    },
+    "denominatorComponent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "unknown_reason", "evidence_paths"],
+      "properties": {
+        "status": {"enum": ["KNOWN", "UNKNOWN"]},
+        "value": {"type": ["string", "null"], "maxLength": 1024},
+        "unknown_reason": {"type": ["string", "null"], "maxLength": 1024},
+        "evidence_paths": {"$ref": "#/$defs/pathArray"}
+      }
+    },
+    "failureFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "family_id", "campaign_id", "recorded_at_utc", "compressed_from_count", "member_run_ids", "mechanism_summary", "distinguishing_observation", "exact_failure_reason", "evidence_paths", "reactivation_conditions", "denominator", "aggregate_actual_denominator", "checkpoint_path"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "failure_family"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "family_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "recorded_at_utc": {"$ref": "#/$defs/timestamp"},
+        "compressed_from_count": {"type": "integer", "minimum": 1},
+        "member_run_ids": {"$ref": "#/$defs/idArray"},
+        "mechanism_summary": {"$ref": "#/$defs/text"},
+        "distinguishing_observation": {"$ref": "#/$defs/text"},
+        "exact_failure_reason": {"$ref": "#/$defs/text"},
+        "evidence_paths": {"type": "array", "minItems": 1, "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/path"}},
+        "reactivation_conditions": {"$ref": "#/$defs/textArray"},
+        "denominator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vector", "model", "harness"],
+          "properties": {
+            "vector": {"$ref": "#/$defs/denominatorComponent"},
+            "model": {"$ref": "#/$defs/denominatorComponent"},
+            "harness": {"$ref": "#/$defs/denominatorComponent"}
+          }
+        },
+        "aggregate_actual_denominator": {"$ref": "#/$defs/actualDenominator"},
+        "checkpoint_path": {"$ref": "#/$defs/checkpointPath"}
+      }
+    },
+    "significantPrompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt_class", "path", "sha256"],
+      "properties": {
+        "prompt_class": {"const": "LAB_AUTHORED_ACTION_PROMPT"},
+        "path": {"$ref": "#/$defs/path"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "modelIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_id", "version_status", "exact_version", "unknown_reason"],
+      "properties": {"model_id": {"$ref": "#/$defs/shortText"}, "version_status": {"enum": ["EXACT", "UNKNOWN"]}, "exact_version": {"type": ["string", "null"], "maxLength": 1024}, "unknown_reason": {"type": ["string", "null"], "maxLength": 1024}}
+    },
+    "harnessIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["harness_id", "version_status", "exact_version", "unknown_reason"],
+      "properties": {"harness_id": {"$ref": "#/$defs/shortText"}, "version_status": {"enum": ["EXACT", "UNKNOWN"]}, "exact_version": {"type": ["string", "null"], "maxLength": 1024}, "unknown_reason": {"type": ["string", "null"], "maxLength": 1024}}
+    },
+    "toolCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tool_id", "version_status", "exact_version", "unknown_reason", "invocation_count", "command_manifest_path", "command_manifest_sha256"],
+      "properties": {"tool_id": {"$ref": "#/$defs/shortText"}, "version_status": {"enum": ["EXACT", "UNKNOWN"]}, "exact_version": {"type": ["string", "null"], "maxLength": 1024}, "unknown_reason": {"type": ["string", "null"], "maxLength": 1024}, "invocation_count": {"type": "integer", "minimum": 1}, "command_manifest_path": {"$ref": "#/$defs/path"}, "command_manifest_sha256": {"$ref": "#/$defs/sha256"}}
+    },
+    "rawRunManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "run_id", "campaign_id", "role_id", "phase", "started_at_utc", "completed_at_utc", "outcome_class", "claim_ids", "significant_prompts", "execution_provenance", "verification_boundary", "raw_archive", "output_artifact_paths", "checkpoint_path", "checkpoint_id", "checkpoint_sha256", "claim_dossier_path", "claim_dossier_anchor_path", "claim_dossier_anchor_sha256"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "raw_run_manifest"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "run_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "role_id": {"$ref": "#/$defs/id"},
+        "phase": {"$ref": "#/$defs/phase"},
+        "started_at_utc": {"$ref": "#/$defs/timestamp"},
+        "completed_at_utc": {"$ref": "#/$defs/timestamp"},
+        "outcome_class": {"enum": ["SUCCESS", "PARTIAL", "FAILURE", "INCONCLUSIVE"]},
+        "claim_ids": {"$ref": "#/$defs/idArray"},
+        "significant_prompts": {"type": "array", "maxItems": 32, "items": {"$ref": "#/$defs/significantPrompt"}},
+        "execution_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["model", "harness", "effort", "planned_budget", "actual_denominator", "tool_commands"],
+          "properties": {
+            "model": {"$ref": "#/$defs/modelIdentity"},
+            "harness": {"$ref": "#/$defs/harnessIdentity"},
+            "effort": {"type": "object", "additionalProperties": false, "required": ["level", "note"], "properties": {"level": {"enum": ["LOW", "MEDIUM", "HIGH", "XHIGH", "MAX", "CUSTOM", "UNKNOWN"]}, "note": {"type": ["string", "null"], "maxLength": 1024}}},
+            "planned_budget": {"$ref": "#/$defs/budget"},
+            "actual_denominator": {"$ref": "#/$defs/actualDenominator"},
+            "tool_commands": {"type": "array", "maxItems": 128, "items": {"$ref": "#/$defs/toolCommand"}}
+          }
+        },
+        "verification_boundary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["independence_status", "verified_scope", "unverified_scope", "evidence_paths"],
+          "properties": {
+            "independence_status": {"enum": ["NOT_ASSESSED", "SELF_CHECKED", "INDEPENDENTLY_CHECKED"]},
+            "verified_scope": {"type": "array", "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "unverified_scope": {"type": "array", "maxItems": 256, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "evidence_paths": {"$ref": "#/$defs/pathArray"}
+          }
+        },
+        "raw_archive": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "sha256", "bytes", "availability"],
+          "properties": {
+            "path": {"type": "string", "pattern": "^research/raw_runs/archive/"},
+            "sha256": {"$ref": "#/$defs/sha256"},
+            "bytes": {"type": "integer", "minimum": 0},
+            "availability": {"enum": ["PRESENT_LOCAL", "HASH_ONLY_PRUNED"]}
+          }
+        },
+        "output_artifact_paths": {"$ref": "#/$defs/pathArray"},
+        "checkpoint_path": {"$ref": "#/$defs/checkpointPath"},
+        "checkpoint_id": {"$ref": "#/$defs/checkpointId"},
+        "checkpoint_sha256": {"$ref": "#/$defs/sha256"},
+        "claim_dossier_path": {"type": "string", "pattern": "^problems/(active|backlog|closed)/[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"},
+        "claim_dossier_anchor_path": {"$ref": "#/$defs/path"},
+        "claim_dossier_anchor_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "axis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis", "status", "assessor_role_ids", "rationale", "evidence_paths"],
+      "properties": {
+        "axis": {"enum": ["correctness", "novelty", "significance", "independent_verification", "human_rederivation_comprehension", "formalization_coverage", "release_readiness"]},
+        "status": {"enum": ["UNKNOWN", "FAIL", "PARTIAL", "PASS", "NOT_ASSESSED", "OVERLAPS_KNOWN", "DISTINCT_WITHIN_SEARCH_SCOPE", "LIMITED", "MATERIAL", "HIGH", "NOT_RUN", "INCONCLUSIVE", "NONE", "PILOT", "COMPLETE", "NOT_APPLICABLE", "NOT_READY", "CONDITIONAL", "READY_FOR_HUMAN_DECISION"]},
+        "assessor_role_ids": {"$ref": "#/$defs/idArray"},
+        "rationale": {"$ref": "#/$defs/text"},
+        "evidence_paths": {"$ref": "#/$defs/pathArray"}
+      }
+    },
+    "claimAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "assessment_id", "campaign_id", "claim_id", "assessed_at_utc", "axes", "governance_note"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "claim_assessment"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "assessment_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "assessed_at_utc": {"$ref": "#/$defs/timestamp"},
+        "axes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["correctness", "novelty", "significance", "independent_verification", "human_rederivation_comprehension", "formalization_coverage", "release_readiness"],
+          "properties": {
+            "correctness": {"$ref": "#/$defs/axis"},
+            "novelty": {"$ref": "#/$defs/axis"},
+            "significance": {"$ref": "#/$defs/axis"},
+            "independent_verification": {"$ref": "#/$defs/axis"},
+            "human_rederivation_comprehension": {"$ref": "#/$defs/axis"},
+            "formalization_coverage": {"$ref": "#/$defs/axis"},
+            "release_readiness": {"$ref": "#/$defs/axis"}
+          }
+        },
+        "governance_note": {"const": "NO_AXIS_AUTOMATICALLY_PROMOTES_A_CLAIM"}
+      }
+    },
+    "sourceUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "use_id", "campaign_id", "claim_id", "claim_statement_path", "claim_statement_sha256", "claim_hypotheses", "recorded_at_utc", "source_path", "original_sha256", "bibliographic_identity", "version", "anchors", "scope", "interface_search", "relation", "relation_audit"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "source_use"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "use_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "claim_statement_path": {"$ref": "#/$defs/path"},
+        "claim_statement_sha256": {"$ref": "#/$defs/sha256"},
+        "claim_hypotheses": {"$ref": "#/$defs/textArray"},
+        "recorded_at_utc": {"$ref": "#/$defs/timestamp"},
+        "source_path": {"type": "string", "pattern": "^sources/"},
+        "original_sha256": {"$ref": "#/$defs/sha256"},
+        "bibliographic_identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["citation_key", "title", "authors", "identifiers"],
+          "properties": {
+            "citation_key": {"$ref": "#/$defs/id"},
+            "title": {"$ref": "#/$defs/shortText"},
+            "authors": {"$ref": "#/$defs/textArray"},
+            "identifiers": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["scheme", "value"],
+                "properties": {"scheme": {"enum": ["DOI", "MR", "ARXIV", "ISBN", "OTHER"]}, "value": {"$ref": "#/$defs/shortText"}}
+              }
+            }
+          }
+        },
+        "version": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["version_label", "publication_date", "edition"],
+          "properties": {"version_label": {"$ref": "#/$defs/shortText"}, "publication_date": {"type": ["string", "null"], "maxLength": 1024}, "edition": {"type": ["string", "null"], "maxLength": 1024}}
+        },
+        "anchors": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["anchor_type", "locator", "scope_note"],
+            "properties": {"anchor_type": {"enum": ["PAGE", "THEOREM", "PROPOSITION", "LEMMA", "COROLLARY", "SECTION", "EQUATION", "DEFINITION"]}, "locator": {"$ref": "#/$defs/shortText"}, "scope_note": {"$ref": "#/$defs/text"}}
+          }
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_scope", "claim_scope", "used_for", "does_not_establish"],
+          "properties": {"source_scope": {"$ref": "#/$defs/text"}, "claim_scope": {"$ref": "#/$defs/text"}, "used_for": {"$ref": "#/$defs/textArray"}, "does_not_establish": {"$ref": "#/$defs/textArray"}}
+        },
+        "interface_search": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["hypotheses", "outputs", "invariants", "representations", "known_bottlenecks", "candidate_bridge_obligations"],
+          "properties": {
+            "hypotheses": {"type": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "outputs": {"type": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "invariants": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "representations": {"type": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "known_bottlenecks": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}},
+            "candidate_bridge_obligations": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"$ref": "#/$defs/shortText"}}
+          }
+        },
+        "relation": {"enum": ["EQUIVALENT", "SPECIALIZATION", "GENERALIZATION", "STRENGTHENING", "IMPLIES", "ANALOGY", "LANGUAGE_TRANSLATION", "NAVIGATION_CITATION", "PRIMARY_SOURCE", "UNRESOLVED"]},
+        "relation_audit": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["audited_relation", "auditor_role_id", "source_scope", "claim_scope", "hypothesis_delta", "conclusion_delta", "translation_map_path", "evidence_paths"],
+              "properties": {"audited_relation": {"enum": ["EQUIVALENT", "SPECIALIZATION", "GENERALIZATION", "STRENGTHENING", "IMPLIES", "LANGUAGE_TRANSLATION"]}, "auditor_role_id": {"$ref": "#/$defs/id"}, "source_scope": {"$ref": "#/$defs/text"}, "claim_scope": {"$ref": "#/$defs/text"}, "hypothesis_delta": {"$ref": "#/$defs/text"}, "conclusion_delta": {"$ref": "#/$defs/text"}, "translation_map_path": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/path"}]}, "evidence_paths": {"$ref": "#/$defs/pathArray"}}
+            }
+          ]
+        }
+      }
+    },
+    "verificationCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "coverage_id", "campaign_id", "claim_id", "recorded_at_utc", "coverage_matrix", "formal_theorem_scope", "environment", "axioms", "external_certificates", "replay"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "verification_coverage"},
+        "problem_id": {"$ref": "#/$defs/id"},
+        "coverage_id": {"$ref": "#/$defs/id"},
+        "campaign_id": {"$ref": "#/$defs/id"},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "recorded_at_utc": {"$ref": "#/$defs/timestamp"},
+        "coverage_matrix": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["obligation_id", "informal_scope", "method", "status", "uncovered_scope", "evidence_paths"],
+            "properties": {"obligation_id": {"$ref": "#/$defs/id"}, "informal_scope": {"$ref": "#/$defs/text"}, "method": {"enum": ["HUMAN_PROOF", "FORMAL", "COMPUTATION", "EXTERNAL_CERTIFICATE", "MIXED"]}, "status": {"enum": ["UNCOVERED", "PARTIAL", "COVERED", "CONTESTED"]}, "uncovered_scope": {"type": ["string", "null"], "maxLength": 16384}, "evidence_paths": {"$ref": "#/$defs/pathArray"}}
+          }
+        },
+        "formal_theorem_scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "declarations", "excluded_scope", "correspondence_audit_paths"],
+          "properties": {
+            "status": {"enum": ["NONE", "PARTIAL", "COMPLETE"]},
+            "declarations": {
+              "type": "array",
+              "maxItems": 64,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["declaration_id", "exact_type_path", "encoded_scope"],
+                "properties": {"declaration_id": {"$ref": "#/$defs/id"}, "exact_type_path": {"$ref": "#/$defs/path"}, "encoded_scope": {"$ref": "#/$defs/text"}}
+              }
+            },
+            "excluded_scope": {"type": "array", "maxItems": 256, "items": {"$ref": "#/$defs/shortText"}},
+            "correspondence_audit_paths": {"$ref": "#/$defs/pathArray"}
+          }
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["tools", "libraries"],
+          "properties": {
+            "tools": {"$ref": "#/$defs/versionedEnvironmentItems"},
+            "libraries": {"$ref": "#/$defs/versionedEnvironmentItems"}
+          }
+        },
+        "axioms": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "classification", "scope", "evidence_paths"],
+            "properties": {"name": {"$ref": "#/$defs/shortText"}, "classification": {"enum": ["DECLARED", "IMPORTED", "UNKNOWN"]}, "scope": {"$ref": "#/$defs/text"}, "evidence_paths": {"$ref": "#/$defs/pathArray"}}
+          }
+        },
+        "external_certificates": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["certificate_id", "issuer", "scope", "local_path", "original_sha256", "verification_status"],
+            "properties": {"certificate_id": {"$ref": "#/$defs/id"}, "issuer": {"$ref": "#/$defs/shortText"}, "scope": {"$ref": "#/$defs/text"}, "local_path": {"$ref": "#/$defs/path"}, "original_sha256": {"$ref": "#/$defs/sha256"}, "verification_status": {"enum": ["UNCHECKED", "VERIFIED", "REJECTED"]}}
+          }
+        },
+        "replay": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "procedure_manifest_path", "inputs", "output_paths", "tool_versions_bound"],
+          "properties": {
+            "status": {"enum": ["NOT_RUN", "PASS", "FAIL", "PARTIAL"]},
+            "procedure_manifest_path": {"$ref": "#/$defs/path"},
+            "inputs": {"type": "array", "maxItems": 128, "items": {"type": "object", "additionalProperties": false, "required": ["path", "sha256"], "properties": {"path": {"$ref": "#/$defs/path"}, "sha256": {"$ref": "#/$defs/sha256"}}}},
+            "output_paths": {"$ref": "#/$defs/pathArray"},
+            "tool_versions_bound": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "versionedEnvironmentItems": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "version", "role"],
+        "properties": {"name": {"$ref": "#/$defs/shortText"}, "version": {"$ref": "#/$defs/shortText"}, "role": {"$ref": "#/$defs/shortText"}}
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_at_utc", "reviewer_role_ids", "scope_note"],
+      "properties": {"status": {"const": "REVIEWED"}, "reviewed_at_utc": {"$ref": "#/$defs/timestamp"}, "reviewer_role_ids": {"$ref": "#/$defs/idArray"}, "scope_note": {"$ref": "#/$defs/text"}}
+    },
+    "claimStatementBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "claim_statement_version", "claim_statement_path", "claim_statement_sha256"],
+      "properties": {
+        "claim_id": {"$ref": "#/$defs/id"},
+        "claim_statement_version": {"$ref": "#/$defs/shortText"},
+        "claim_statement_path": {"$ref": "#/$defs/path"},
+        "claim_statement_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "humanFeedbackTrigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["triggered_by_role_id", "triggered_at_utc", "disclosure_scope", "follow_up_owner_role_id"],
+      "properties": {
+        "triggered_by_role_id": {"$ref": "#/$defs/id"},
+        "triggered_at_utc": {"$ref": "#/$defs/timestamp"},
+        "disclosure_scope": {"$ref": "#/$defs/text"},
+        "follow_up_owner_role_id": {"$ref": "#/$defs/id"}
+      }
+    },
+    "expertFeedbackPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "plan_id", "campaign_id", "created_at_utc", "claim_ids", "claim_bindings", "expert_profile", "questions", "package_manifest_path", "package_manifest_sha256", "review", "human_trigger", "execution_state", "no_outbound_action"],
+      "properties": {
+        "schema_version": {"const": 1}, "record_type": {"const": "expert_feedback_plan"}, "problem_id": {"$ref": "#/$defs/id"}, "plan_id": {"$ref": "#/$defs/id"}, "campaign_id": {"$ref": "#/$defs/id"}, "created_at_utc": {"$ref": "#/$defs/timestamp"}, "claim_ids": {"$ref": "#/$defs/idArray"}, "claim_bindings": {"type": "array", "minItems": 1, "maxItems": 128, "items": {"$ref": "#/$defs/claimStatementBinding"}}, "expert_profile": {"$ref": "#/$defs/text"}, "questions": {"$ref": "#/$defs/textArray"}, "package_manifest_path": {"type": "string", "pattern": "^research/repository_first/exports/.+/manifest\\.json$"}, "package_manifest_sha256": {"$ref": "#/$defs/sha256"}, "review": {"$ref": "#/$defs/review"}, "human_trigger": {"$ref": "#/$defs/humanFeedbackTrigger"}, "execution_state": {"const": "LOCAL_ONLY_NOT_SENT"}, "no_outbound_action": {"const": true}
+      }
+    },
+    "expertFeedbackResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "problem_id", "response_id", "campaign_id", "plan_id", "received_at_utc", "ingest_mode", "original_path", "original_sha256", "observations_path", "claim_implications", "automatic_claim_promotion", "no_outbound_action"],
+      "properties": {
+        "schema_version": {"const": 1}, "record_type": {"const": "expert_feedback_response"}, "problem_id": {"$ref": "#/$defs/id"}, "response_id": {"$ref": "#/$defs/id"}, "campaign_id": {"$ref": "#/$defs/id"}, "plan_id": {"$ref": "#/$defs/id"}, "received_at_utc": {"$ref": "#/$defs/timestamp"}, "ingest_mode": {"const": "USER_PROVIDED_LOCAL_IMPORT"}, "original_path": {"$ref": "#/$defs/path"}, "original_sha256": {"$ref": "#/$defs/sha256"}, "observations_path": {"$ref": "#/$defs/path"},
+        "claim_implications": {"type": "array", "minItems": 1, "maxItems": 128, "items": {"type": "object", "additionalProperties": false, "required": ["finding_id", "claim_id", "claim_statement_version", "claim_statement_path", "claim_statement_sha256", "recommendation", "rationale"], "properties": {"finding_id": {"$ref": "#/$defs/id"}, "claim_id": {"$ref": "#/$defs/id"}, "claim_statement_version": {"$ref": "#/$defs/shortText"}, "claim_statement_path": {"$ref": "#/$defs/path"}, "claim_statement_sha256": {"$ref": "#/$defs/sha256"}, "recommendation": {"enum": ["NO_CHANGE", "RECHECK", "CHALLENGE", "SUPPORT"]}, "rationale": {"$ref": "#/$defs/text"}}}},
+        "automatic_claim_promotion": {"const": false}, "no_outbound_action": {"const": true}
+      }
+    },
+    "exportFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "purpose"],
+      "properties": {"path": {"$ref": "#/$defs/path"}, "sha256": {"$ref": "#/$defs/sha256"}, "bytes": {"type": "integer", "minimum": 0}, "purpose": {"$ref": "#/$defs/shortText"}}
+    },
+    "exportPackageManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "export_id", "created_at_utc", "package_root", "purpose", "claim_ids", "claim_bindings", "source_checkpoint_paths", "review", "included_files", "exclusions", "no_outbound_action", "automatic_claim_promotion", "manifest_payload_sha256"],
+      "properties": {
+        "schema_version": {"const": 1}, "record_type": {"const": "export_package_manifest"}, "export_id": {"$ref": "#/$defs/id"}, "created_at_utc": {"$ref": "#/$defs/timestamp"}, "package_root": {"type": "string", "pattern": "^research/repository_first/exports/[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"}, "purpose": {"$ref": "#/$defs/text"}, "claim_ids": {"$ref": "#/$defs/idArray"}, "claim_bindings": {"type": "array", "minItems": 1, "maxItems": 128, "items": {"$ref": "#/$defs/claimStatementBinding"}}, "source_checkpoint_paths": {"type": "array", "minItems": 1, "maxItems": 128, "uniqueItems": true, "items": {"$ref": "#/$defs/checkpointPath"}}, "review": {"$ref": "#/$defs/review"}, "included_files": {"type": "array", "minItems": 1, "maxItems": 256, "items": {"$ref": "#/$defs/exportFile"}},
+        "exclusions": {"type": "object", "additionalProperties": false, "required": ["raw_archives", "credentials", "hidden_prompts", "chain_of_thought", "outbound_actions"], "properties": {"raw_archives": {"const": true}, "credentials": {"const": true}, "hidden_prompts": {"const": true}, "chain_of_thought": {"const": true}, "outbound_actions": {"const": true}}},
+        "no_outbound_action": {"const": true}, "automatic_claim_promotion": {"const": false}, "manifest_payload_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "effectivenessObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "observation_id", "recorded_at_utc", "period", "collection_boundaries", "source_records", "source_set_sha256", "metrics", "axis_status_counts", "denominator_unknown_counts", "limitations"],
+      "properties": {
+        "schema_version": {"const": 1}, "record_type": {"const": "effectiveness_observation"}, "observation_id": {"$ref": "#/$defs/id"}, "recorded_at_utc": {"$ref": "#/$defs/timestamp"},
+        "period": {"type": "object", "additionalProperties": false, "required": ["start", "end"], "properties": {"start": {"$ref": "#/$defs/date"}, "end": {"$ref": "#/$defs/date"}}},
+        "collection_boundaries": {"type": "object", "additionalProperties": false, "required": ["mode", "lab_local_only", "telemetry", "background_process", "fleet_scan"], "properties": {"mode": {"const": "EXPLICIT_PASSIVE_LOCAL_SNAPSHOT"}, "lab_local_only": {"const": true}, "telemetry": {"const": false}, "background_process": {"const": false}, "fleet_scan": {"const": false}}},
+        "source_records": {"type": "array", "maxItems": 4096, "items": {"type": "object", "additionalProperties": false, "required": ["path", "sha256", "record_type"], "properties": {"path": {"$ref": "#/$defs/path"}, "sha256": {"$ref": "#/$defs/sha256"}, "record_type": {"enum": ["campaign", "phase_change", "adjacent_result", "failure_family", "raw_run_manifest", "claim_assessment", "source_use", "verification_coverage", "expert_feedback_plan", "expert_feedback_response"]}}}},
+        "source_set_sha256": {"$ref": "#/$defs/sha256"},
+        "metrics": {"type": "object", "additionalProperties": false, "required": ["campaign", "phase_change", "adjacent_result", "failure_family", "raw_run_manifest", "claim_assessment", "source_use", "verification_coverage", "expert_feedback_plan", "expert_feedback_response", "total_records", "raw_checkpoint_links", "raw_dossier_links"], "properties": {"campaign": {"type": "integer", "minimum": 0}, "phase_change": {"type": "integer", "minimum": 0}, "adjacent_result": {"type": "integer", "minimum": 0}, "failure_family": {"type": "integer", "minimum": 0}, "raw_run_manifest": {"type": "integer", "minimum": 0}, "claim_assessment": {"type": "integer", "minimum": 0}, "source_use": {"type": "integer", "minimum": 0}, "verification_coverage": {"type": "integer", "minimum": 0}, "expert_feedback_plan": {"type": "integer", "minimum": 0}, "expert_feedback_response": {"type": "integer", "minimum": 0}, "total_records": {"type": "integer", "minimum": 0}, "raw_checkpoint_links": {"type": "integer", "minimum": 0}, "raw_dossier_links": {"type": "integer", "minimum": 0}}},
+        "axis_status_counts": {"type": "array", "maxItems": 128, "items": {"type": "object", "additionalProperties": false, "required": ["axis", "status", "count"], "properties": {"axis": {"enum": ["correctness", "novelty", "significance", "independent_verification", "human_rederivation_comprehension", "formalization_coverage", "release_readiness"]}, "status": {"type": "string", "minLength": 1}, "count": {"type": "integer", "minimum": 0}}}},
+        "denominator_unknown_counts": {"type": "object", "additionalProperties": false, "required": ["vector", "model", "harness"], "properties": {"vector": {"type": "integer", "minimum": 0}, "model": {"type": "integer", "minimum": 0}, "harness": {"type": "integer", "minimum": 0}}},
+        "limitations": {"$ref": "#/$defs/textArray"}
+      }
+    }
+  }
+}

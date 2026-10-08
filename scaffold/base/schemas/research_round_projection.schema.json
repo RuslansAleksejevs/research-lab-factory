@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/research_round_projection.schema.json",
+  "title": "Bounded Control Room Research Round Projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "round_id",
+    "lab_id",
+    "action_id",
+    "action_version",
+    "generated_at",
+    "status",
+    "summary",
+    "changed_paths",
+    "checkpoint_path",
+    "blockers",
+    "next_step",
+    "source_digest_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "round_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "lab_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "action_id": {"const": "run-rounds.v1"},
+    "action_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "minLength": 1, "maxLength": 64},
+    "status": {
+      "enum": ["CHECKPOINTED", "COMPLETED", "PARTIAL", "BLOCKED", "FAILED", "CANCELLED"]
+    },
+    "summary": {"type": "string", "minLength": 1, "maxLength": 4096},
+    "changed_paths": {
+      "type": "array",
+      "maxItems": 128,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"
+      }
+    },
+    "checkpoint_path": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "string",
+          "pattern": "^research/checkpoints/(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"
+        }
+      ]
+    },
+    "blockers": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {"type": "string", "minLength": 1, "maxLength": 1024}
+    },
+    "next_step": {"type": "string", "maxLength": 2048},
+    "source_digest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

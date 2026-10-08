@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "record_type": "verifier_exposure",
+  "problem_id": "eval-valid-verified-proof",
+  "target_id": "EVAL-TARGET-REFLEXIVITY-v1",
+  "target_sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9",
+  "candidate_id": "EVAL-REFLEXIVITY-v1",
+  "candidate_sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c",
+  "verifier_id": "EVAL-VERIFIER-1",
+  "originating_run_ids": ["EVAL-GENERATOR-1"],
+  "material_repair_run_ids": [],
+  "audit_packet": "evals/regression/proof_search_valid_states/artifacts/audit_packet.json",
+  "audit_packet_sha256": "22404c00c05c1a48479332dd1915c6958507b819cac2d88923155957c56ec86c",
+  "packet_entries": [
+    {"role": "target", "path": "evals/regression/proof_search_valid_states/artifacts/target.md", "sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9"},
+    {"role": "candidate", "path": "evals/regression/proof_search_valid_states/artifacts/candidate.md", "sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c"},
+    {"role": "candidate_lineage", "path": "evals/regression/proof_search_valid_states/artifacts/candidate_lineage.md", "sha256": "bf5a5f25dcda610667c87e5facdd1adf76c37eed600504c39eeadfac5d0f4a98"},
+    {"role": "proof_obligations", "path": "evals/regression/proof_search_valid_states/artifacts/proof_obligations.md", "sha256": "cfe49884713b4bf155d0172fccaddb27bf520398d3db66780bc56990d1377b0d"},
+    {"role": "proof_obligations_manifest", "path": "evals/regression/proof_search_valid_states/artifacts/proof_obligations_manifest.json", "sha256": "5c07efbd6b418e1b817eba98a1416b98ba50193d6611220c9c1284747c087632"},
+    {"role": "source_audit", "path": "evals/regression/proof_search_valid_states/artifacts/source_audit.md", "sha256": "9e359d557d57d8d0e257e5072f91d8eee7ad2614e39e7e60bde64bbd49ad2ce0"},
+    {"role": "source_audit_manifest", "path": "evals/regression/proof_search_valid_states/artifacts/source_audit_manifest.json", "sha256": "7b568e8aff8d38a0158614ae51b944ef1cda59cfffaee70f61a2f54e421dc6e0"},
+    {"role": "attack_surface_exit", "path": "evals/regression/proof_search_valid_states/artifacts/attack_surface.md", "sha256": "33dc3b3cb5edbda3cfb4b7a25a28371dca9a9495f32de454263d8c0003ae6fa5"},
+    {"role": "attack_surface_exit_manifest", "path": "evals/regression/proof_search_valid_states/artifacts/attack_surface_exit_manifest.json", "sha256": "78ae073357105ef814c261e6b6e95a832ef26358d9fbcedcc288b6c0e025c676"},
+    {"role": "dependency_snapshot", "path": "evals/regression/proof_search_valid_states/artifacts/dependency_snapshot.json", "sha256": "e78c6b73b3d0dfc28f6faa566c7bab6f30bb255cb65750b863ef79e02433b43b"}
+  ],
+  "exposure_log": "evals/regression/proof_search_valid_states/verifier_reports/exposure_log.md",
+  "exposure_log_sha256": "23c53f8cc6de2a8db55cbdc006e052fb87f4f23769eae4dbb62e55e1f6f8bc69",
+  "material_withheld": [
+    "generator discussion and optimism",
+    "intended repairs"
+  ],
+  "assigned_by": "EVAL-ROOT-1",
+  "assigned_at": "2026-07-10T00:00:00Z"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_type": "redirected_wave_waiver",
+  "problem_id": "eval-valid-exhausted-waiver",
+  "target_id": "EVAL-TARGET-EXHAUSTION-v1",
+  "target_sha256": "43a6052952a0c513f18c5bbcd87b71bb41615957495aa23200b578fcc6bda7fd",
+  "reason": "The exact fixture contract exposes only one admissible mechanism.",
+  "initial_wave_manifest": "evals/regression/proof_search_valid_states/artifacts/initial_wave_manifest.json",
+  "initial_wave_manifest_sha256": "c9cd4da7474d66709db7ddb3b005d81d1bd0f0da7f18699cddcb97abfca45268",
+  "evidence": "evals/regression/proof_search_valid_states/artifacts/waiver_assessment.json",
+  "evidence_sha256": "f000ebdc9a27fcb1b768e32d61221f53a7d7e4e446cb0c6ed9ad2de226b6cda9",
+  "unavailable_operators": [
+    "REPRESENTATION_CHANGE",
+    "STRUCTURAL_DECOMPOSITION",
+    "INVARIANT_OBSTRUCTION",
+    "DUALITY_ADJUNCTION",
+    "LOCAL_TO_GLOBAL",
+    "MINIMAL_WITNESS",
+    "COMPUTATIONAL_MICROEXPERIMENT",
+    "HYPOTHESIS_ABLATION",
+    "SOURCE_THEOREM_MINING",
+    "CHECKER_FORMALIZATION",
+    "SYNTHESIS_NEW_COMPATIBILITY"
+  ],
+  "waiver_assessment": "evals/regression/proof_search_valid_states/artifacts/waiver_assessment.json",
+  "waiver_assessment_sha256": "f000ebdc9a27fcb1b768e32d61221f53a7d7e4e446cb0c6ed9ad2de226b6cda9"
+}

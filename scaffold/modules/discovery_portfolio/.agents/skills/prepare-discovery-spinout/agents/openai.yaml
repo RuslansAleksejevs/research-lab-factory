@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Discovery Spin-out"
+  short_description: "Freeze a no-delete standalone-lab seed"
+  default_prompt: "Use $prepare-discovery-spinout to prepare a reviewed hash-bound seed without creating the sibling laboratory."

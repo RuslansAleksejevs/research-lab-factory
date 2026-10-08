@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "promotion_id": "replace-with-promotion-id",
+  "to_tier": "TRIAL",
+  "decided_at": "2026-01-01T00:00:00Z",
+  "decided_by": ["replace-with-member-id"],
+  "rationale": "Why this exact candidate earns the next allocation tier.",
+  "supporting_artifact_paths": [],
+  "funnel_observation": {
+    "observed_pool_size": 1,
+    "observed_selected_size": 1,
+    "deviation_rationale": null
+  }
+}

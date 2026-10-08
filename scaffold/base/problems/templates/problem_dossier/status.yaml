@@ -1,0 +1,15 @@
+{
+  "problem_id": "{{PROBLEM_ID}}",
+  "title": "{{TITLE}}",
+  "track": "{{TRACK}}",
+  "status": "UNKNOWN",
+  "research_level": null,
+  "created": "{{DATE}}",
+  "last_update": "{{DATE}}",
+  "verifier_report_required_before_verified": true,
+  "context_envelope": "context_envelope.md",
+  "approach_registry": "approach_registry.md",
+  "attack_surface": "attack_surface.md",
+  "proof_search_state": "proof_search_state.yaml",
+  "candidate_lineage": "candidate_lineage.md"
+}

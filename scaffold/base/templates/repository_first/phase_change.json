@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "record_type": "phase_change",
+  "problem_id": "replace-problem-id",
+  "change_id": "replace-phase-change-id",
+  "campaign_id": "replace-campaign-id",
+  "sequence": 1,
+  "previous_change_id": null,
+  "from_phase": "BREADTH_SEARCH",
+  "to_phase": "MECHANISM_DEVELOPMENT",
+  "changed_at_utc": "2026-01-01T01:00:00Z",
+  "changed_by_role_id": "human-owner",
+  "transition_kind": "PROGRESS",
+  "input_artifact_paths": ["problems/active/replace-problem-id/attempts/replace-input.md"],
+  "active_role_ids": ["research-operator"],
+  "budget": {
+    "input_token_budget": 100000,
+    "output_token_budget": 30000,
+    "reasoning_token_budget": null,
+    "wall_time_seconds": 7200,
+    "tool_call_budget": 100,
+    "unknown_reason": "The harness does not expose a separate reasoning-token budget."
+  },
+  "exit_condition": "Stop after one discriminating mechanism test or a checkpointed obstruction.",
+  "prior_failure_family_ids": [],
+  "search_policy_delta": null,
+  "reason": "The breadth phase produced one bounded mechanism worth testing.",
+  "checkpoint_path": "research/checkpoints/replace-checkpoint.md"
+}

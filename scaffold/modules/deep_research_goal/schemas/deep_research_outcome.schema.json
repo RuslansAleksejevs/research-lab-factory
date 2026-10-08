@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/deep_research_outcome.schema.json",
+  "title": "Deep Research Outcome Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "goal_id",
+    "plan_sha256",
+    "outcome_id",
+    "recorded_at",
+    "outcome_class",
+    "strict_uncertainty_reduction",
+    "semantic_delta",
+    "verification",
+    "compute"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "goal_id": {"$ref": "#/$defs/id"},
+    "plan_sha256": {"$ref": "#/$defs/sha256"},
+    "outcome_id": {"$ref": "#/$defs/id"},
+    "recorded_at": {"$ref": "#/$defs/timestamp"},
+    "outcome_class": {
+      "enum": [
+        "VERIFIED_PROOF",
+        "VERIFIED_REFUTATION",
+        "EXACT_LEMMA",
+        "CHECKED_COUNTEREXAMPLE",
+        "DECISIVE_BARRIER",
+        "NO_STRICT_REDUCTION"
+      ]
+    },
+    "strict_uncertainty_reduction": {"type": "boolean"},
+    "semantic_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["discharged", "falsified", "narrowed", "left_open"],
+      "properties": {
+        "discharged": {"$ref": "#/$defs/textList"},
+        "falsified": {"$ref": "#/$defs/textList"},
+        "narrowed": {"$ref": "#/$defs/textList"},
+        "left_open": {"$ref": "#/$defs/textList"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_paths",
+        "generator_ids",
+        "material_reviser_ids",
+        "verifier_ids",
+        "decisive_verifier_independent",
+        "independence_level",
+        "kernel_state_path",
+        "remaining_highest_gap"
+      ],
+      "properties": {
+        "evidence_paths": {
+          "type": "array",
+          "maxItems": 128,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/path"}
+        },
+        "verifier_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/singleLine"}
+        },
+        "generator_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/singleLine"}
+        },
+        "material_reviser_ids": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/singleLine"}
+        },
+        "decisive_verifier_independent": {"type": "boolean"},
+        "independence_level": {
+          "oneOf": [
+            {"type": "null"},
+            {"enum": ["I2", "I3"]}
+          ]
+        },
+        "kernel_state_path": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/$defs/path"}
+          ]
+        },
+        "remaining_highest_gap": {
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/$defs/text"}
+          ]
+        }
+      }
+    },
+    "compute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "elapsed_wall_seconds",
+        "verification_wall_seconds",
+        "model_attempts",
+        "route_attempts",
+        "route_ids_attempted",
+        "verifier_attempts",
+        "candidate_appeared",
+        "usage_source",
+        "input_tokens",
+        "output_tokens"
+      ],
+      "properties": {
+        "elapsed_wall_seconds": {"type": "integer", "minimum": 1},
+        "verification_wall_seconds": {"type": "integer", "minimum": 0},
+        "model_attempts": {"type": "integer", "minimum": 0},
+        "route_attempts": {"type": "integer", "minimum": 0},
+        "route_ids_attempted": {
+          "type": "array",
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/id"}
+        },
+        "verifier_attempts": {"type": "integer", "minimum": 0},
+        "candidate_appeared": {"type": "boolean"},
+        "usage_source": {
+          "enum": ["OUTER_RUNNER_REPORTED", "USER_RECORDED", "UNAVAILABLE"]
+        },
+        "input_tokens": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "integer", "minimum": 0}
+          ]
+        },
+        "output_tokens": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "integer", "minimum": 0}
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "singleLine": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "pattern": "^[^\\u0000-\\u001F\\u007F]+$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 12000
+    },
+    "textList": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/text"}
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    }
+  }
+}

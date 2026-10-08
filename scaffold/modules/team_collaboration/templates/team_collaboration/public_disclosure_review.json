@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "public_repository_disclosure_review",
+  "plan_sha256": "FILL_64_LOWERCASE_HEX",
+  "reviewed_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "approved_by_member_ids": ["FILL_ALL_MEMBER_IDS"],
+  "decision": "APPROVED",
+  "checks": {
+    "no_credentials_or_secrets": true,
+    "rights_to_publish": true,
+    "private_material_removed": true,
+    "research_exposure_intentionally_approved": true
+  }
+}
+

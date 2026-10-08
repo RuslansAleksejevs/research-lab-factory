@@ -1,0 +1,33 @@
+{
+  "members": [
+    {
+      "display_name": "FILL_FROM_PROFILE",
+      "github_handle": null,
+      "id": "member_one",
+      "role": "STEWARD"
+    },
+    {
+      "display_name": "FILL_FROM_PROFILE",
+      "github_handle": null,
+      "id": "member_two",
+      "role": "CO_OWNER"
+    }
+  ],
+  "steward_id": "member_one",
+  "governance": {
+    "research_decisions": "CONSENSUS",
+    "spinout_decisions": "CONSENSUS",
+    "publication_decisions": "CONSENSUS",
+    "process_decisions": "STEWARD"
+  },
+  "authorship_policy": "ALL_MEMBERS_EXPECTED_COAUTHORS",
+  "integration_mode": "PULL_REQUEST",
+  "cycle_policy": "MEETING_REAUTHORIZED",
+  "meeting_capture": "MANUAL_SUMMARY_REVISIT_AFTER_FIRST_CYCLE",
+  "repository": {
+    "provider": "GITHUB",
+    "setup_state": "NOT_CONFIGURED",
+    "visibility": "UNDECIDED"
+  }
+}
+

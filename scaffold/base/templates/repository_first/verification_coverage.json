@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "record_type": "verification_coverage",
+  "problem_id": "replace-problem-id",
+  "coverage_id": "replace-coverage-id",
+  "campaign_id": "replace-campaign-id",
+  "claim_id": "replace-target-claim-id",
+  "recorded_at_utc": "2026-01-01T06:00:00Z",
+  "coverage_matrix": [
+    {
+      "obligation_id": "replace-obligation-id",
+      "informal_scope": "Replace with one exact informal proof obligation.",
+      "method": "HUMAN_PROOF",
+      "status": "UNCOVERED",
+      "uncovered_scope": "Replace with the exact remaining gap.",
+      "evidence_paths": ["problems/active/replace-problem-id/proof_obligations.md"]
+    }
+  ],
+  "formal_theorem_scope": {
+    "status": "NONE",
+    "declarations": [],
+    "excluded_scope": ["The target has not been encoded."],
+    "correspondence_audit_paths": []
+  },
+  "environment": {
+    "tools": [{"name": "replace-tool", "version": "replace-version", "role": "Replace exact verification role"}],
+    "libraries": []
+  },
+  "axioms": [
+    {
+      "name": "replace-assumption-or-axiom",
+      "classification": "UNKNOWN",
+      "scope": "Replace with the exact scope and trusted boundary.",
+      "evidence_paths": ["problems/active/replace-problem-id/assumptions.md"]
+    }
+  ],
+  "external_certificates": [],
+  "replay": {
+    "status": "NOT_RUN",
+    "procedure_manifest_path": "problems/active/replace-problem-id/computations/replace-replay-manifest.json",
+    "inputs": [],
+    "output_paths": [],
+    "tool_versions_bound": false
+  }
+}

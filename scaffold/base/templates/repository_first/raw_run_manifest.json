@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "record_type": "raw_run_manifest",
+  "problem_id": "replace-problem-id",
+  "run_id": "replace-run-id",
+  "campaign_id": "replace-campaign-id",
+  "role_id": "research-operator",
+  "phase": "BREADTH_SEARCH",
+  "started_at_utc": "2026-01-01T01:00:00Z",
+  "completed_at_utc": "2026-01-01T02:00:00Z",
+  "outcome_class": "INCONCLUSIVE",
+  "claim_ids": ["replace-target-claim-id"],
+  "significant_prompts": [
+    {
+      "prompt_class": "LAB_AUTHORED_ACTION_PROMPT",
+      "path": "problems/active/replace-problem-id/repository_first/prompts/replace-action-prompt.md",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "execution_provenance": {
+    "model": {
+      "model_id": "replace-model-id",
+      "version_status": "UNKNOWN",
+      "exact_version": null,
+      "unknown_reason": "The exact served model revision was not exposed."
+    },
+    "harness": {
+      "harness_id": "replace-local-harness",
+      "version_status": "EXACT",
+      "exact_version": "replace-version",
+      "unknown_reason": null
+    },
+    "effort": {"level": "HIGH", "note": null},
+    "planned_budget": {
+      "input_token_budget": 100000,
+      "output_token_budget": 30000,
+      "reasoning_token_budget": null,
+      "wall_time_seconds": 7200,
+      "tool_call_budget": 100,
+      "unknown_reason": "The harness does not expose a separate reasoning-token budget."
+    },
+    "actual_denominator": {
+      "input_tokens": 40000,
+      "output_tokens": 10000,
+      "reasoning_tokens": null,
+      "wall_time_seconds": 3600,
+      "tool_calls": 20,
+      "model_invocations": 2,
+      "harness_runs": 1,
+      "unknown_fields": ["reasoning_tokens"]
+    },
+    "tool_commands": [
+      {
+        "tool_id": "replace-local-tool",
+        "version_status": "EXACT",
+        "exact_version": "replace-version",
+        "unknown_reason": null,
+        "invocation_count": 20,
+        "command_manifest_path": "problems/active/replace-problem-id/computations/replace-command-manifest.json",
+        "command_manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "verification_boundary": {
+    "independence_status": "NOT_ASSESSED",
+    "verified_scope": [],
+    "unverified_scope": ["The proposed mechanism has not received independent verification."],
+    "evidence_paths": []
+  },
+  "raw_archive": {
+    "path": "research/raw_runs/archive/replace-problem-id/replace-run-id.jsonl",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 0,
+    "availability": "HASH_ONLY_PRUNED"
+  },
+  "output_artifact_paths": ["problems/active/replace-problem-id/attempts/replace-run.md"],
+  "checkpoint_path": "research/checkpoints/replace-checkpoint.md",
+  "checkpoint_id": "replace-checkpoint",
+  "checkpoint_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "claim_dossier_path": "problems/active/replace-problem-id",
+  "claim_dossier_anchor_path": "problems/active/replace-problem-id/problem.md",
+  "claim_dossier_anchor_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+}

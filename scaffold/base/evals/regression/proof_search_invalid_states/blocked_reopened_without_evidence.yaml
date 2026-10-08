@@ -1,0 +1,103 @@
+{
+  "_expected_failure_fragment": "has authorized reopen basis",
+  "schema_version": 1,
+  "problem_id": "negative-blocked-reopen",
+  "orchestration_profile": null,
+  "mode": null,
+  "global_status": "UNINITIALIZED",
+  "current_round": 1,
+  "information_partitions_recorded": false,
+  "statement_frozen": false,
+  "attack_surface_ready": false,
+  "approach_registry_ready": false,
+  "independent_refutation_active": false,
+  "candidate_route_id": null,
+  "candidate_proof_id": null,
+  "candidate_artifact_sha256": null,
+  "candidate_lineage": {
+    "originating_run_ids": [],
+    "material_repair_run_ids": [],
+    "lineage_artifact": null,
+    "lineage_artifact_sha256": null
+  },
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "id": null,
+    "candidate_id": null,
+    "candidate_artifact_sha256": null,
+    "report_sha256": null,
+    "exposure_log": null,
+    "exposure_log_sha256": null,
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": null,
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_id": null,
+    "candidate_artifact": null,
+    "candidate_artifact_sha256": null,
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": null,
+    "strongest_artifact": null,
+    "exact_remaining_gaps": [],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false,
+    "redirected_wave_waiver": false,
+    "redirected_wave_waiver_reason": null,
+    "redirected_wave_waiver_evidence": null,
+    "initial_wave_report": null,
+    "redirected_wave_report": null
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "silent reopen",
+      "idea_fingerprint": "blocked::silent-reopen::v1",
+      "status": "ACTIVE",
+      "gap_class": "GS3",
+      "independence_lineage": "test",
+      "strongest_artifact": null,
+      "candidate_id": null,
+      "strongest_artifact_sha256": null,
+      "parent_route_ids": [],
+      "inherited_gaps": [],
+      "merged_into": null,
+      "transitions": [
+        {
+          "round": 0,
+          "from_status": null,
+          "to_status": "BLOCKED",
+          "reason": "targeted route blocked",
+          "evidence": "problems/active/example-target/search_rounds/20260710-round-00-architecture-backfill.md",
+          "reopen_basis": null,
+          "reopen_evidence": null
+        },
+        {
+          "round": 1,
+          "from_status": "BLOCKED",
+          "to_status": "ACTIVE",
+          "reason": "more agents requested",
+          "evidence": "problems/active/example-target/search_rounds/20260710-round-00-architecture-backfill.md",
+          "reopen_basis": null,
+          "reopen_evidence": null
+        }
+      ],
+      "exact_gap": "same substantive gap",
+      "source_gate": "OPEN",
+      "verification_gate": "NOT_READY",
+      "novelty_gate": "OPEN",
+      "blocked_reason": null,
+      "reopen_condition": null
+    }
+  ],
+  "last_checkpoint": null
+}

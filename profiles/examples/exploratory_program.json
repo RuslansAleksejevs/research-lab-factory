@@ -1,0 +1,114 @@
+{
+  "bootstrap": {
+    "assumptions": [],
+    "initial_problem": null,
+    "inputs": [],
+    "intake_report": {
+      "ignored_items": [],
+      "unclassified_items": [],
+      "unreadable_items": []
+    },
+    "modules": [
+      "paper",
+      "computation"
+    ],
+    "profile_decisions": [
+      {
+        "basis": "The related tracks share definitions, sources, and one prospective article-level objective.",
+        "classification": "factory_default",
+        "confidence": "high",
+        "field": "lab.kind"
+      },
+      {
+        "basis": "The beginner example omits advanced budgeted campaigns; they can be selected for a later project when useful.",
+        "classification": "factory_default",
+        "confidence": "high",
+        "field": "bootstrap.modules.deep_research_goal"
+      },
+      {
+        "basis": "The example's null initial_problem and unresolved target question explicitly describe an exploratory start.",
+        "classification": "evidence_backed_inference",
+        "confidence": "high",
+        "field": "bootstrap.initial_problem"
+      }
+    ],
+    "unresolved_questions": [
+      "No exact theorem target has yet been selected."
+    ]
+  },
+  "integrations": {
+    "claude_terminal": {
+      "enabled": false
+    }
+  },
+  "lab": {
+    "areas": [
+      "extremal combinatorics",
+      "probabilistic combinatorics"
+    ],
+    "article_title": "",
+    "collaborators": [],
+    "deliverables": [
+      "paper",
+      "computation"
+    ],
+    "directory_name": "Lab — Exploratory Combinatorics Program",
+    "in_scope": [
+      "Structural bounds, extremal witnesses, and finite experiments directly tied to the program."
+    ],
+    "language": "match-user",
+    "mission": "Explore one coherent combinatorial research program and determine which precise article-level claim is viable.",
+    "out_of_scope": [
+      "Independent combinatorics projects without shared definitions or sources."
+    ],
+    "owners": [
+      "Researcher"
+    ],
+    "title": "Exploratory Combinatorics Research Laboratory"
+  },
+  "research": {
+    "central_questions": [
+      "Which structural hypothesis yields the sharpest provable bound?"
+    ],
+    "conventions": [
+      "All finite parameter ranges must be stated explicitly."
+    ],
+    "default_track": "structure",
+    "required_checks": [
+      "quantifiers",
+      "parameter ranges",
+      "small and extremal cases",
+      "asymptotic constants",
+      "source dependencies"
+    ],
+    "source_priorities": [
+      "primary papers",
+      "reproducible computation records"
+    ],
+    "specialist_roles": [
+      {
+        "checks": [
+          "sharpness",
+          "boundary cases",
+          "hidden asymptotic assumptions"
+        ],
+        "description": "Check structural and extremal combinatorics arguments.",
+        "id": "combinatorics_specialist"
+      }
+    ],
+    "terminology": [],
+    "tracks": [
+      {
+        "description": "Deterministic structural arguments.",
+        "id": "structure",
+        "title": "Structural route"
+      },
+      {
+        "description": "Witness and counterexample construction.",
+        "id": "examples",
+        "title": "Extremal examples"
+      }
+    ]
+  },
+  "schema_version": 1
+}

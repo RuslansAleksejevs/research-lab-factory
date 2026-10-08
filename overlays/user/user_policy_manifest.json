@@ -1,0 +1,24 @@
+{
+  "portable_sections": [
+    {
+      "id": "workspace-communication-preference",
+      "marker": "workspace-communication-preference:v1",
+      "revision": 1
+    },
+    {
+      "id": "practical-research-workflow",
+      "marker": "practical-research-workflow:v1",
+      "revision": 1
+    }
+  ],
+  "portable_view": {
+    "factory_path": "overlays/user/AGENTS.user.md",
+    "lab_path": "USER_PREFERENCES.md",
+    "sha256": "1c051ce4c7490988fa272b0e2383d287641fae4b33cbadef9d77441faac6bc03"
+  },
+  "private_exclusions": [],
+  "profile_id": "public-research-policy",
+  "revision": 1,
+  "schema_version": 1,
+  "significant_quotes_policy": "OUTSIDE_PORTABLE_OVERLAY"
+}

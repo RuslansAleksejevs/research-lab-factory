@@ -1,0 +1,17 @@
+import {{PINNED_IMPORT_MODULE}}
+
+namespace {{NAMESPACE}}
+
+/-!
+This file is intentionally not valid Lean until every template token is
+rendered. The declaration type must match `formalization_contract.yaml`
+exactly. Proof admissions and unauthorized trust escapes are forbidden.
+-/
+
+theorem {{DECLARATION_NAME}} : {{EXACT_FORMAL_TYPE}} := by
+  {{PROOF_TERM_WITHOUT_ADMISSIONS}}
+
+#print {{NAMESPACE}}.{{DECLARATION_NAME}}
+#print axioms {{NAMESPACE}}.{{DECLARATION_NAME}}
+
+end {{NAMESPACE}}

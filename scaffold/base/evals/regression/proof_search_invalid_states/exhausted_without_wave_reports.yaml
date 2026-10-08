@@ -1,0 +1,96 @@
+{
+  "_expected_failure_fragment": "exhausted state has typed initial-wave report",
+  "schema_version": 1,
+  "problem_id": "negative-exhausted-no-reports",
+  "orchestration_profile": "FULL",
+  "mode": "PROJECT_AWARE",
+  "global_status": "EXHAUSTED_CURRENT_MECHANISMS",
+  "current_round": 2,
+  "information_partitions_recorded": false,
+  "statement_frozen": true,
+  "attack_surface_ready": true,
+  "approach_registry_ready": true,
+  "independent_refutation_active": false,
+  "candidate_route_id": null,
+  "candidate_proof_id": null,
+  "candidate_artifact_sha256": null,
+  "candidate_lineage": {
+    "originating_run_ids": [],
+    "material_repair_run_ids": [],
+    "lineage_artifact": null,
+    "lineage_artifact_sha256": null
+  },
+  "historical_verifiers": [],
+  "independent_verifier": {
+    "id": null,
+    "candidate_id": null,
+    "candidate_artifact_sha256": null,
+    "report_sha256": null,
+    "exposure_log": null,
+    "exposure_log_sha256": null,
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": null,
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_id": null,
+    "candidate_artifact": null,
+    "candidate_artifact_sha256": null,
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": "The recorded mechanisms did not close the target.",
+    "strongest_artifact": "problems/active/example-target/attempts/attempt-1.md",
+    "exact_remaining_gaps": ["The exact comparison theorem remains unavailable."],
+    "exhaustion_rationale": "Fixture claims two waves without preserving their reports.",
+    "redirected_wave_completed": true,
+    "redirected_wave_waiver": false,
+    "redirected_wave_waiver_reason": null,
+    "redirected_wave_waiver_evidence": null,
+    "initial_wave_report": null,
+    "redirected_wave_report": null
+  },
+  "routes": [
+    {
+      "id": "NEG-A1",
+      "family": "blocked route",
+      "idea_fingerprint": "blocked::comparison::v1",
+      "status": "BLOCKED",
+      "gap_class": "GS3",
+      "independence_lineage": "test",
+      "strongest_artifact": "problems/active/example-target/attempts/attempt-1.md",
+      "candidate_id": null,
+      "strongest_artifact_sha256": null,
+      "parent_route_ids": [],
+      "inherited_gaps": [],
+      "merged_into": null,
+      "transitions": [
+        {
+          "round": 0,
+          "from_status": null,
+          "to_status": "BLOCKED",
+          "reason": "comparison theorem missing",
+          "evidence": "problems/active/example-target/search_rounds/20260710-round-00-architecture-backfill.md",
+          "evidence_sha256": "56c592880a91bf171ae6a836b7a006b1c8e262046c5f3e1e193bae9a238d3e11",
+          "reopen_basis": null,
+          "reopen_evidence": null,
+          "reopen_evidence_sha256": null
+        }
+      ],
+      "exact_gap": "comparison theorem missing",
+      "source_gate": "OPEN",
+      "verification_gate": "NOT_READY",
+      "novelty_gate": "NOT_REQUIRED",
+      "blocked_reason": "comparison theorem missing",
+      "reopen_condition": "direct checked closure or exact source"
+    }
+  ],
+  "last_checkpoint": "negative"
+}

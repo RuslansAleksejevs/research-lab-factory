@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "record_type": "redirected_wave_waiver_assessment",
+  "problem_id": null,
+  "target_id": null,
+  "target_sha256": null,
+  "initial_wave_manifest": null,
+  "initial_wave_manifest_sha256": null,
+  "impossibility_claim": null,
+  "operator_assessments": []
+}

@@ -1,0 +1,54 @@
+{
+  "_expected_failure_fragment": "report exists in a verifier-report area",
+  "schema_version": 1,
+  "problem_id": "negative-verifier-report-area",
+  "orchestration_profile": null,
+  "mode": null,
+  "global_status": "UNINITIALIZED",
+  "current_round": 0,
+  "information_partitions_recorded": false,
+  "statement_frozen": false,
+  "attack_surface_ready": false,
+  "approach_registry_ready": false,
+  "independent_refutation_active": false,
+  "candidate_route_id": null,
+  "candidate_proof_id": null,
+  "historical_verifiers": [
+    {
+      "id": "NEG-HIST-V1",
+      "candidate_version": "v1",
+      "independence_level": "I2",
+      "completed": true,
+      "verdict": "PASS",
+      "decisive": false,
+      "report": "workflows/hard_math_search_orchestration.md"
+    }
+  ],
+  "independent_verifier": {
+    "id": null,
+    "candidate_version": null,
+    "required": true,
+    "assigned": false,
+    "independent_of_candidate": null,
+    "independence_level": null,
+    "completed": false,
+    "verdict": null,
+    "report": null
+  },
+  "closure_evidence": {
+    "candidate_version": null,
+    "proof_obligations": null,
+    "source_audit": null,
+    "attack_surface_exit": null
+  },
+  "outcome_record": {
+    "exact_assumptions": [],
+    "strongest_result": null,
+    "strongest_artifact": null,
+    "exact_remaining_gaps": [],
+    "exhaustion_rationale": null,
+    "redirected_wave_completed": false
+  },
+  "routes": [],
+  "last_checkpoint": null
+}

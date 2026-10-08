@@ -1,0 +1,3450 @@
+{
+  "boundary": "Byte consistency and explicit packaging only; no proof of mathematical quality or universal privacy. This manifest records local package assembly, not publication status.",
+  "data_overrides": [
+    {
+      "fields": [
+        "forbidden_kernel_fingerprints"
+      ],
+      "override_sha256": "3bd69956087d0d27accfcbaab202d196a8d6225c72c979b92de48cede4e28a88",
+      "path": "scaffold/manifest.json",
+      "reason": "Replace private historical denylist data with neutral public purity sentinels.",
+      "source_sha256": "8bc4467219d04b9f2ca6c3c886a569da391026df8cce61eaaee864aac37a923a"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 2147,
+      "mode": "100644",
+      "origin": "assets",
+      "path": ".agents/skills/create-research-lab/SKILL.md",
+      "sha256": "1faf5d3fdbcfdafbccb86057b39ece316cc462f11f5d2d2f947aa996902b10d0"
+    },
+    {
+      "bytes": 80,
+      "mode": "100644",
+      "origin": "assets",
+      "path": ".gitignore",
+      "sha256": "a38212dabc7bf55e75a0e9d3f050692062ffb08a9cab0c569fce8e2bb985d427"
+    },
+    {
+      "bytes": 1388,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "AGENTS.md",
+      "sha256": "70f55c4f5e46cab942af243b0093d0bb73ade1913542296e1ab7c98cdae78a22"
+    },
+    {
+      "bytes": 30407,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "COMPARISON.md",
+      "sha256": "4ecd06de568407076dc7e979e9979eb356c6e9e83cd4c4809575b78d9b768597"
+    },
+    {
+      "bytes": 1595,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "CONTRIBUTING.md",
+      "sha256": "535ff972122f4a1c41b80a140f723c141e118b61f3a51eec055ed940415b6c14"
+    },
+    {
+      "bytes": 1075,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "LICENSE",
+      "sha256": "5c0cce7f57e7d7cd89ae510b4304dba8ec069ead86d8fa04f0b173be087fd9c8"
+    },
+    {
+      "bytes": 126,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "LICENSE_STATUS.md",
+      "sha256": "198ee0288d173fc7c7d48b7e5f035e46deadf04d0fc641e06f53f9a47b650de8"
+    },
+    {
+      "bytes": 407,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "Makefile",
+      "sha256": "2407c5df0a6ee4503abbe242aa3c7bb1b8b91e229ee7cec867078d84b77ebb43"
+    },
+    {
+      "bytes": 10047,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "README.md",
+      "sha256": "3cd9c4a118d80542b1353b14297414105438b2cb4a2161e20b528fded4be2247"
+    },
+    {
+      "bytes": 2579,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "RELEASE_NOTES.md",
+      "sha256": "6ed8439fcbe7c0a6095195acd2e1aabea90df738b904340a6c6d38e3a9a41b09"
+    },
+    {
+      "bytes": 15,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "TEMPLATE_VERSION",
+      "sha256": "a1e63cc18242a76915cba44b8804d2ba51e5af17fbf6740cf2bf1818de0834f8"
+    },
+    {
+      "bytes": 945,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "overlays/user/AGENTS.user.md",
+      "sha256": "1c051ce4c7490988fa272b0e2383d287641fae4b33cbadef9d77441faac6bc03"
+    },
+    {
+      "bytes": 665,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "overlays/user/user_policy_manifest.json",
+      "sha256": "d28e0296ca114669bc486e85c67a6060ca69c0b06e8751fae6f8d357932632c1"
+    },
+    {
+      "bytes": 3218,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "profiles/examples/exploratory_program.json",
+      "sha256": "9180a1090c2ad0e8eeffb2714f23a4505eb42c6458335467b81c2f2d20a861c7"
+    },
+    {
+      "bytes": 2885,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "profiles/examples/minimal_article.json",
+      "sha256": "deb64bda7002026934f2c3ba0fc64e3f0c57b96e14f412138ef40f0b8832bb90"
+    },
+    {
+      "bytes": 1488,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "profiles/examples/philosophy_program.json",
+      "sha256": "ad2b75867938be1d0de94375d6c69e9abb76672de326d32c1ce014ceaa6e099d"
+    },
+    {
+      "bytes": 602,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/cite-project-source/SKILL.md",
+      "sha256": "1e95c71f4d37d7482e2789cab0b5344915ad45b3fb9177342d01eca1939fd0ee"
+    },
+    {
+      "bytes": 2441,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/explore-research-directions/SKILL.md",
+      "sha256": "93cce23760bbf9a36fbe6f03f29789db7fd66f952ec19a2cf7dc159da4301a60"
+    },
+    {
+      "bytes": 577,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/formulate-research-claim/SKILL.md",
+      "sha256": "24a24297f7cf71ef863ff473f457d628a11f9881b0505141f657227b9415432d"
+    },
+    {
+      "bytes": 926,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/ingest-math-source/SKILL.md",
+      "sha256": "57059ee0019c6166909942b0907f0b1b213804da973f48d3e72bd9d24748a662"
+    },
+    {
+      "bytes": 174,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/ingest-math-source/references/source_digest_schema.md",
+      "sha256": "5b460f1c06ab21613b91e62dad22b947162001f5a6f647613dc2464580898de8"
+    },
+    {
+      "bytes": 118,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/ingest-math-source/scripts/README.md",
+      "sha256": "38da6a259fe524daf5e1c7469fc42c42bf60e6affbb83870f94b32a28bf8cf27"
+    },
+    {
+      "bytes": 899,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/literature-sweep/SKILL.md",
+      "sha256": "794a9adbe89ca09350250225d625466baafe50256665169607e8410a7c65c3d3"
+    },
+    {
+      "bytes": 534,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/propose-agent-improvement/SKILL.md",
+      "sha256": "fee4966e374e12cf18d68107c178ba0fbd71b1b659226f8557199f340c103080"
+    },
+    {
+      "bytes": 3376,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/prove-or-refute/SKILL.md",
+      "sha256": "6c0ce9f68953f46c87865610f8f8c84103bc74a0f5c15c778b6a5065c23396d8"
+    },
+    {
+      "bytes": 3599,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/record-research-checkpoint/SKILL.md",
+      "sha256": "6c89dccb904b8ec5412a8a124bfb0e66fcd8643c7d59a0ebbc3caae724d124a5"
+    },
+    {
+      "bytes": 1479,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/run-external-research-bridge/SKILL.md",
+      "sha256": "4c62d407bfee464df0855ef122b2efbaad8ca5964ce10d24467e715870d736c0"
+    },
+    {
+      "bytes": 279,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/run-external-research-bridge/agents/openai.yaml",
+      "sha256": "54beb88c8b64b71705d6238608d2fdbc05a42470baf6a2bb4ba2d37a6b655c3d"
+    },
+    {
+      "bytes": 2778,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/run-research-round/SKILL.md",
+      "sha256": "866e8dbe7f02e6e4f97f940d6411ad001da9681628a21d5b8735277d2c838651"
+    },
+    {
+      "bytes": 3936,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/steward-laboratory-state/SKILL.md",
+      "sha256": "cfbcc4f71db148847535c4e5a793b5757ac80379fe805c5bed2e3acf8bdcd385"
+    },
+    {
+      "bytes": 289,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/steward-laboratory-state/agents/openai.yaml",
+      "sha256": "7a9e5a8fecdc56b9d717cee92ee903d19fe058f97769e6a72003a87701645e6b"
+    },
+    {
+      "bytes": 3346,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/survey-laboratory-state/SKILL.md",
+      "sha256": "96d7866f8edd1f89c5b24f7777d82e3c1779e15dc7e6ab0422d521ba3cc2b1b5"
+    },
+    {
+      "bytes": 533,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/update-research-ledgers/SKILL.md",
+      "sha256": "7f9f8a7de816104d680b70c9a8e672b162462d194d0c22ef8fce974f491d7194"
+    },
+    {
+      "bytes": 2643,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.agents/skills/verify-proof/SKILL.md",
+      "sha256": "bc484989783c96c4a3708fe4324634722a1e96db4b8e5e77686d0d077de8a7ae"
+    },
+    {
+      "bytes": 946,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/adversarial_verifier.toml",
+      "sha256": "0e6caee7dcf1fa3374d3173704ed202a1c9efab15a703688df7bf39e577d87a5"
+    },
+    {
+      "bytes": 467,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/architecture_evaluator.toml",
+      "sha256": "7c31334f20e71d621eb695b4e48b2f3df5c9d45cba4996217bf7ed6f3b887200"
+    },
+    {
+      "bytes": 462,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/conjecture_designer.toml",
+      "sha256": "ac439dfa74529521df113605d344f532937e8fdf32295b4b43e36e5dc15bed37"
+    },
+    {
+      "bytes": 741,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/counterexample_hunter.toml",
+      "sha256": "800c77a68612e8c34c4900a9560690ed6a2485cab9c8d1ee46a7d66df9004387"
+    },
+    {
+      "bytes": 979,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/proof_generator.toml",
+      "sha256": "bed659fe90bb20e2e39add3145d43610674c10f71abd7d2e986d504aae157ed3"
+    },
+    {
+      "bytes": 690,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/proof_reviser.toml",
+      "sha256": "19d3c9863bcca90f46168ce8b8bbb4515fd15516db611c1d5963b28402f3e524"
+    },
+    {
+      "bytes": 438,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.codex/agents/source_librarian.toml",
+      "sha256": "bc49cad552e2a2cb8e5043c7ceb90c704ae7871b3df576ac444fe7896da05e03"
+    },
+    {
+      "bytes": 65,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.gitattributes",
+      "sha256": "02e59ac11dbadf815514db562f2e75a1d66cd8e17c9f272c29e1eea7c2529d4a"
+    },
+    {
+      "bytes": 367,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.gitignore",
+      "sha256": "a6dc26d1cf54f6ba8275be80e72f697a8279722ce5c299deb9ffa4e799114f51"
+    },
+    {
+      "bytes": 217,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.lab/control_room_actions.json",
+      "sha256": "9242ef939c6f4116ded1628a1fa5f6727c2d9265c75ef18785b661555549b346"
+    },
+    {
+      "bytes": 244,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/.lab/durable_research_memory.json",
+      "sha256": "2fab245411591405c400b3ed7a45258cd51a7aacc7a34877e2ca56f1300727bc"
+    },
+    {
+      "bytes": 24983,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/AGENTS.md",
+      "sha256": "bf963f06be0143e87ca88d2ffc52d53d85a586bb7465cb1ecaf95074266098e9"
+    },
+    {
+      "bytes": 10567,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/AGENT_POLICY.md",
+      "sha256": "3494cce6e0594d4e657d180da6680952e6db84057719154b9f2d48e18a469da5"
+    },
+    {
+      "bytes": 659,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/BACKLOG.md",
+      "sha256": "94dd04ac5024f196965a9328a524741995613060e9f6d30c3bde968eab5d3a2c"
+    },
+    {
+      "bytes": 8608,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/CHANGELOG.md",
+      "sha256": "2e59a44501d173ba0869c5e6db67520a433150d83a05b4aa746203fc6559acdd"
+    },
+    {
+      "bytes": 12727,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/Makefile",
+      "sha256": "d25d0958cad3793a359e5f52140dbf742c279cce6d60ca890d70ed40997f5f98"
+    },
+    {
+      "bytes": 418,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/PROJECT_CHARTER.md",
+      "sha256": "6b441b6a679450ce06e74418199ecdd65ac372cc977852454e8315b580a6b4f6"
+    },
+    {
+      "bytes": 14672,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/README.md",
+      "sha256": "e7830147be804436b47190c350062b468cd45954febc90fb30977c9cb1a8bce4"
+    },
+    {
+      "bytes": 527,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/archive/README.md",
+      "sha256": "ab48e72fcd7565077ccd162da8ec6b20e89b76399f86efb4144dca9e76cee862"
+    },
+    {
+      "bytes": 160,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/decisions/README.md",
+      "sha256": "a0a385ec5e56b6226950fbe268c46b862f337b8939f951466035fb7e85e3c2b0"
+    },
+    {
+      "bytes": 43,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/decisions/decision_log.md",
+      "sha256": "219755f29607578134ecb693eb6f00b897d8c063599371a7441a912ca8ccd091"
+    },
+    {
+      "bytes": 442,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/README.md",
+      "sha256": "7eb36b1a737903e6a7e0faf49f64f596b8aa3860d14ee074229c3d907cac3a11"
+    },
+    {
+      "bytes": 1542,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/README.md",
+      "sha256": "e51fd7a6060967723bbc14fc7c54488bc2fc93981e5735685b6b546dd98b3d93"
+    },
+    {
+      "bytes": 2985,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/durable_research_memory_incomplete_handoff.md",
+      "sha256": "956f5fbfe3247cefd754ea1f949747ab594a64c460939941011fb1ec8b2c5fe3"
+    },
+    {
+      "bytes": 90,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/flawed_proof_check.md",
+      "sha256": "c29b2c836450fb94f3d329b59029bf4db61a654b726d9e3335e437216a2f0549"
+    },
+    {
+      "bytes": 3780,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/laboratory_stewardship_fragmented_repair.md",
+      "sha256": "963ec1a6a1c516096535bb74a893032336f16fd5cf263069aa19e9f08a6f3f8b"
+    },
+    {
+      "bytes": 3626,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/laboratory_survey_fragmented_state.md",
+      "sha256": "ef0372728f18c6c975166881b95ee3206f4e358ab57742a45f7c72383037c935"
+    },
+    {
+      "bytes": 1908,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_anchoring.md",
+      "sha256": "372a1d17b34e971fc82c0b2ddcd8fb382c131b7774bac9e54c32c4c65ee5b257"
+    },
+    {
+      "bytes": 2314,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_blind_literature_mode_confusion.md",
+      "sha256": "52c84dddd6ed667fc78d91760b5d151c89b81c6ae027294c4c1aae4ecbc9a050"
+    },
+    {
+      "bytes": 1741,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_blocked_route_reopening.md",
+      "sha256": "4e48c6c0f9ea9ab49b29d3e3605d99911c58b53af4f16a5d7359455683096605"
+    },
+    {
+      "bytes": 2048,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_equivalent_strength_lemma.md",
+      "sha256": "33f9768f63514bf3e0304d4a9fa3cdcbb0c4cd780236f2e5fea221cfa04ca271"
+    },
+    {
+      "bytes": 2885,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_long_open_status_aversion.md",
+      "sha256": "1cc70471f7119e2f4982a4c40dec5e3267ca6a2af1912290a0689b255345d4e0"
+    },
+    {
+      "bytes": 1867,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_premature_success.md",
+      "sha256": "e05951cbd163d1ca8545eba33aa57ad9321d55cced2811e4ca90a09683c41e7b"
+    },
+    {
+      "bytes": 1828,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_pseudo_diversity.md",
+      "sha256": "30fd1b289cb227dfb67d2050dd7bba80a002040cb70a9f609db89523c527dcee"
+    },
+    {
+      "bytes": 1981,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_same_model_self_certification.md",
+      "sha256": "f07cfe1640dba71167f6938f4835c857dfd640832728132ccd0314fae896adb0"
+    },
+    {
+      "bytes": 2716,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/proof_search_semantic_stall.md",
+      "sha256": "90f2e6d06240d43478663dda4d2655552c6a02166089b278ffbcc85df32e236d"
+    },
+    {
+      "bytes": 6764,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/research_release_guarded_materialization.md",
+      "sha256": "131d002a247d2997267d9a8fa242cca49c30246e7388080768687b44c1f5c5c0"
+    },
+    {
+      "bytes": 3285,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/adversarial/research_round_guarded_execution.md",
+      "sha256": "fee75deb9954460539590d64f6e1c0ae84782caf3df2b119ab441df43a630259"
+    },
+    {
+      "bytes": 334,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/README.md",
+      "sha256": "c4b16a32ecde91e2c27027e25a363e02d865306bd8a2560515fbcb0207bdb065"
+    },
+    {
+      "bytes": 361,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/artifacts/same_run_exposure_log.md",
+      "sha256": "d7606706d90ba8d4fb7395ca2cdaf35ad98e19706dbef6a24f17f8feb1b59ed7"
+    },
+    {
+      "bytes": 3358,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/audit_candidate_version_mismatch.yaml",
+      "sha256": "901bce48fbf20add4825eb239146bfad5a24a10f80539b8968e86ab48feaf85d"
+    },
+    {
+      "bytes": 3073,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/blocked_reopened_without_evidence.yaml",
+      "sha256": "a2d8b1e02d4168e7df365ca72a06459b5b118aae890c242dd39ece06edc0cc8a"
+    },
+    {
+      "bytes": 1602,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/blocked_with_gs0.yaml",
+      "sha256": "e3acdc4e95b911be33aaf2fbeb46c8f08eb5d28cd7446da7f7c7545753782012"
+    },
+    {
+      "bytes": 1218,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/checkpoint_without_gaps.yaml",
+      "sha256": "419e79f92eec5e327094eaae0668388428883046a5a8584c42abbfab254bf2ee"
+    },
+    {
+      "bytes": 1725,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/conditional_without_assumptions.yaml",
+      "sha256": "daf2d3f624872c3121e243db369a00bc608208366b73e4f666ae72792b76c7b5"
+    },
+    {
+      "bytes": 1140,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/duplicate_redirected_wave_manifest.json",
+      "sha256": "0e6c1d517dd3f574930d3633fcbd4a1c2644d28bf233e434142d75692335bc4f"
+    },
+    {
+      "bytes": 1717,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/exhausted_with_live_route.yaml",
+      "sha256": "373331ca264178e6483c066d09de4cc76161449680f688e234d0b78636a3bd8a"
+    },
+    {
+      "bytes": 3260,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/exhausted_without_wave_reports.yaml",
+      "sha256": "1dc2cff2ce13345c6b837151a7265af2a4a91d22a20f8e304dda43cc04765c21"
+    },
+    {
+      "bytes": 1620,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/external_artifact_path.yaml",
+      "sha256": "2252bc990c676a459c7b81dbfd9be9b3801a2d62d22b9ac590b4e7dbbfe6c5f4"
+    },
+    {
+      "bytes": 1604,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/forged_verified_proof.yaml",
+      "sha256": "6ac01bd9147aa853923f3e519c26191a37850dbed90195e188c2a37af09161b1"
+    },
+    {
+      "bytes": 1451,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/historical_i2_marked_decisive.yaml",
+      "sha256": "83ab5147cd2e6c4d2a47179d1f00ca716e52547cd200acb6a9dd6cd99b11365b"
+    },
+    {
+      "bytes": 3715,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/i3_verifier_is_material_repair_run.yaml",
+      "sha256": "d51d1cde55f037f92bf843a9c4a8737f0588e89d0c49f10918eb75df89301994"
+    },
+    {
+      "bytes": 1145,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/invalid_primitive_types.yaml",
+      "sha256": "1655d718837055e8250b5380e62acc977c30b1de5767920d1d9d8b6551cfafd4"
+    },
+    {
+      "bytes": 4674,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/merge_drops_parent_gap.yaml",
+      "sha256": "dfc363e30af4a264625ff31a5d32a2eb1b7e716ffe59b079f80b0b48f388a4f2"
+    },
+    {
+      "bytes": 1580,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/refuted_without_witness.yaml",
+      "sha256": "1b57e714e5d58741dda76ea71f745b72a5ce139a75ee4a296f76fb07ddeb7909"
+    },
+    {
+      "bytes": 1720,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/under_audit_unassigned.yaml",
+      "sha256": "29f738d281e3dc10e8ca7e6804afdf9e928738c7075f42afbbae70f41aa67369"
+    },
+    {
+      "bytes": 1162,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/unfrozen_contract.yaml",
+      "sha256": "67c05fc7a77c2d719415a6f8b93387fbb10082197517856a076df8ad78b8b0bd"
+    },
+    {
+      "bytes": 1583,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/unhashable_malformed_values.yaml",
+      "sha256": "8e36759104c1b002e6af7770521e12679f4a59b6f557771f747fbcd50551593f"
+    },
+    {
+      "bytes": 572,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/verifier_report_from_exposure.md",
+      "sha256": "1b8863d18cc4b6253d3844b68790be930e3bb5bb0ddb4fadfe7462f68aa0c2eb"
+    },
+    {
+      "bytes": 1451,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_invalid_states/verifier_report_wrong_area.yaml",
+      "sha256": "54d1af609d225df6a360b4ef2417a18ba99d743a25fda1780dd2a6d581f3cadf"
+    },
+    {
+      "bytes": 339,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/README.md",
+      "sha256": "6cc357bf08f5317cd7d10a16d28079dd89d96aaed5be9fbffc5b8043d2655ecf"
+    },
+    {
+      "bytes": 188,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/attack_surface.md",
+      "sha256": "33dc3b3cb5edbda3cfb4b7a25a28371dca9a9495f32de454263d8c0003ae6fa5"
+    },
+    {
+      "bytes": 688,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/attack_surface_exit_manifest.json",
+      "sha256": "78ae073357105ef814c261e6b6e95a832ef26358d9fbcedcc288b6c0e025c676"
+    },
+    {
+      "bytes": 2209,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/audit_packet.json",
+      "sha256": "22404c00c05c1a48479332dd1915c6958507b819cac2d88923155957c56ec86c"
+    },
+    {
+      "bytes": 315,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/candidate.md",
+      "sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c"
+    },
+    {
+      "bytes": 541,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/candidate_lineage.md",
+      "sha256": "bf5a5f25dcda610667c87e5facdd1adf76c37eed600504c39eeadfac5d0f4a98"
+    },
+    {
+      "bytes": 3343,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/closure_manifest.json",
+      "sha256": "d1479d67805871e296c0affb1568daf4c310b917067770c15fd6b21e1e553021"
+    },
+    {
+      "bytes": 690,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/dependency_snapshot.json",
+      "sha256": "e78c6b73b3d0dfc28f6faa566c7bab6f30bb255cb65750b863ef79e02433b43b"
+    },
+    {
+      "bytes": 232,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/exhaustion_target.md",
+      "sha256": "43a6052952a0c513f18c5bbcd87b71bb41615957495aa23200b578fcc6bda7fd"
+    },
+    {
+      "bytes": 286,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/gap_discharge_evidence.md",
+      "sha256": "21d9338bccf6fc0ad2a4b315d635163dfdf14c886a624dc60f714e082294e7f5"
+    },
+    {
+      "bytes": 687,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/gap_discharge_manifest.json",
+      "sha256": "dd8cec88360d93d82156dc3ec91e129e8d9e5bf43a70325b16a11952488b33ba"
+    },
+    {
+      "bytes": 835,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/initial_wave_manifest.json",
+      "sha256": "c9cd4da7474d66709db7ddb3b005d81d1bd0f0da7f18699cddcb97abfca45268"
+    },
+    {
+      "bytes": 359,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/initial_wave_report.md",
+      "sha256": "6789b7d24c281a2a0f86df552b9f943dbfef197599f3cd2ea2b4960ada19cf4c"
+    },
+    {
+      "bytes": 93,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/proof_obligations.md",
+      "sha256": "cfe49884713b4bf155d0172fccaddb27bf520398d3db66780bc56990d1377b0d"
+    },
+    {
+      "bytes": 687,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/proof_obligations_manifest.json",
+      "sha256": "5c07efbd6b418e1b817eba98a1416b98ba50193d6611220c9c1284747c087632"
+    },
+    {
+      "bytes": 1202,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/redirected_wave_manifest.json",
+      "sha256": "3a7b350b236f72fe341fedb89b716521d4754e5f067d2f01718bca27ccc36ac4"
+    },
+    {
+      "bytes": 345,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/redirected_wave_report.md",
+      "sha256": "4b780deaa26e40b22ce91c479c3a24c319b00e782cec0237198d121539b930de"
+    },
+    {
+      "bytes": 363,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/reopen_evidence.md",
+      "sha256": "65a66a7827c7bd62f95130133f7c1f596306454e47f392c94d6d935c4691298c"
+    },
+    {
+      "bytes": 846,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/reopen_manifest.json",
+      "sha256": "13c9cf07cee26601f55f3d82f8cb4ea8a17b439cd929ca0988d078520ef3d979"
+    },
+    {
+      "bytes": 86,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/source_audit.md",
+      "sha256": "9e359d557d57d8d0e257e5072f91d8eee7ad2614e39e7e60bde64bbd49ad2ce0"
+    },
+    {
+      "bytes": 734,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/source_audit_manifest.json",
+      "sha256": "7b568e8aff8d38a0158614ae51b944ef1cda59cfffaee70f61a2f54e421dc6e0"
+    },
+    {
+      "bytes": 208,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/target.md",
+      "sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9"
+    },
+    {
+      "bytes": 212,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/transition_report.md",
+      "sha256": "3766e7fced515287b757ce831dd08366c2e4c4e3bfd8389de14df67207681972"
+    },
+    {
+      "bytes": 2191,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/waiver_assessment.json",
+      "sha256": "f000ebdc9a27fcb1b768e32d61221f53a7d7e4e446cb0c6ed9ad2de226b6cda9"
+    },
+    {
+      "bytes": 1274,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/artifacts/waiver_manifest.json",
+      "sha256": "db1889a2445127711639411a0cc31a8231000179c3d84ef2be179179cbd4f87f"
+    },
+    {
+      "bytes": 6461,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/exhausted_with_redirected_wave.yaml",
+      "sha256": "021d66d3e5169eb8be67df00e027b20103e1ebe4f1376e2c7812e29448d9dc89"
+    },
+    {
+      "bytes": 6592,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/exhausted_with_waiver.yaml",
+      "sha256": "21f1271a20c3f743841b945800d4a7e6aa76cd813c33ab10093daa47bf8eed3c"
+    },
+    {
+      "bytes": 7617,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/merged_route_with_discharge.yaml",
+      "sha256": "626e8d9d3097bfab2c7e1baff33a0fd36d4ae4458bd93052bc983d250d7955e1"
+    },
+    {
+      "bytes": 10045,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/verified_proof.yaml",
+      "sha256": "e954b74009bbdf8e4bdb11ac50d391973420389dee0eb3d2a356976a44c599ec"
+    },
+    {
+      "bytes": 961,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/verifier_reports/exposure_log.md",
+      "sha256": "23c53f8cc6de2a8db55cbdc006e052fb87f4f23769eae4dbb62e55e1f6f8bc69"
+    },
+    {
+      "bytes": 3047,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/verifier_reports/exposure_manifest.json",
+      "sha256": "4653b0392f0a2b6017138cc8809bd6a211a23c2c1f1ef1c5f1726298f71e1105"
+    },
+    {
+      "bytes": 1835,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/verifier_reports/report_manifest.json",
+      "sha256": "635b57091a9c10f6fcfe87cffe6a48e728e37d9f998201bc3bd4c67bacea9c28"
+    },
+    {
+      "bytes": 1412,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/regression/proof_search_valid_states/verifier_reports/verifier_report.md",
+      "sha256": "cfd583be6987c6c46e996ede97962d2e818acfa7045c8ef6a73ea517734e9bdc"
+    },
+    {
+      "bytes": 110,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/evals/reports/README.md",
+      "sha256": "68851f932fdfc8dc0d74c0e1a36c7644a09f36dd5b7e6cd5772545030f16c059"
+    },
+    {
+      "bytes": 275,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/improvements/POLICY.md",
+      "sha256": "23eccdc977f815eceef8a1a40f778463ee27f2c477a17be2e87457e3c6a2b859"
+    },
+    {
+      "bytes": 334,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/assumptions_and_conventions.md",
+      "sha256": "35581518d9fefa9afb6ddb8d340f4f272c1ebb11f41124c78e4c997ec3baf7ea"
+    },
+    {
+      "bytes": 47,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/conjectures_ledger.yaml",
+      "sha256": "4746cbdb4a8cee90a0dfbd1a8ae836338afd9ca66762919d8c6029739fbaf045"
+    },
+    {
+      "bytes": 44,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/examples_ledger.yaml",
+      "sha256": "532bfaa622fe27e89c61bfdb20fa3ac97eab51627b8ad50764256a765ae2c765"
+    },
+    {
+      "bytes": 95,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/glossary.md",
+      "sha256": "4f4f32f2350983d6041523c1b053c8b1172bd7e50fa1aad6b21abe9e4ba70bae"
+    },
+    {
+      "bytes": 145,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/known_warnings.md",
+      "sha256": "221a07795392d08d049eed8ec92c97fb5d3c52b7b74d9d5dc1de184d7a6ca4ee"
+    },
+    {
+      "bytes": 819,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/laboratory_overview.md",
+      "sha256": "83f03019981b7008bee6f6d4cf3d344bc84df95b98a2751fabe2dab52d9d5c0d"
+    },
+    {
+      "bytes": 272,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/laboratory_survey_state.json",
+      "sha256": "c02c41214de3b413c89e8004bd1faa5da8d56397743a4241022dc5ff45726029"
+    },
+    {
+      "bytes": 185,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/notation.md",
+      "sha256": "60abea15bbcbd615b89ca073067f494bdb952c013f4be5765d0731b9e0aa11fa"
+    },
+    {
+      "bytes": 45,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/open_questions.yaml",
+      "sha256": "0acebc3a8a44f1ead97ea8580f8ab81ac863decc3caf643a04bda6d75662e86d"
+    },
+    {
+      "bytes": 2280,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/project_map.md",
+      "sha256": "87d1e59a6e9b24261424182ec9ebaa8ea5254e8be03cc5f4229203498c09bb61"
+    },
+    {
+      "bytes": 301,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/project_state.md",
+      "sha256": "ff633f91bd3a67ec5334ce890d99eaf6ffd1ddd05c56e563387bdcbffc511604"
+    },
+    {
+      "bytes": 468,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/research_lab_practices.md",
+      "sha256": "14db51c7c6fbf6dc9b179643febec9a2242318e671d9685011bc6a3bbdb5af87"
+    },
+    {
+      "bytes": 120,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/research_state.yaml",
+      "sha256": "4bae01119ae19255fa387a487d67e7fa4722df1ae1cd463986713c84628a2448"
+    },
+    {
+      "bytes": 274,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/results_ledger.yaml",
+      "sha256": "070cd87e60e71545ec09df4fed2b3682f4d8742c722ed4cf560ad3de97fa551c"
+    },
+    {
+      "bytes": 219,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/knowledge/source_map.md",
+      "sha256": "605e1de5fbb9733716e1d52344722e3c00fda30b4debd596d59bb51276b9cd5f"
+    },
+    {
+      "bytes": 656,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/README.md",
+      "sha256": "0526673825fd5450e4c4e788dcebc1ca7e8640cf46f1a9f488e6ad06f2d8f514"
+    },
+    {
+      "bytes": 125,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/active/README.md",
+      "sha256": "995e8ca1a577f96f3c7adbdabc139bb9f166d156d60638377189f2411293a998"
+    },
+    {
+      "bytes": 96,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/backlog/README.md",
+      "sha256": "84dca7fe37c6fc742e42d5e3d9ae946b696029d31e9d0153bd241408eca70aaf"
+    },
+    {
+      "bytes": 150,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/closed/README.md",
+      "sha256": "6cb67c3f55e2525657c983db0acc929a71e8d0440d643bd401154d0eb79333d9"
+    },
+    {
+      "bytes": 3921,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/README.md",
+      "sha256": "8788822f09379e26ce77afc24bf6ed2560d56b14f667e02bae23cd2f297c1bc1"
+    },
+    {
+      "bytes": 8889,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/approach_registry.md",
+      "sha256": "1af8122f585bd24dc4477dfbee27135d830788fc8fe3f456c2fae57ea01535c4"
+    },
+    {
+      "bytes": 3239,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/attack_surface.md",
+      "sha256": "8293e258d2f81d80002b01d80fe29e84180d80c9eca4713863ed53c165780fef"
+    },
+    {
+      "bytes": 874,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/attempts/README.md",
+      "sha256": "51d4d979d7a8a72f8f0d949d9173863f63306f5ef157ee640a8553adda2038b0"
+    },
+    {
+      "bytes": 1968,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/candidate_lineage.md",
+      "sha256": "e20b45913a029acb356b8a8b2fd389e98b20bdc7e80d6ab2a9fac9e95a3f24dc"
+    },
+    {
+      "bytes": 102,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/changelog.md",
+      "sha256": "0335449a41cc18cd722593eb65640bc94d41b3d61ec36e6e31332a6782af0b29"
+    },
+    {
+      "bytes": 58,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/computations/README.md",
+      "sha256": "87e33c857a760b60e372c41fbbd20c7b0ec22e857dcfafc5edaa6974d259b569"
+    },
+    {
+      "bytes": 3285,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/context_envelope.md",
+      "sha256": "fa0612c77a040d1717ce7a471834031661ada6e39eda81ef38111904951d84ca"
+    },
+    {
+      "bytes": 64,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/counterexamples/README.md",
+      "sha256": "57b2c9b511d7b8b115125e09c52022fe39dedaf3b97ddc9e286f6d3afa803888"
+    },
+    {
+      "bytes": 941,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/external_llm_responses/README.md",
+      "sha256": "4dfebdc8f09cea92dcea3dde3eefcb199e4af439338bf68ebfed1cf17b820795"
+    },
+    {
+      "bytes": 44,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/final/README.md",
+      "sha256": "7c9fe2061b0210eb86f27b34877e3e956f07c6d48b4d842d94f3e48f904451af"
+    },
+    {
+      "bytes": 703,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/interaction_card.md",
+      "sha256": "7756f4ccc79f764260bbf6d77f0f2d1da670fcb557beb12005688b4b9b134787"
+    },
+    {
+      "bytes": 2475,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/parallel_llm_launch_prompt.md",
+      "sha256": "ba4b70b78cf73acc025624afbc768de8ef777712c2e63d7d3847caaf2b2f4d95"
+    },
+    {
+      "bytes": 1017,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/problem.md",
+      "sha256": "bd00fece24563a32f2c4b3442f008f8c2825dc1bd61526ef438399c884775576"
+    },
+    {
+      "bytes": 337,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/proof_obligations.md",
+      "sha256": "1032cb7e731753e8da55c15ff186b053131e18b96cc386e946af651ab85d9ced"
+    },
+    {
+      "bytes": 2987,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/proof_search_state.yaml",
+      "sha256": "17fcb12da272634b560228f9b930b239bfc77c89da0618a73847ab8131ae67b0"
+    },
+    {
+      "bytes": 1265,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/search_rounds/README.md",
+      "sha256": "bc062794c30dba30322dbe04592a3e03bb6e81469f9bb3c2fa3b023a4cfbf80a"
+    },
+    {
+      "bytes": 73,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/source_facts.md",
+      "sha256": "bf05be14526c6361b4bf28acd3bfd59eea1a01d1ecfabf03b0a238ea8ae8e613"
+    },
+    {
+      "bytes": 471,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/status.yaml",
+      "sha256": "a2d0aef00991894f24aff504e8b05237cd0be80631690201f1dbe9a83c32c17b"
+    },
+    {
+      "bytes": 1755,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/verifier_reports/README.md",
+      "sha256": "6a74957c7cbd58b5ca8c87f3a0942d2fa62c42c884820141346eb7933d3c0a68"
+    },
+    {
+      "bytes": 1834,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/problems/templates/problem_dossier/verifier_reports/exposure_log.template.md",
+      "sha256": "bd05e969f805f039bdce3560dc25c8ce8cb2d9aaafff7f97dcb7f0400b7fd7dd"
+    },
+    {
+      "bytes": 398,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/research/README.md",
+      "sha256": "a65b96dfd3a85458dd4767bbdefe834ae5cf9a865103f71d148c99c2b6898201"
+    },
+    {
+      "bytes": 68,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/research/checkpoint_index.json",
+      "sha256": "37cff8cae4d397176490e49b9d246f633b89abe75e257bada00c829628a08683"
+    },
+    {
+      "bytes": 1284,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/research/checkpoints/README.md",
+      "sha256": "40f8862f9230759e1be83849508c9ce4359f48ea6d41a0fe7d5378808bc7ec7d"
+    },
+    {
+      "bytes": 676,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/research/raw_runs/README.md",
+      "sha256": "93e7677e5c89ce953dfb5763fdef4429bad254a6e4fa066e2ae6191db87972fc"
+    },
+    {
+      "bytes": 1344,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/research/repository_first/README.md",
+      "sha256": "c447cc3323c9fec6b1a3944c2f9724c1853e05ac81c9c062b83587ea71362631"
+    },
+    {
+      "bytes": 77,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/results/conditional/README.md",
+      "sha256": "85d997949520378e8d955ea18d403e1fb925404c3798ed070206f88aa26a3526"
+    },
+    {
+      "bytes": 93,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/results/refuted/README.md",
+      "sha256": "a10dd01c29acf7fd35fb881340fa887c427e395cbaa0859e3718c6c792ff15e6"
+    },
+    {
+      "bytes": 99,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/results/unresolved/README.md",
+      "sha256": "cf5713cb768813d1b7c70c7d1cf6e411bc73bd3571caf4713693f76c591f6d68"
+    },
+    {
+      "bytes": 111,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/results/verified/README.md",
+      "sha256": "cb5fd47743b0dfc18eaa9c4800b391d7581b9e48a1460022b024c717eeb9e271"
+    },
+    {
+      "bytes": 1236,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/runs/laboratory_stewardship/README.md",
+      "sha256": "22f663f2379a5cd943fd464e5c7a1d0ef13e9e5210d9ec5c78af89d0cfd696a1"
+    },
+    {
+      "bytes": 1268,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/runs/laboratory_surveys/README.md",
+      "sha256": "b90f8c01aa075eabc3cf0ef15771021c934333719d97824b58d568e85e78621e"
+    },
+    {
+      "bytes": 42480,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/repository_first.schema.json",
+      "sha256": "807c224c03e156dd7383e36845f085da9708cf256cb70c2be3f0c723c8fdf502"
+    },
+    {
+      "bytes": 12853,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_checkpoint.schema.json",
+      "sha256": "89373a68a554de76d0edd50132bb1a524ee63408362f33b98b9ed9feb6e887fa"
+    },
+    {
+      "bytes": 11055,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_release_package.schema.json",
+      "sha256": "2d3722c49bb5d91a87a452bd43213a937c0eda41fa824a1e5c40eb2980900c1f"
+    },
+    {
+      "bytes": 6530,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_release_request.schema.json",
+      "sha256": "04696bbee150e365bf12bb6bdb2686fe9b17a81c2bf6e8caf87cfb2db9a1d445"
+    },
+    {
+      "bytes": 1703,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_round_plan.schema.json",
+      "sha256": "e587d4317856b393986b9f51ed530fa1e9b4522a3d6ccb0c9119b545f6ba11ac"
+    },
+    {
+      "bytes": 1872,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_round_projection.schema.json",
+      "sha256": "5de3eb809463373c804ba3941b633601fb2016676e53342521b9ed4115075191"
+    },
+    {
+      "bytes": 1437,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/schemas/research_round_result.schema.json",
+      "sha256": "ace9be7140c589a5a9d6b1029616be88d2a97300ab83f68abb0d8efe08fe2136"
+    },
+    {
+      "bytes": 1203,
+      "mode": "100755",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/build_source_index.py",
+      "sha256": "77049eebe0251310ddc6a87abec2542887c8c3bc96396ec4420c947955f32911"
+    },
+    {
+      "bytes": 5481,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/claude_terminal/claude_cli_launch.py",
+      "sha256": "cd9912bee0e2829c72debbcebc58113dfbd82c5d9f39bc6949321e5f9c8adb64"
+    },
+    {
+      "bytes": 23045,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/claude_terminal/claude_collection_intake.py",
+      "sha256": "b33a3e43a18e500d6a1c64ee0cbc37e07b5c0151fccc1a76a70636ea5c6b6c99"
+    },
+    {
+      "bytes": 59534,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/claude_terminal/claude_runner.py",
+      "sha256": "c9496f0b96e10351eefc780ba1a331999ccbcf5da39bd67e8b1b50364603645b"
+    },
+    {
+      "bytes": 15305,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/claude_terminal/claude_runner_support.py",
+      "sha256": "f8d534c8c2796bc469baa9a24d93d569d19822b3ccaa4718304300948b13af08"
+    },
+    {
+      "bytes": 3965,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/claude_terminal/claude_source_capture.py",
+      "sha256": "072423d5570ef174986f100099988c4b08b19b2391f1cee2520558b166caf528"
+    },
+    {
+      "bytes": 22081,
+      "mode": "100755",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/doctor.py",
+      "sha256": "8c6c9002e056428c95adc151cd904f82b7a3c7b1287ea0d317d7fe704c57b8f7"
+    },
+    {
+      "bytes": 11609,
+      "mode": "100755",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/ingest_sources.py",
+      "sha256": "43ed9788d09219bad7ea430f1a35b23745399f75f5b934af4f59cbbbca67da37"
+    },
+    {
+      "bytes": 103880,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/laboratory_stewardship.py",
+      "sha256": "ea7cd4457ff4c71df426d8ac624c5a5ab161f3bf1653b4ed6452d0a2cd68d2ae"
+    },
+    {
+      "bytes": 62486,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/laboratory_survey.py",
+      "sha256": "d7c3f1ac25fa31cf038f757232a3b7f54dc115a583ba92ab66787d3541b98b3f"
+    },
+    {
+      "bytes": 13136,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/new_problem.py",
+      "sha256": "669424af402e848399a1c0d170b3eb70893e8130048218f92930e9e56fc553a1"
+    },
+    {
+      "bytes": 128650,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/repository_first.py",
+      "sha256": "d1922406f29e95221324a4ca93c3cab5388fabb1aed248233ef0672fe95e0942"
+    },
+    {
+      "bytes": 113703,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/research_memory.py",
+      "sha256": "832f0bd5fb76b37aa18470066a227d630308c80050031f27e81373575889f7e0"
+    },
+    {
+      "bytes": 87763,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/research_release.py",
+      "sha256": "aaaf47f3c418c19a644faadfe66436dff8120a96a4e766f375b88440eaf8a9f7"
+    },
+    {
+      "bytes": 116434,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/research_round.py",
+      "sha256": "75460a80844dbda22a9297c940fb525e1be65213dc23a03bd82e1531bbb3a618"
+    },
+    {
+      "bytes": 47059,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/run_evals.py",
+      "sha256": "1f481363faf57011194f3d82fe354d5cf5c6258bee0849db5d95fab55f6bbb65"
+    },
+    {
+      "bytes": 8544,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/snapshot_project_state.py",
+      "sha256": "56346e133522ce50af3c25f0eeb21173ec2aa0c9682f6c59bc39575706f61f9b"
+    },
+    {
+      "bytes": 40620,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/validate_lab.py",
+      "sha256": "19ee250ad0bb6b498f354a670e55c459ff1a4680a9d44602c97dba770792dc63"
+    },
+    {
+      "bytes": 8805,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/validate_ledgers.py",
+      "sha256": "36316470bd12cb3977e94caa90e9a1229fc571d81d1d6533d208d2bc73dac299"
+    },
+    {
+      "bytes": 169341,
+      "mode": "100755",
+      "origin": "sources",
+      "path": "scaffold/base/scripts/validate_proof_search.py",
+      "sha256": "e0e419cd3141c626d4625a658d02f9faa5cb40b8ec017dc2a22e90c65ed58f3b"
+    },
+    {
+      "bytes": 2354,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/TRUST_TIERS.md",
+      "sha256": "e934b5296670f97f1e5241acdef0a9141d0ed6a8d5bfe073154f912aef70e4ae"
+    },
+    {
+      "bytes": 125,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/bibliography/citation_audit.md",
+      "sha256": "41c608c55506e061083ce22bd8beef844ba70d64fb729efe3d1810f278df97cc"
+    },
+    {
+      "bytes": 1,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/bibliography/library.bib",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 1,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/manifests/ingestion_log.jsonl",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 41,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/manifests/source_index.md",
+      "sha256": "604c8a3314e2dff5c87baec0d646b4e2481ded98da4f2740e2262c5708e70835"
+    },
+    {
+      "bytes": 43,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/sources/manifests/source_registry.yaml",
+      "sha256": "a22dedf6efbb8e2882d0ef055b93d2eb07d25119af346ef2379ec9d0349471ad"
+    },
+    {
+      "bytes": 14704,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/approach_registry.md",
+      "sha256": "77ece39004dbeb0cb1d379813a0a29ce44112f3218f2ab15ad50feffbab6b181"
+    },
+    {
+      "bytes": 8949,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/attack_surface.md",
+      "sha256": "ee79c2b8626eae1090e236df860b7a18a547626ff6ddab27b47396a7f4701907"
+    },
+    {
+      "bytes": 309,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/attack_surface_exit_manifest.yaml",
+      "sha256": "a71b6b2cb3f07c3740b99cc399925ac112e682564d14d72f1504090d609c7e96"
+    },
+    {
+      "bytes": 808,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/audit_packet_manifest.yaml",
+      "sha256": "dbf024f1cf6bfd8b494fe0235471384ab180dffc716d45ccf48c007fc7c61f8e"
+    },
+    {
+      "bytes": 2094,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/candidate_lineage.md",
+      "sha256": "3f66d87dbb4a458842478aacb0944fd23687b27b3960a09711dc7f8ac322ebf2"
+    },
+    {
+      "bytes": 225,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/claim_card.md",
+      "sha256": "a7b4f25816eabf091cbd1ba66637c43851d8242a000b15f16339c8b15398874e"
+    },
+    {
+      "bytes": 705,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/claude_terminal/request.json",
+      "sha256": "881ca359988da88ced499688bff15b6754e5889d14df071041b85f0bac33b2ad"
+    },
+    {
+      "bytes": 1229,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/closure_manifest.yaml",
+      "sha256": "597a3aa33782ee894d92101b24132db49ebd06614389cab2b4497303a5e00dc2"
+    },
+    {
+      "bytes": 4353,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/context_envelope.md",
+      "sha256": "42602f5392e7a37fec0e5025c8921122ed728cbd4b051f4b2a9cf59e6a95a133"
+    },
+    {
+      "bytes": 135,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/counterexample_report.md",
+      "sha256": "d6ad7f77f7b97344a271ce410cb51e39e6f0178c5d3b5c3b2ca7ab0cf478f138"
+    },
+    {
+      "bytes": 242,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/dependency_snapshot_manifest.yaml",
+      "sha256": "c60b3d7bf01727b6be634ca7f46249a90be2ecf6460418ef3168e0a08136c096"
+    },
+    {
+      "bytes": 347,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/gap_discharge_manifest.yaml",
+      "sha256": "270b1440e6e6a0deff767d8393eae21c0669c8e87b4ca281c52e09a83c58b470"
+    },
+    {
+      "bytes": 237,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/historical_backfill_manifest.yaml",
+      "sha256": "8636f499567eeb16c0dc4f4b99ffaa5b88b95cc9df4806ba8586f4368f40fff4"
+    },
+    {
+      "bytes": 372,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/interaction_card.md",
+      "sha256": "141eed8676642d0790797ea0e0cafaa52fc89153128ca664b962f5e35ecfc807"
+    },
+    {
+      "bytes": 852,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/laboratory_stewardship_plan.json",
+      "sha256": "34fc194eb17581f2aa8ab64a903692d69ef9f52b598d01a8f484ab77b8af27c6"
+    },
+    {
+      "bytes": 2864,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/laboratory_stewardship_report.md",
+      "sha256": "66e92f57f0acee6be96aca0b9f81937f82aaec96afa260b85672d933c933b05b"
+    },
+    {
+      "bytes": 5081,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/laboratory_survey.md",
+      "sha256": "d6bfe937dbb46d9bdd44eb40336b3285f6a6f76f1c10ca197ddbfcac0e72b20c"
+    },
+    {
+      "bytes": 148,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/literature_report.md",
+      "sha256": "1c798a573c56c01a50a0f0b0e600fedd0057fcb0cc6de493c6ff58af12811c43"
+    },
+    {
+      "bytes": 1638,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/proof_attempt.md",
+      "sha256": "4e1cf0056fbef626274c15203b1970619e9defa58208a670f3ac2f8c6f67e56f"
+    },
+    {
+      "bytes": 357,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/proof_obligations_manifest.yaml",
+      "sha256": "6d32028badce2423f326e6472061edbccbd33ee446cae544b72e755cfb955456"
+    },
+    {
+      "bytes": 2975,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/proof_search_state.yaml",
+      "sha256": "495b29d352ba0be9f0e8e0ddf02c5cdd5c82e164783b500f54bf99ad3a34ead4"
+    },
+    {
+      "bytes": 371,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/redirected_wave_waiver_manifest.yaml",
+      "sha256": "1f96b117186debd2033c7edd9ee6cdf8c22ff4b3e26e5f8faeffa8a70d401007"
+    },
+    {
+      "bytes": 412,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/reopen_manifest.yaml",
+      "sha256": "72a4bcebd52bb6b838fedb0e27d086f02bc6e23ee167fc48dda9e5f2d6942550"
+    },
+    {
+      "bytes": 1885,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/README.md",
+      "sha256": "7fafb4db21a18572d754a7b72857983d1365f1afa252bc5dea158d4329414692"
+    },
+    {
+      "bytes": 546,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/adjacent_result.json",
+      "sha256": "87eea1c05213aec1c5373c94614f42cb6805b0801227b14c812ab36e762d1b28"
+    },
+    {
+      "bytes": 1369,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/campaign.json",
+      "sha256": "a9bf3c8e957fb25e230938509fab6af50517a8254d181c7accd0d5c1e43f44f9"
+    },
+    {
+      "bytes": 2171,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/claim_assessment.json",
+      "sha256": "9b3846a01164e995c09f8ba0203eb61c924aa29fed19579601fecde5ba58f781"
+    },
+    {
+      "bytes": 1559,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/expert_feedback_plan.json",
+      "sha256": "df95e0882076e5016c93d253734bce8b3e77a49e4a0297c4fbeab4b285004b5e"
+    },
+    {
+      "bytes": 1233,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/expert_feedback_response.json",
+      "sha256": "1c3daaca7d4270e6a388a5f46ee93e41571ef65c8c07d50dfe0f4c24c0a78d94"
+    },
+    {
+      "bytes": 1659,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/export_request.json",
+      "sha256": "50eab7cccbc48c815261bcfa878e2193da8bc5dc29333da80a8cca5abaa92c29"
+    },
+    {
+      "bytes": 1830,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/failure_family.json",
+      "sha256": "6ab3ed2afd937617931cb93bad34842b991a07f3e00ecf4584cdfe4345e27a65"
+    },
+    {
+      "bytes": 1131,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/phase_change.json",
+      "sha256": "b8ed9054707bc07bda469262b85ae78ade5947e8d654dba61a7b637406aafaa1"
+    },
+    {
+      "bytes": 3156,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/raw_run_manifest.json",
+      "sha256": "93dfd54f12b5548d92ebac0db9b891b2115599b5d2b11bfd0f1eeb061c9ef8fa"
+    },
+    {
+      "bytes": 3104,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/release_request.json",
+      "sha256": "9341b58d9728d8847408cbf9c5f9e10978bba7977d1a426210dfb73af2de1818"
+    },
+    {
+      "bytes": 2762,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/source_use.json",
+      "sha256": "d67aaea22a2f19d05ae785e7ad961c847c2a532568aa81fa8c5632a1b620aadb"
+    },
+    {
+      "bytes": 1500,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/repository_first/verification_coverage.json",
+      "sha256": "b6126261d3c67cb332a9061c8b62937f6d7c169f21382891a3b025c1a1c44444"
+    },
+    {
+      "bytes": 4613,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/research_checkpoint.json",
+      "sha256": "3f84cd52b617c3bbdd8d5c05d392690fc7295e50821e43dae17b2afdcc0d73eb"
+    },
+    {
+      "bytes": 1980,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/research_checkpoint.md",
+      "sha256": "47f1b1bb88206f5b1ee9f86c5c2f719c1f5f6f3f1bd7fd681328a0fd9d73bc78"
+    },
+    {
+      "bytes": 823,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/research_direction.md",
+      "sha256": "de0fc7f5c5d9ba9feefdc1f8f9ab288ca039abd52ca6aea44b7ac5726ad7ecc8"
+    },
+    {
+      "bytes": 601,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/research_round_plan.json",
+      "sha256": "3f946059c3b35648a9a02ab9caea9082553ca32d35b94ed6b1a5f8e0db862132"
+    },
+    {
+      "bytes": 328,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/research_round_result.json",
+      "sha256": "55f64b5c79b3d99447e69f94a6a98125beca9a8dcb7a4a44efb90765acd95b71"
+    },
+    {
+      "bytes": 14107,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/search_round_report.md",
+      "sha256": "e45d48e68fe5b299b65e099d1368ce6bf2f4ff0b735bbf45a881a57067248d6b"
+    },
+    {
+      "bytes": 464,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/search_wave_manifest.yaml",
+      "sha256": "90439a2068dbf5b8a13005c6a31ad7c196a6345392ad448f04e659023caa9a81"
+    },
+    {
+      "bytes": 358,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/source_audit_manifest.yaml",
+      "sha256": "c37eccd950a5d35b48cfde72d04bc559e805f4abb803578b3fcf3c4d2a411533"
+    },
+    {
+      "bytes": 276,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/source_digest.md",
+      "sha256": "38ef5bcd32ec34aa2c2eac8fcbbd91f902d4e83ff1444b13657064c06a829d68"
+    },
+    {
+      "bytes": 2183,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/verifier_exposure_log.md",
+      "sha256": "ac9a151d93d9faa40e5b8ea2fa510fe6b45fe83b9893dfe7f8e092a885c53195"
+    },
+    {
+      "bytes": 476,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/verifier_exposure_manifest.yaml",
+      "sha256": "e93ef296cfb11f31f534117741373cf126a5d4d0ead5444782a426a31d4a7eaf"
+    },
+    {
+      "bytes": 2679,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/verifier_report.md",
+      "sha256": "087010df8523de22166b47d7ceafbe27c3ce16168d24ec06c0f9539d0e4bc075"
+    },
+    {
+      "bytes": 763,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/verifier_report_manifest.yaml",
+      "sha256": "a0ab4ed05601f884fc04c852adbf6354e5d367694d6c9b91717464d9f3fd4e5e"
+    },
+    {
+      "bytes": 282,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/templates/waiver_assessment_manifest.yaml",
+      "sha256": "716cc0ad56b4109a945ca56e7cf399ec1e9b10fddad992d97761ee6cdfc59907"
+    },
+    {
+      "bytes": 17532,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_claude_collection_intake.py",
+      "sha256": "1d6cfe5fd3c34ed72170b7bcee08bbd688ab69542e16d8d02657fc0493d467b1"
+    },
+    {
+      "bytes": 28861,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_claude_terminal.py",
+      "sha256": "e2afd446cf2f2655d27b1502289818eb22753a00fef5f3bd49109a0788088f74"
+    },
+    {
+      "bytes": 6008,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_claude_terminal_launch.py",
+      "sha256": "b01d7a31248f0a78258b0d87b9fbf59f79c40e37667f1928203df9188829cd48"
+    },
+    {
+      "bytes": 6851,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_claude_terminal_research.py",
+      "sha256": "243c56b9faad1053f198b85092b6ff2686256a610eabbbf363a3295c1b1a84ab"
+    },
+    {
+      "bytes": 24841,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_claude_terminal_timeout.py",
+      "sha256": "ad386d75477a92cd594d759d97f924e00f586871f0db7ddf40f394337762cf5f"
+    },
+    {
+      "bytes": 52275,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_laboratory_stewardship.py",
+      "sha256": "3a2c8014ac951ac090c335e0e73111bb321b541698a182c1361cb567db94ca51"
+    },
+    {
+      "bytes": 32204,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_laboratory_survey.py",
+      "sha256": "bf921b48ac7f4b13fe6bd4f5367907e4009ae07248e01f99913f935318374e3b"
+    },
+    {
+      "bytes": 38351,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_repository_first.py",
+      "sha256": "130f81af06e5b628bf6319ad7bbd8a2b5513ecbc3ebe07e942f93ca7b7139f57"
+    },
+    {
+      "bytes": 76602,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_research_memory.py",
+      "sha256": "ff3172ef8101ed25ada1c80bbde2f305e6a45b8d2e4fcd4774b9cbf1585d703e"
+    },
+    {
+      "bytes": 88454,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_research_release.py",
+      "sha256": "2e2a5dfc8ddb1338a3dbe5fa672e1c48f516073365dc90d85c0aaeb6b4a02b3c"
+    },
+    {
+      "bytes": 82432,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_research_round.py",
+      "sha256": "6289c5c071cf7b816a58130840c0e305574be8884869ae1b820651797046f9bd"
+    },
+    {
+      "bytes": 4000,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/tests/test_validate_proof_search_artifact_roots.py",
+      "sha256": "86a0e363f7e57eb11911ec728506b12680c4c7198cb8c85aafc80f8e6ad46ffb"
+    },
+    {
+      "bytes": 1894,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/README.md",
+      "sha256": "240dba61c74d0ec3eda39786b7129271829e47750bb780df8ac7165f441120d9"
+    },
+    {
+      "bytes": 13696,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/claude_terminal_protocol.md",
+      "sha256": "d4cb314774a1c6e26acf27e796d0452008edbc2aaea27ed976701bdb156aca23"
+    },
+    {
+      "bytes": 902,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/command_examples.md",
+      "sha256": "be7e1514f3624fdf03cb6b528f77ce367883553770559e8e9e5f1f4a40a7e2ab"
+    },
+    {
+      "bytes": 11018,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/durable_research_memory_protocol.md",
+      "sha256": "f6fe295a0297a0c839441645ee7662e43fcd5534ad925d82d9a25a5bb7063077"
+    },
+    {
+      "bytes": 33372,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/hard_math_search_orchestration.md",
+      "sha256": "f8814d25cb222c1bf14bc5067f8f05b06e6c74cd730a186601d14b71f4c69d1a"
+    },
+    {
+      "bytes": 12288,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/laboratory_stewardship_protocol.md",
+      "sha256": "b66686a6b37608bc420b1416dce1d450e5f8cc8febc8404cd078197831c0f920"
+    },
+    {
+      "bytes": 10757,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/laboratory_survey_protocol.md",
+      "sha256": "a93e470f5cccd78480a76543061a4bf6a7c010800afe7177684afe86628cf313"
+    },
+    {
+      "bytes": 510,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/literature_protocol.md",
+      "sha256": "e836da82a61d3622cd8bc1af4c4e8c2484a4b54199e1a83dee82a526023c88e4"
+    },
+    {
+      "bytes": 5928,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/proof_protocol.md",
+      "sha256": "460b24ac541a19036d464b0d884ee2a2434b23f3c806c66034f3a16fa7252051"
+    },
+    {
+      "bytes": 17634,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/repository_first_protocol.md",
+      "sha256": "88659568745bf7623c6b8920c57dbd8aa478648315b4c942edb371a8e6096282"
+    },
+    {
+      "bytes": 1523,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/research_directions_protocol.md",
+      "sha256": "d723290f06517c4e123fa2e1afe28fd5ccdf433e4b996df377497e4da7751da0"
+    },
+    {
+      "bytes": 9153,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/research_round_protocol.md",
+      "sha256": "7938442dabbcae0e74bf867fd47cef536f8efe7869b9e63b0b1d7306f998172d"
+    },
+    {
+      "bytes": 247,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/base/workflows/self_improvement_protocol.md",
+      "sha256": "b31c896285fd94f082eb56c8d77d98b13a36a695c197d5414316729a7b310b7e"
+    },
+    {
+      "bytes": 18055,
+      "mode": "100644",
+      "origin": "reviewed_data_override",
+      "path": "scaffold/manifest.json",
+      "sha256": "9738a2f091f2ff86e2b843ad9a62c9c2c3188cdd082279e6b0f1d4946569ff93"
+    },
+    {
+      "bytes": 488,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/computation/.codex/agents/computation_formalization.toml",
+      "sha256": "dc62ee378cd2a4bb76d5cb44fdb28da6c43e14cf18fd64aecbdff74cc81c13c1"
+    },
+    {
+      "bytes": 214,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/computation/research/computations/README.md",
+      "sha256": "6a55142508c9b8863b3c49fd2c890ae4d59877d729ee83565ec165336fc0acba"
+    },
+    {
+      "bytes": 5614,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/.agents/skills/run-deep-research-goal/SKILL.md",
+      "sha256": "844cdff1c7650a506ab77cc4ff93ba3e08c2e5411b59303fd611cbaab406d134"
+    },
+    {
+      "bytes": 263,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/.agents/skills/run-deep-research-goal/agents/openai.yaml",
+      "sha256": "f4722a5a8b6db36e9ef6d623a615d448f564fa9f8df8b050bf4533e3a065a33f"
+    },
+    {
+      "bytes": 2101,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/evals/adversarial/deep_research_goal_scaling.md",
+      "sha256": "c7791a808fbd3aa4217822cf7c22754105ede225ebaf41d26465015fc61fa197"
+    },
+    {
+      "bytes": 845,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/research/deep_goals/README.md",
+      "sha256": "179f006cb88d08893d07e63c38be1834202a99acd3778c2f3212dec9fafe81de"
+    },
+    {
+      "bytes": 10340,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/schemas/deep_research_goal.schema.json",
+      "sha256": "2a6d0c76ba8582e00801f3d2cf0c772684f6162bc1d6a4bca8bab9a934ead3d8"
+    },
+    {
+      "bytes": 5176,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/schemas/deep_research_outcome.schema.json",
+      "sha256": "85eeab4fa4f9ed88267e57d06ee58be1390c6f140cab0735d797eaa509094b94"
+    },
+    {
+      "bytes": 1387,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/schemas/deep_research_target.schema.json",
+      "sha256": "8ed2c11df9febf82ef992fede513c9b2e0a6ddcf59f65a7be05a3719a43faafc"
+    },
+    {
+      "bytes": 77326,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/scripts/deep_research_goal.py",
+      "sha256": "34611d6581e17280ae17baf21f8198b5d121d24c18fc30922e3af6ccd2b6a307"
+    },
+    {
+      "bytes": 1398,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/templates/deep_research_goal.json",
+      "sha256": "01c744bb37927e4854dded7537015f459eacca3cc7cb701fc9cecf70a694b810"
+    },
+    {
+      "bytes": 1034,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/templates/deep_research_outcome.json",
+      "sha256": "b5157e55b50f7ed334602374965bca296bd59d61d7447a1ab20ebcd3ce98fc1b"
+    },
+    {
+      "bytes": 399,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/templates/deep_research_target.json",
+      "sha256": "b7ddd53f2f53b7c7438cf1220b63a7ed60885c5f830942ac7620d4ab51cfc7ce"
+    },
+    {
+      "bytes": 69974,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/tests/test_deep_research_goal.py",
+      "sha256": "652af688ce6c182aa34f6481a24f398e80281dd6f9bbbddebad99fd9ea86523a"
+    },
+    {
+      "bytes": 6423,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/deep_research_goal/workflows/deep_research_goal_protocol.md",
+      "sha256": "09c16f60f2a04b484f2cd20f078a9d2b00628849f96035869f3ef6ea43f01816"
+    },
+    {
+      "bytes": 1137,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/intake-discovery-candidate/SKILL.md",
+      "sha256": "3cc9f731b7086030ef805738e6132d83f28a95ba59847ed7a044cff5476f43c7"
+    },
+    {
+      "bytes": 239,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/intake-discovery-candidate/agents/openai.yaml",
+      "sha256": "57dd0ae8cdeec3489f22a3ce404607cd6e1feb092103773763bdd7894c6f0527"
+    },
+    {
+      "bytes": 1460,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/prepare-discovery-spinout/SKILL.md",
+      "sha256": "7ce27c8986949b708841fd04455bf319d591e6c3a835ea990d7ef230bd5b9a78"
+    },
+    {
+      "bytes": 248,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/prepare-discovery-spinout/agents/openai.yaml",
+      "sha256": "c376f20de3fc651d477f58bbb712d7e7b2f232c2be27818692ad2215b643cfe2"
+    },
+    {
+      "bytes": 2027,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/qualify-discovery-candidate/SKILL.md",
+      "sha256": "1315601354ba70c513c102d82e0c978ae15040ce8b152bd9a28c5dee5d128321"
+    },
+    {
+      "bytes": 266,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/qualify-discovery-candidate/agents/openai.yaml",
+      "sha256": "165c36a75d8e4b5b1e78b04831fef68ab6cbc75b0aed88a442311d40f9b4d84c"
+    },
+    {
+      "bytes": 859,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/recheck-parked-candidates/SKILL.md",
+      "sha256": "818cb95239695eb5ad8f9e65a22f61224c64ca3120b14829a859020bd5f80938"
+    },
+    {
+      "bytes": 265,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/.agents/skills/recheck-parked-candidates/agents/openai.yaml",
+      "sha256": "d6366aab2f1757edaf04094bdd1b3ea3e3b2e5e009c12514db4df234339dd20a"
+    },
+    {
+      "bytes": 2254,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/evals/adversarial/transaction_and_round_gates.md",
+      "sha256": "00c24e561bd8526f35e4a5b6a0930420f90646407f052d27b6b7bc702e8b78ea"
+    },
+    {
+      "bytes": 544,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/knowledge/control_room_summary.json",
+      "sha256": "667f9247724c0ff77f3d259c77c5d9afbbe89316448d7cecb6d90facdfeb04f5"
+    },
+    {
+      "bytes": 1903,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/README.md",
+      "sha256": "c39699b3ef0c8f28e4a726311f4e8615dce2bd907991eab1cd004b5bbccfc3f4"
+    },
+    {
+      "bytes": 862,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/candidates/README.md",
+      "sha256": "918a0072f4fa35df74306d8ba85be7dfa1915d1baa2a8f0aa6a89b49b9e84100"
+    },
+    {
+      "bytes": 325,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/exports/README.md",
+      "sha256": "50e2c9a72a7a62dc0ccfa0d50a3c527cd5b02589357087de88fe188f4283c923"
+    },
+    {
+      "bytes": 328,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/imports/README.md",
+      "sha256": "3cd4882a1f1d359ddb76370a50fc85c649cab5c026c901572c8fdc57c7421f57"
+    },
+    {
+      "bytes": 212,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/inbox/README.md",
+      "sha256": "e359e5dc8abae8ebaba9ed62ec8d0f047974e833059642dc88d2580cdfeeb35a"
+    },
+    {
+      "bytes": 261,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/portfolio_state.json",
+      "sha256": "552b459a5be15057d40587e73c9160863d6727e653bc1020a517edc64654da12"
+    },
+    {
+      "bytes": 172,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/portfolio/spinouts/README.md",
+      "sha256": "fc4a4172926e8982bed5b0d714c91c5bc14611dee75091d913e974569a010838"
+    },
+    {
+      "bytes": 28385,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/scripts/discovery_portfolio.py",
+      "sha256": "7fa71ff929e7c4ab5b25c0abb9e74d05cceeb84edecf3b3345aabe3ef1ac502a"
+    },
+    {
+      "bytes": 68840,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/scripts/discovery_portfolio_lib.py",
+      "sha256": "5cd076e425bd7174afeb5e928e7873fa20fa5c01323293650895a0db24e8db76"
+    },
+    {
+      "bytes": 2773,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/scripts/validate_discovery_portfolio.py",
+      "sha256": "be314ed7a3151f615d6abc5ec1b9763181190146cf5beee99b8cd30aabd7b4fd"
+    },
+    {
+      "bytes": 480,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/candidate_intake.json",
+      "sha256": "4aa1f18073b850dab01764c1ea3377a0257a1bb91902c06ff5726728696cf318"
+    },
+    {
+      "bytes": 362,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/decision_input.json",
+      "sha256": "0be07416970fee5ddeb3e3775d42ab27d27e94d3d3532e1448b9c28eccefc2ba"
+    },
+    {
+      "bytes": 227,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/dossier_link.json",
+      "sha256": "da05090f61ee9ba3ca99319796ac8f6ee0005476f47f70641001e1251297ada4"
+    },
+    {
+      "bytes": 414,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/engagement_decision.json",
+      "sha256": "e34c582a35868495baa7a410f3ebf58d16671766602f2a5f2faed4dd7a1bb9c9"
+    },
+    {
+      "bytes": 515,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/park_plan.json",
+      "sha256": "d1a67b23d98e2ec69f99d9e90a753e3fdcfc8871ed20197da850976f6bd695c1"
+    },
+    {
+      "bytes": 604,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/qualification_input.json",
+      "sha256": "7aa5364e71b4b6aa8107ee15d6505cde8e7066a2e936ddb867073e885a4b58eb"
+    },
+    {
+      "bytes": 588,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/round_input.json",
+      "sha256": "611830ebaf035bcc87c8d61609f9ebcbd468813719bcd3a8d638eff5a7e8c160"
+    },
+    {
+      "bytes": 340,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/spinout_receipt.json",
+      "sha256": "d2fef5882758d5d0ee9c3545cc9ad3b1931cd304e4fd80050de29c3030c47715"
+    },
+    {
+      "bytes": 368,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/templates/discovery_portfolio/spinout_request_draft.json",
+      "sha256": "df7099c28ad2bf1ed86e09505b6cd35d7408cf3c5df87e2491ac690b90d43684"
+    },
+    {
+      "bytes": 74537,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/tests/test_discovery_portfolio.py",
+      "sha256": "df2e9e3f030174f3771360a746b83299b013634a8bdc8a2437bbb49b3435f546"
+    },
+    {
+      "bytes": 6705,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/discovery_portfolio/workflows/discovery_portfolio_protocol.md",
+      "sha256": "0c19f6c2f8260310aad42a2540c028b517b041f82a8f84a6d6cda378f61d8afe"
+    },
+    {
+      "bytes": 4596,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/.agents/skills/consult-chatgpt-pro/SKILL.md",
+      "sha256": "f9f3c29ffdbf1b474c1e2b9d79fb518404b9855afbcf56e0cc8bf141b7f05b29"
+    },
+    {
+      "bytes": 227,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/.agents/skills/consult-chatgpt-pro/agents/openai.yaml",
+      "sha256": "3e13737a5917bfb88a601734c8130814e3127aef06422bc568c2518aeb74eb87"
+    },
+    {
+      "bytes": 329,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/runs/external_llm/README.md",
+      "sha256": "b2576c6daf76fa0537f2d0f6b8cb0e366626398c91217784f2c478994b38ef01"
+    },
+    {
+      "bytes": 26564,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/scripts/chatgpt_pro_bridge.py",
+      "sha256": "5c311fd164fe70eac32daab21835df68a1a6cf4b53bff667f4d219ec24e873c8"
+    },
+    {
+      "bytes": 2189,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/templates/chatgpt_pro_browser_prompt.md",
+      "sha256": "d550ca7189cb7091e9105a57eee92b1473115b0293e5d996c96c9f5c4c58a672"
+    },
+    {
+      "bytes": 1259,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/templates/chatgpt_pro_response_intake.md",
+      "sha256": "4f54e6fefb932cf36fbb5cdd5bd1ecf16913aa5cab7f5acc6ad8d72a2ca2e4ff"
+    },
+    {
+      "bytes": 1505,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/templates/chatgpt_project_instructions_math_research_lab.md",
+      "sha256": "790daff925bcae0c44faac26e92acd1f753d42c570c73b4ecc74bca2f42f7edc"
+    },
+    {
+      "bytes": 1059,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/templates/external_llm_response_digest.md",
+      "sha256": "42bb7457f47f9d3718c6dd639ab4d889c325ac607b5625803861b433a4f5752a"
+    },
+    {
+      "bytes": 1786,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/templates/parallel_llm_launch_prompt.md",
+      "sha256": "d0cad4c0294ed3399f52977b9c52dd1ca0a1ac9b910d4e2ee7bb1ef10b9a7bd1"
+    },
+    {
+      "bytes": 12079,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/tests/test_chatgpt_pro_bridge.py",
+      "sha256": "a238d4c3f7574f589aa7dd7b5d874a7e24bc67c0671e01cb740ff7304ac3e8c4"
+    },
+    {
+      "bytes": 4201,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/workflows/chatgpt_pro_browser_protocol.md",
+      "sha256": "3cb26d09c8da5b5c09b1826bd68bd0286088cdeb605c39c9e17f1cd8e7fa8ae9"
+    },
+    {
+      "bytes": 3032,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/workflows/external_chatgpt_project_readme.md",
+      "sha256": "0a17570edee2224e81cf85d03e0dae88552286f9359c2d2f381eb9cef513e8e8"
+    },
+    {
+      "bytes": 5291,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/workflows/external_strong_model_sprint_protocol.md",
+      "sha256": "eb09cb21fc3dfdde741bd5bc07f793d2f93e18ceda392a4433dbf2661a044156"
+    },
+    {
+      "bytes": 7978,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/external_llm/workflows/parallel_llm_research_protocol.md",
+      "sha256": "c9cc29a2da937044a465d39792a87b303f9c55fc75ac6646bdabf5e57b8fd69c"
+    },
+    {
+      "bytes": 22435,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/.agents/skills/lean-room/SKILL.md",
+      "sha256": "df0f038cd7bbee92ca08057cb6559af26ed89cfebef7e02638f5c4e7976399f8"
+    },
+    {
+      "bytes": 207,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/.agents/skills/lean-room/agents/openai.yaml",
+      "sha256": "9d155f7c8e8994a9799ae0be1e46e9b1cd2d81bb6a09f7ff0aa9573b5fdac552"
+    },
+    {
+      "bytes": 8238,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/.agents/skills/lean-room/references/operator_checklist.md",
+      "sha256": "ec2374b5a7d189038a08c8e42d0be159413ab98f335fcd35025c4d0a9d02d4d6"
+    },
+    {
+      "bytes": 1294,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/.codex/agents/formalization_auditor.toml",
+      "sha256": "534a00c3a342e500d44b1f5e16c9d2ac1c3fdcf95ae8af9e1b65a14a967229a7"
+    },
+    {
+      "bytes": 1905,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/.codex/agents/formalization_specialist.toml",
+      "sha256": "7192cdc418a0355e231c77378956ef4b8406aaa2ec87809d4654297757a10da9"
+    },
+    {
+      "bytes": 2534,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/README.md",
+      "sha256": "beba7895711cbed8fb30d0ab67d06e048c5fe2cb7f602d2ebfde8ec132657c57"
+    },
+    {
+      "bytes": 4729,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/adversarial_acceptance.md",
+      "sha256": "4d346e867e101522bef20ad5c97a29adcc15c809196908bf19a2370a2c940e48"
+    },
+    {
+      "bytes": 5442,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/dependency_pilot_phase_b.md",
+      "sha256": "3a4ad1eac75a115124b9b04256a8b27f8d65639822a4e56d5fb95241e0e50555"
+    },
+    {
+      "bytes": 3501,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/dependency_snapshot_phase_a.md",
+      "sha256": "9f91fb8b00fe98873219b6fb6ae607fa439c7d790c4fc8f544d712b910239b13"
+    },
+    {
+      "bytes": 49,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/admit/Main.lean",
+      "sha256": "2623cdf4ee1f6eb0667972ab03d6fb9ac5167c729b829f51232598fd5b019165"
+    },
+    {
+      "bytes": 87,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/auto_implicit/Main.lean",
+      "sha256": "6e6ad9d2934eaac9d8b8cc7cc940c0046cfe7e34c8eee006cac541656e62669a"
+    },
+    {
+      "bytes": 234,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/coercion_mismatch/Main.lean",
+      "sha256": "1cdf9e485c09f723b8026cf3896264b636d370ebc215c13832a0615f450016a6"
+    },
+    {
+      "bytes": 105,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/custom_axiom/Main.lean",
+      "sha256": "23a47ca48d9dfa3ab782ee93153897285257b5b9c4752740b431fba1799e6cbf"
+    },
+    {
+      "bytes": 341,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/meta_elaborator/Main.lean",
+      "sha256": "7fa7b0742681e8306b92f448a30a23091403a06865f82370a5a54d94700e1219"
+    },
+    {
+      "bytes": 70,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/native_decide/Main.lean",
+      "sha256": "6312ec2e1a6d0a931d529a667d7898058c79feae6f7a23c694717d05319653d6"
+    },
+    {
+      "bytes": 49,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/sorry/Main.lean",
+      "sha256": "b7add6434c7c1df4d5123360904d3af65dc9100e1f15ccca91b831516a2d9a71"
+    },
+    {
+      "bytes": 54,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/valid/Main.lean",
+      "sha256": "17dfdf8290e385061cfc512edc1eefe04827516ec70211c426cfbc09f2abfc1c"
+    },
+    {
+      "bytes": 129,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/evals/lean_room/fixtures/wrong_theorem/Main.lean",
+      "sha256": "e6b34e911bd748430bc8506b749bc9b8f73613f3111d456fb036f2966e534ee6"
+    },
+    {
+      "bytes": 1635,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/research/formalization/README.md",
+      "sha256": "e55b9d72cba3851a8bd9a915fdb6789a2b919f01584efa9c85345e8452c10ea6"
+    },
+    {
+      "bytes": 223,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/research/formalization/lean_room_state.json",
+      "sha256": "127b08c2903ac121e7f1871fa20a9bea9c1c9baa6bab6a57e5d3135957a91818"
+    },
+    {
+      "bytes": 30596,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/freeze_lean_case.py",
+      "sha256": "c72776af684ea9ab4dc0f0deeadd43ad120ec257d96d12f64822d619ceb2b121"
+    },
+    {
+      "bytes": 25583,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/import_lean_dependency_snapshot.py",
+      "sha256": "82f76345bd32a95783ad43cdefb125612d884f752c88208a61ce08dc5f79e4f6"
+    },
+    {
+      "bytes": 31252,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/issue_lean_certificate.py",
+      "sha256": "3d5945ea57c299526e38a7fe00c3bd2c06b443bd803a826a25e173e4eee2a886"
+    },
+    {
+      "bytes": 28758,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/lean_room.py",
+      "sha256": "5f354a1004570c5199ea76f4e7df76a3ebbd3f8ce84bc58db2f1386f7698b608"
+    },
+    {
+      "bytes": 17185,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/new_lean_case.py",
+      "sha256": "5c8a43dce82afe019a2c82205b965b89badb384123a4c2d5dc4e0aff2ff70743"
+    },
+    {
+      "bytes": 47723,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/record_lean_audit.py",
+      "sha256": "f3236526bc2df5f85311f8b00d92951aa2fd6bc25fa96951d9260c347164eb6c"
+    },
+    {
+      "bytes": 36179,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/validate_lean_case.py",
+      "sha256": "283aac8e7a41181b496d6c043ecae90dd1123284955405d60a0e304196d96a70"
+    },
+    {
+      "bytes": 49428,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/validate_lean_dependency_snapshot.py",
+      "sha256": "074f5f03ffbc8b99e33b0a77a89e47b7170bf23b666ac84050e5106d9eebc7e1"
+    },
+    {
+      "bytes": 45389,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/verify_lean_case.py",
+      "sha256": "b26b1bdb37d31f288b95150036eb72815586c22054c8d3a6e218a3aab833fb30"
+    },
+    {
+      "bytes": 107247,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/scripts/verify_lean_dependency_pilot.py",
+      "sha256": "51ae7042891e1fa255a51b7ac9e1709e44d6045589ed478fe4b5e902cf9080f6"
+    },
+    {
+      "bytes": 4905,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/README.md",
+      "sha256": "015cde6525ced259b9d7f3aab5a33f05bb46ef012e7e23cdd87b51d732b88d82"
+    },
+    {
+      "bytes": 3633,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/auditor_prompt.md",
+      "sha256": "cf23ebd420647d26487bc4c907771affab2220272f4a697ff768de933cc87ab1"
+    },
+    {
+      "bytes": 2215,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/build_manifest.yaml",
+      "sha256": "965aac2834c5c6086cda0f0d910263cd9d185e0f4012a8916435e0e0db1cd379"
+    },
+    {
+      "bytes": 1213,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/correspondence_verdict.yaml",
+      "sha256": "2b073732a1b8adbfafad0f8d44d69183a011e3872fe198b63da215a4b80f5ee5"
+    },
+    {
+      "bytes": 1767,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/dependency_snapshot_manifest.yaml",
+      "sha256": "6a448816c5f36aea6e2dd6bcf8f01879c578c7a16109a6e60b52688e2ad799bc"
+    },
+    {
+      "bytes": 2726,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/dependency_snapshot_review.yaml",
+      "sha256": "6b87c4d062a40b16937906bca8e062debfb3268a49c0940a778757112a93df63"
+    },
+    {
+      "bytes": 2628,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formal_audit_manifest.yaml",
+      "sha256": "ba257b065886cabed2ab812b4635f087c6bf84206d6f16a52b2cb756a57040cb"
+    },
+    {
+      "bytes": 2510,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formal_certificate_manifest.yaml",
+      "sha256": "7357e97c2e008f939388a45cbc439e3cc5b3cfffaf634277fc129f61b6290f21"
+    },
+    {
+      "bytes": 495,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formal_certificate_retraction.yaml",
+      "sha256": "d22057f652ad2494b36cd74e065571cc718b9b279914049dbc56475babec6068"
+    },
+    {
+      "bytes": 4435,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formal_correspondence.md",
+      "sha256": "bc1901c58450458d50d5ded2b24b9c7ed3d9170005bed1743669b666c884b7be"
+    },
+    {
+      "bytes": 3818,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formalization_campaign.md",
+      "sha256": "e59d4649d3987a6f6eb2cfa3767184ee0cc4474db9329dafeeb1e0cc098d633a"
+    },
+    {
+      "bytes": 2454,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formalization_checkpoint.md",
+      "sha256": "02a5dcf7b7392303a5e309fada453507df87fdcd95737149d93f798c8be65058"
+    },
+    {
+      "bytes": 4056,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/formalization_contract.yaml",
+      "sha256": "f6ab7f2660145c21bdf66ef2abec21d9836697ed2820280e5324f8fb72efb82c"
+    },
+    {
+      "bytes": 1366,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/freeze_manifest.yaml",
+      "sha256": "7841ec04366b5a82e632b6e19f5e3bc8353606259e655ad1893980c9b172ba5f"
+    },
+    {
+      "bytes": 3377,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/generator_prompt.md",
+      "sha256": "0a72018d2bfa30a25fff7d768ce84a9cbc8196f9620f54ef9576a9b6493a3e0f"
+    },
+    {
+      "bytes": 488,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/project/Main.lean.template",
+      "sha256": "d43f76e7a5e183516abe5ba31fd5bad1b8949e37c598e13424a08656755fba7e"
+    },
+    {
+      "bytes": 774,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/project/README.md",
+      "sha256": "eb527064e75a35010cb993f796114e1e795f5b9322250c6c89aefbb2fd7d257b"
+    },
+    {
+      "bytes": 393,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/project/lakefile.toml.template",
+      "sha256": "0063f374dc7f1f5db31565341eac06c9c330df212157ea94a7befa77978eb8bd"
+    },
+    {
+      "bytes": 20,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/project/lean-toolchain.template",
+      "sha256": "c9506b56264c9ce17d4c64f07068de164d08f45f29d3acbf7c736627053cf55f"
+    },
+    {
+      "bytes": 3511,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/proof_blueprint.md",
+      "sha256": "287b9cf063fbfebd0b7b9f962f698ac1dd3e7640b47604a524722adda0c0bb74"
+    },
+    {
+      "bytes": 2523,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/templates/lean_room/refactor_audit.md",
+      "sha256": "a9ab3bb3cd72551364ccddbeaddfbf004cedcb794d5a2e8fe64409aeab869d7a"
+    },
+    {
+      "bytes": 50033,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/tests/test_lean_dependency_pilot.py",
+      "sha256": "fbaf1ebafc0921eacce0c3c4575b6e8032648af522af7f8972c102e7dff4fea6"
+    },
+    {
+      "bytes": 35846,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/tests/test_lean_dependency_snapshot.py",
+      "sha256": "3a9736af7a5fe8e1e3485048ba33d408aadf10983764ba45be010d31f1a9b285"
+    },
+    {
+      "bytes": 99709,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/tests/test_lean_room.py",
+      "sha256": "03966f1af47be473d2984ad8aadbe46a78245fb7891871be99ed847182061640"
+    },
+    {
+      "bytes": 44621,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/formalization/workflows/lean_room_protocol.md",
+      "sha256": "66325eb0d57f7d374dab89b3d761e3f3c0faf8bb891ba90cb7f63aeb640de57b"
+    },
+    {
+      "bytes": 556,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/.agents/skills/draft-paper-section/SKILL.md",
+      "sha256": "93944a1db2c74e96c0ee34ed4176c7abb41822c1c7d4a738c3d039807f4db42a"
+    },
+    {
+      "bytes": 468,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/.codex/agents/exposition_editor.toml",
+      "sha256": "6a147428de2c8a6ac87a9c9bcaeb5be36dcea6ec21771e1ad78651a8fa8abfad"
+    },
+    {
+      "bytes": 209,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/paper/README.md",
+      "sha256": "f2bd8d3c37591355b0afc434e8d37881b92c6ebe74377757d7549b4c954408a3"
+    },
+    {
+      "bytes": 99,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/paper/figures/README.md",
+      "sha256": "65ca8dcb955209ada5d614c4de6821dc8b1787489ed6ef2ef07f3bf185fb7c78"
+    },
+    {
+      "bytes": 208,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/research_reports/README.md",
+      "sha256": "12ee2099bf9d220fc4ad21786d169d9e90b4bbff5d8adf4a4e69a942b8dc9030"
+    },
+    {
+      "bytes": 395,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/README.md",
+      "sha256": "7a4039bf778c194361e8d684da573eac95e23a04ba34624c3dd87595d8977d32"
+    },
+    {
+      "bytes": 677,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/macros.tex",
+      "sha256": "fcafa513f4fb2feacc2e0d10d54573c1536235f16b3357838545dae338339c14"
+    },
+    {
+      "bytes": 1328,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/main.tex",
+      "sha256": "e7fbc66f6fa720d8b32e1dea6179c762e32637cb4253074146a159ae0b2ae25d"
+    },
+    {
+      "bytes": 176,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/references.bib",
+      "sha256": "4e985aa3babc8546dd1175caf5e47f47be2397ddccb5c033dfc4ed74b8b063c5"
+    },
+    {
+      "bytes": 414,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/source_crosswalk.tex",
+      "sha256": "8f6ba43ac29f43d2d69e4c397e05015024bed4078fb8832558a15147af3e1653"
+    },
+    {
+      "bytes": 456,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/templates/overleaf_research_report/status_table.tex",
+      "sha256": "bcd200a9ecdb4cc91786ecd8d27f4d39a0d22c1c9d0ce00b4d525162e3eacda7"
+    },
+    {
+      "bytes": 225,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/workflows/paper_protocol.md",
+      "sha256": "1b5e0b64db6413adef33da673e4940e537f756b5465efdd369c174436084980d"
+    },
+    {
+      "bytes": 806,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/paper/workflows/research_report_protocol.md",
+      "sha256": "b6885429a66fcc81b65ac4f27fdb891ed2123fc2225890ee8d55ed9109d3d9da"
+    },
+    {
+      "bytes": 502,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/.agents/skills/build-math-talk/SKILL.md",
+      "sha256": "539c528b611e14a609f147948c310fca726278fdebfba159bf6060455d34476a"
+    },
+    {
+      "bytes": 468,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/.codex/agents/talk_designer.toml",
+      "sha256": "da5a40d6476589eeb5af97bbc268e504c6cebb950bd884da5d39838cd0f64334"
+    },
+    {
+      "bytes": 161,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/talks/README.md",
+      "sha256": "63229a7ec6f7670b133eab6a3393cc3504310e8f7221a86b4478661193d23fad"
+    },
+    {
+      "bytes": 273,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/talks/templates/talk_note.md",
+      "sha256": "da55123745d6fa565f5d454c1b8f1428ba0230eb0bd36d16eb3be72497264733"
+    },
+    {
+      "bytes": 174,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/talks/templates/talk_outline.md",
+      "sha256": "f56d95144eb88b5d6b3d2a121ec301eeb10875378f792e3aa3dac4a64e4b190b"
+    },
+    {
+      "bytes": 178,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/talks/workflows/talk_protocol.md",
+      "sha256": "f1501fabfd24ca357c8111655b2a3c8bfa85b0b83701af44fabe8630d71dd390"
+    },
+    {
+      "bytes": 1214,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/.agents/skills/bootstrap-team-repository/SKILL.md",
+      "sha256": "4277707b0ca2d97802db7e749affb5c533606b59eb6c219e057594557d117e40"
+    },
+    {
+      "bytes": 1526,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/.agents/skills/run-team-research-cycle/SKILL.md",
+      "sha256": "42ade8dde5ce2ff5ca068c0bddf571a3210d0d134f1427cde1bc8e1810ecbc1f"
+    },
+    {
+      "bytes": 861,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/README.md",
+      "sha256": "178abd222489b1a8c5ada79e939af2aba0fb5905b0aa8f9acb28caf4bd9f7e64"
+    },
+    {
+      "bytes": 526,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/contributions/README.md",
+      "sha256": "c29d4dc9128eb1b91edf5356ba9a938ec56a1a35644b5d1378d64d0847382c3f"
+    },
+    {
+      "bytes": 163,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/cycles/README.md",
+      "sha256": "a1992a8cd177d8ce4db6a5198274a06ed80835446ea0fd440dfc5875d5029ff9"
+    },
+    {
+      "bytes": 246,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/repository/README.md",
+      "sha256": "733a89d368402821f876953842884d055c3dbc732046e124b5f237cf5d75beb7"
+    },
+    {
+      "bytes": 85,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/repository/plans/README.md",
+      "sha256": "8b4092546c4ed549f22917461fe2043a5b32976e5dca6c0b7654c272bf418b95"
+    },
+    {
+      "bytes": 146,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/repository/receipts/README.md",
+      "sha256": "e253a2d8a0970fab4a592b66742275503c0a825829376551c86dfdd51b2e570f"
+    },
+    {
+      "bytes": 100,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/repository/reviews/README.md",
+      "sha256": "376a61a3a221e91023e49dbbd786a38984906579747f8c3846b246f26bafc058"
+    },
+    {
+      "bytes": 108,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/team.json",
+      "sha256": "42bce13937e1647c0822c653a6d17eedd8260b309abedb6aa0d2ac8666f04a91"
+    },
+    {
+      "bytes": 161,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/collaboration/work_items/README.md",
+      "sha256": "79332617b61864e7dc0fa6111d1d765d787a3a1b24e5d87fcda1d49cc109b9d5"
+    },
+    {
+      "bytes": 63558,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/scripts/team_collaboration.py",
+      "sha256": "e8cf637d960330cd582b4427ef9bcc4d6dab87a27cb7017f3ed74fb314bed658"
+    },
+    {
+      "bytes": 34924,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/scripts/team_repository_bootstrap.py",
+      "sha256": "a35db1775c257e40a69772e54be2335cf49b0c5c959177b6de491b7c5753768b"
+    },
+    {
+      "bytes": 429,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/templates/team_collaboration/manual_meeting_summary.md",
+      "sha256": "4e82b2b448de7fdbb09619391c0573537a4740f159db1562f714505c2c257959"
+    },
+    {
+      "bytes": 425,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/templates/team_collaboration/public_disclosure_review.json",
+      "sha256": "6f8cd39f771ae6ed0d5ecdc69c3efcab695340e9ba1025841f133b497af0ee1b"
+    },
+    {
+      "bytes": 819,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/templates/team_collaboration/team_governance.json",
+      "sha256": "f400974f8c29cc55f9e66de36e8fd9aa2fa226c6e5079d77a7b99b73794ebfe0"
+    },
+    {
+      "bytes": 357,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/templates/team_collaboration/work_item.json",
+      "sha256": "fb292651bdc657596e93f9fcd6906067eff30fd3ff47a300b6e49c5ef0b5e8c2"
+    },
+    {
+      "bytes": 25179,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/tests/test_team_collaboration.py",
+      "sha256": "959ffab31dbf3ff2a1b18e144e94853fa77dbc6807622b66d5cbad59b08e202c"
+    },
+    {
+      "bytes": 1559,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/workflows/team_repository_bootstrap_protocol.md",
+      "sha256": "15a0180ed79c2018754aef9f1e8580c36c449f93904248a298ed065719fe0222"
+    },
+    {
+      "bytes": 2548,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/modules/team_collaboration/workflows/team_research_cycle_protocol.md",
+      "sha256": "4c6abb3961992a6900fc423e6b37410a83403bbe785df6f0110e8cef640377b3"
+    },
+    {
+      "bytes": 83,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/.gitignore",
+      "sha256": "09e1412cc6524e83ca10eeaf10e742c5395d8f5ad3299af880690f0ce5d6c167"
+    },
+    {
+      "bytes": 111,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/.lab/philosophy.json",
+      "sha256": "1ccc652e4d3d508085bc2f9e9d590e6022abc235750b5f646763084ff2b52a91"
+    },
+    {
+      "bytes": 6338,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/AGENTS.md",
+      "sha256": "d5be375740e285bd06d664c91eb61752a7fc8803f51eb70d4c62ce59e3e4c617"
+    },
+    {
+      "bytes": 558,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/AGENT_POLICY.md",
+      "sha256": "36e27864278b7ae00d11472a56680a524b61616de71b4338885d95e6ddba207d"
+    },
+    {
+      "bytes": 239,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/CHANGELOG.md",
+      "sha256": "dc0a8dd2b140689827ff58f964e804ae92409fc57f0436e8dbef03ac9b18fe45"
+    },
+    {
+      "bytes": 758,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/Makefile",
+      "sha256": "accc61926e5f6ac8b7a1e56e200bf68b70710ee3589269ed8bb309e85f11836c"
+    },
+    {
+      "bytes": 327,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/PROJECT_CHARTER.md",
+      "sha256": "3953d6e6d1e77b7dafeea9f4cf0760747244d350686007823a523079e05e3e33"
+    },
+    {
+      "bytes": 1576,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/README.md",
+      "sha256": "dc6bf18dadab009530821abad6a5d5910b295f75b1806aaafa4f71d0a1aac4a4"
+    },
+    {
+      "bytes": 1386,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/START_HERE.md",
+      "sha256": "78b9fb88effc2f04718391261962920d9cf3fe509c196fc107f880f381d57690"
+    },
+    {
+      "bytes": 10210,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/docs/ARCHIVE_FORMAT.md",
+      "sha256": "18caaac1115d2b678d9e25c44e578483a47cffc5ce00774511bc64231660b014"
+    },
+    {
+      "bytes": 6804,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/docs/CAPTURE.md",
+      "sha256": "ad72cabe97f76c09bca700ddcaa6ea5eb58b53df13a95a13f03580cdbb1feedd"
+    },
+    {
+      "bytes": 7884,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/docs/TIMELINE.md",
+      "sha256": "27e9965a86fe148a2f28163812f813ad8945b4941058d1ec357f148e60c55bd7"
+    },
+    {
+      "bytes": 109,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/knowledge/project_map.md",
+      "sha256": "56c0a95d0923b19e945ade11cbb9d971780f3bee4e1e1a920a9fa76c9d0cc6a8"
+    },
+    {
+      "bytes": 910,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/knowledge/resume.md",
+      "sha256": "beb2c9715f61b594bad01a9f722b04b3e619a7a3e1258aa14312345ae6a9f055"
+    },
+    {
+      "bytes": 749,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/methods/simple-v1.json",
+      "sha256": "befa00c117671b9138897b1260ddee50b93e42c623af40d06e1cb2bbd3084750"
+    },
+    {
+      "bytes": 2796,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/schemas/archive_event.schema.json",
+      "sha256": "fc313e56f484b4d709d038e6d581bfb2c1c8b02d700c07e8aca9c53c150ac39b"
+    },
+    {
+      "bytes": 2491,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/schemas/candidate_birth.schema.json",
+      "sha256": "99fe3ac3ba380ae7586462353dd5fbed4f0b376d3d06b318d21e45205d152121"
+    },
+    {
+      "bytes": 23151,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/capture_codex.py",
+      "sha256": "8c960b61f40468c324c79474afadd7850a658ea6c2ae5dad90b210a167a2b790"
+    },
+    {
+      "bytes": 5481,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/claude_terminal/claude_cli_launch.py",
+      "sha256": "cd9912bee0e2829c72debbcebc58113dfbd82c5d9f39bc6949321e5f9c8adb64"
+    },
+    {
+      "bytes": 23045,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/claude_terminal/claude_collection_intake.py",
+      "sha256": "b33a3e43a18e500d6a1c64ee0cbc37e07b5c0151fccc1a76a70636ea5c6b6c99"
+    },
+    {
+      "bytes": 59534,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/claude_terminal/claude_runner.py",
+      "sha256": "c9496f0b96e10351eefc780ba1a331999ccbcf5da39bd67e8b1b50364603645b"
+    },
+    {
+      "bytes": 15305,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/claude_terminal/claude_runner_support.py",
+      "sha256": "f8d534c8c2796bc469baa9a24d93d569d19822b3ccaa4718304300948b13af08"
+    },
+    {
+      "bytes": 3965,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/claude_terminal/claude_source_capture.py",
+      "sha256": "072423d5570ef174986f100099988c4b08b19b2391f1cee2520558b166caf528"
+    },
+    {
+      "bytes": 1789,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/doctor.py",
+      "sha256": "ac88dda9dcd67754c004e0f9fa0507c012025750023c8351db269787b21c631a"
+    },
+    {
+      "bytes": 22459,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/philosophy_round.py",
+      "sha256": "3e74681759c308bff7170773cfaee44f04fde70ca39798f9b58afcbace02b7d3"
+    },
+    {
+      "bytes": 36348,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/research_archive.py",
+      "sha256": "cd70bb0efcac497b0e9812b579e3ef999f2f779ee56a1cb352fe6fdb446ac9f0"
+    },
+    {
+      "bytes": 28360,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/research_timeline.py",
+      "sha256": "4d1555ad01f38c659535656d5e38d9f76f82821dc0aa1dba6aa1f56435750f6e"
+    },
+    {
+      "bytes": 1403,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/run_evals.py",
+      "sha256": "30d19173b057d89a1eb31fffcf7d0e7350548b649efc986ebedc25804c24598e"
+    },
+    {
+      "bytes": 19264,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/scripts/validate_lab.py",
+      "sha256": "1e81d2519e3b43432aa6182a362f83560b8c4eb4d63b1f6867279d80a6f99488"
+    },
+    {
+      "bytes": 705,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/templates/claude_terminal/request.json",
+      "sha256": "881ca359988da88ced499688bff15b6754e5889d14df071041b85f0bac33b2ad"
+    },
+    {
+      "bytes": 14293,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_capture_codex.py",
+      "sha256": "037cb1d70db4300537a26c55cf66e732ed6dffb9d037ca321d2b383a3f5eb0ae"
+    },
+    {
+      "bytes": 17532,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_claude_collection_intake.py",
+      "sha256": "1d6cfe5fd3c34ed72170b7bcee08bbd688ab69542e16d8d02657fc0493d467b1"
+    },
+    {
+      "bytes": 28861,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_claude_terminal.py",
+      "sha256": "e2afd446cf2f2655d27b1502289818eb22753a00fef5f3bd49109a0788088f74"
+    },
+    {
+      "bytes": 6008,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_claude_terminal_launch.py",
+      "sha256": "b01d7a31248f0a78258b0d87b9fbf59f79c40e37667f1928203df9188829cd48"
+    },
+    {
+      "bytes": 6851,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_claude_terminal_research.py",
+      "sha256": "243c56b9faad1053f198b85092b6ff2686256a610eabbbf363a3295c1b1a84ab"
+    },
+    {
+      "bytes": 24841,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_claude_terminal_timeout.py",
+      "sha256": "ad386d75477a92cd594d759d97f924e00f586871f0db7ddf40f394337762cf5f"
+    },
+    {
+      "bytes": 20435,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_philosophy_round.py",
+      "sha256": "7df4133684620b764cf8ace48b558e534de709b618023427fd728414c67b28ba"
+    },
+    {
+      "bytes": 16516,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_research_archive.py",
+      "sha256": "10691f4fcd1f7f56df1a908dba7c0e0cbff2449d288fbdae082b1084f4bb3779"
+    },
+    {
+      "bytes": 16936,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/tests/test_research_timeline.py",
+      "sha256": "f76f69dd8c90d493560e511c25a638b796f4b7abe0b957887abc2f229d3aef95"
+    },
+    {
+      "bytes": 4911,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/workflows/ROUND.md",
+      "sha256": "2a99b99f496a15885a6f059bb0f6b2c4211c3a6f09e15d75a749b019e539dead"
+    },
+    {
+      "bytes": 13534,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scaffold/philosophy/workflows/claude_terminal_protocol.md",
+      "sha256": "90a7aa2d9d9687d2af21ebea4e28cdd533843500f1d1a6bcdcc3a56ef494d285"
+    },
+    {
+      "bytes": 4797,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "schemas/generation_manifest.schema.json",
+      "sha256": "bf6a074d77f96245aa70a144a2e3c6d020473c10d2057be1e58f32d62ced4e93"
+    },
+    {
+      "bytes": 12594,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "schemas/lab_profile.schema.json",
+      "sha256": "908046e3ca9552e00b7b4e8e3e76243cd790d612c69d9caee25f9e44e139efb1"
+    },
+    {
+      "bytes": 12749,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "schemas/new_lab_request.schema.json",
+      "sha256": "d99925e6436b61dbdba1deda16d41696d00f1874d57fff9a8633c54ea4ee15bf"
+    },
+    {
+      "bytes": 8317,
+      "mode": "100644",
+      "origin": "assets",
+      "path": "scripts/check_public_kit.py",
+      "sha256": "d8f3083e0646830bfe87a6e4f8dd9b65a8cc2f5fc771807f1ab4bd543f3937a0"
+    },
+    {
+      "bytes": 20965,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scripts/local_bootstrap_layer.py",
+      "sha256": "33ee22b984edf4f3b977f4e84df1c790d686db94815bf7213b9dab20c8dc219d"
+    },
+    {
+      "bytes": 136184,
+      "mode": "100644",
+      "origin": "sources",
+      "path": "scripts/new_lab.py",
+      "sha256": "7f8a5689aaa065ad1c2fb780df249b02e3e40b9573e5f241bef9f4c2356f85ec"
+    }
+  ],
+  "kit_id": "research-lab-factory-experimental",
+  "schema_version": 1,
+  "spec_sha256": "a77a4fea15b4538df927f1e547bbf36722abb44ccf622bcf94ac5473caad1c92",
+  "status": "EXPERIMENTAL_SNAPSHOT"
+}

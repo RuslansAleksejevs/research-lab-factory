@@ -1,0 +1,23 @@
+{
+  "candidate_counts": {
+    "LEAD": 0,
+    "PARKED": 0,
+    "QUALIFYING": 0,
+    "REJECTED": 0,
+    "SPINOUT_READY": 0,
+    "SPUN_OUT": 0,
+    "TRIAL_ACTIVE": 0
+  },
+  "generated_at": null,
+  "lab_kind": "DISCOVERY_PORTFOLIO",
+  "last_cycle_at": null,
+  "model_recheck_count": 0,
+  "next_cycle_at": null,
+  "pending_cycle_decision": false,
+  "repository": {
+    "state": "NOT_CONFIGURED",
+    "visibility": "UNDECIDED"
+  },
+  "schema_version": 1,
+  "source_digest_sha256": "74b8d4e476c9897390c577e48b4037107042843b1d4573b96bc56b0452260fae"
+}

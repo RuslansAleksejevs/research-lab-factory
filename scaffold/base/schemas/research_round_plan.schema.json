@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/research_round_plan.schema.json",
+  "title": "Approved Research Round Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "round_id",
+    "request_id",
+    "lab_id",
+    "action_id",
+    "action_version",
+    "model",
+    "reasoning_effort",
+    "authorization",
+    "scope",
+    "scope_sha256",
+    "created_at",
+    "checkpoint_required",
+    "architecture_guard_policy_version"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "protocol_version": {"const": 1},
+    "round_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$"
+    },
+    "lab_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "action_id": {"const": "run-rounds.v1"},
+    "action_version": {"const": "1.0.0"},
+    "model": {"const": "gpt-5.6-sol"},
+    "reasoning_effort": {"const": "ultra"},
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "approved_at"],
+      "properties": {
+        "source": {"const": "control-room-button"},
+        "approved_at": {"type": "string", "minLength": 1, "maxLength": 64}
+      }
+    },
+    "scope": {"type": "string", "minLength": 1, "maxLength": 12000},
+    "scope_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "created_at": {"type": "string", "minLength": 1, "maxLength": 64},
+    "checkpoint_required": {"const": true},
+    "architecture_guard_policy_version": {"const": 2}
+  }
+}

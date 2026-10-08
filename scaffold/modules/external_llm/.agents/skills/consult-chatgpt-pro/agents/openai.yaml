@@ -1,0 +1,4 @@
+interface:
+  display_name: "Consult ChatGPT Pro"
+  short_description: "Send a bounded math packet to ChatGPT Pro"
+  default_prompt: "Use $consult-chatgpt-pro to prepare, send, and safely import an external ChatGPT Pro review."

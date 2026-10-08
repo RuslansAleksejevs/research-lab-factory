@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "record_type": "candidate_dependency_snapshot",
+  "problem_id": "eval-valid-verified-proof",
+  "target_id": "EVAL-TARGET-REFLEXIVITY-v1",
+  "target_sha256": "3600f4194aa8ff38f7bb504c4e443a12765771140752c1f9a07aaf9d13479fa9",
+  "candidate_id": "EVAL-REFLEXIVITY-v1",
+  "candidate_sha256": "186d9617fd3d2131820a6b9709faa0e02243f5faa1be4d74b2938c19fadcb14c",
+  "candidate_route_id": "EVAL-A1",
+  "routes": [
+    {
+      "route_id": "EVAL-A1",
+      "parent_route_ids": [],
+      "gap_id": "EVAL-A1-G0",
+      "gap_class": "GS0",
+      "gap_statement_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inherited_gaps": []
+    }
+  ]
+}

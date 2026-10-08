@@ -1,0 +1,4 @@
+interface:
+  display_name: "Steward Laboratory State"
+  short_description: "Audit, repair, and re-survey a math lab"
+  default_prompt: "Use $steward-laboratory-state to audit this laboratory deeply, apply safe evidence-backed repairs, validate it, and return its new whole-project state."

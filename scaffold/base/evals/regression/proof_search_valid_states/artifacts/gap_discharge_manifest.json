@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "record_type": "gap_discharge",
+  "problem_id": "eval-valid-exhausted-waiver",
+  "target_id": "EVAL-TARGET-EXHAUSTION-v1",
+  "target_sha256": "43a6052952a0c513f18c5bbcd87b71bb41615957495aa23200b578fcc6bda7fd",
+  "child_route_id": "EVAL-M2",
+  "source_route_id": "EVAL-M1",
+  "source_gap_id": "EVAL-M1-GAP",
+  "source_gap_class": "GS3",
+  "source_gap_statement_sha256": "b867d6cf775b6a2d4d3b011e0bdf426d22bb319b44204ab08f3c27efa7444864",
+  "discharge_basis": "DIRECT_PROOF",
+  "evidence": "evals/regression/proof_search_valid_states/artifacts/gap_discharge_evidence.md",
+  "evidence_sha256": "21d9338bccf6fc0ad2a4b315d635163dfdf14c886a624dc60f714e082294e7f5"
+}

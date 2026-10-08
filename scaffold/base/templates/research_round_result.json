@@ -1,0 +1,10 @@
+{
+  "blockers": [],
+  "changed_paths": [],
+  "checkpoint_path": "research/checkpoints/YYYYMMDDTHHMMSSZ-round-id.md",
+  "next_step": "State one exact next discriminating action.",
+  "round_id": "round-id",
+  "schema_version": 1,
+  "status": "PARTIAL",
+  "summary": "State the strongest honest result and its exact limitation."
+}

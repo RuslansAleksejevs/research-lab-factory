@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean Room"
+  short_description: "Build and audit bounded Lean certificates"
+  default_prompt: "Use $lean-room to formalize and independently verify a bounded mathematical claim."

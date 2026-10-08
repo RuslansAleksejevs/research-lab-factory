@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.codex/schemas/generation_manifest.schema.json",
+  "title": "Generated Laboratory Origin Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "template_id",
+    "template_version",
+    "generator_version",
+    "created_at",
+    "lab_id",
+    "lab_kind",
+    "directory_name",
+    "scaffold_sha256",
+    "profile_sha256",
+    "modules",
+    "bootstrap_inputs",
+    "initial_dossier",
+    "generated_specialist_roles",
+    "validation",
+    "ownership_policy",
+    "initial_inventory",
+    "notes"
+  ],
+  "dependentRequired": {
+    "user_policy": ["repository_first"],
+    "repository_first": ["user_policy"]
+  },
+  "properties": {
+    "schema_version": {"const": 1},
+    "template_id": {"const": "math-research-lab-template"},
+    "template_version": {"type": "string"},
+    "generator_version": {"type": "integer", "minimum": 1},
+    "created_at": {"type": "string"},
+    "lab_id": {"type": "string"},
+    "lab_kind": {"enum": ["ARTICLE_OR_COHERENT_PROGRAM", "DISCOVERY_PORTFOLIO", "PHILOSOPHY_PROGRAM"]},
+    "directory_name": {"type": "string"},
+    "scaffold_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "profile_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "user_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "profile_id",
+        "revision",
+        "portable_view",
+        "portable_sections",
+        "private_exclusions",
+        "sidecar_path",
+        "sidecar_sha256"
+      ],
+      "properties": {
+        "schema_version": {"const": 1},
+        "profile_id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+        "revision": {"type": "integer", "minimum": 1},
+        "portable_view": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"const": "USER_PREFERENCES.md"},
+            "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "portable_sections": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "revision", "marker"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+              "revision": {"type": "integer", "minimum": 1},
+              "marker": {"type": "string", "pattern": "^[a-z][a-z0-9-]*:v[1-9][0-9]*$"}
+            }
+          }
+        },
+        "private_exclusions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "revision", "copy_policy"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,127}$"},
+              "revision": {"type": "integer", "minimum": 1},
+              "copy_policy": {"const": "NEVER_COPY_TO_LABS_OR_CORE_BUNDLES"}
+            }
+          }
+        },
+        "sidecar_path": {"const": ".lab/user_policy.json"},
+        "sidecar_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "repository_first": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enabled"],
+          "properties": {"enabled": {"const": false}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "canonical_repository_visibility",
+            "raw_material_policy",
+            "export_policy",
+            "process_steward"
+          ],
+          "properties": {
+            "enabled": {"const": true},
+            "canonical_repository_visibility": {"const": "PRIVATE"},
+            "raw_material_policy": {"const": "LOCAL_UNTRACKED"},
+            "export_policy": {"const": "REVIEWED_ONLY"},
+            "process_steward": {"type": "string", "minLength": 1, "maxLength": 256}
+          }
+        }
+      ]
+    },
+    "modules": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "bootstrap_inputs": {"type": "array", "items": {"type": "object"}},
+    "initial_dossier": {"type": ["string", "null"]},
+    "generated_specialist_roles": {"type": "array", "items": {"type": "string"}},
+    "validation": {"type": "array", "items": {"type": "object"}},
+    "ownership_policy": {"type": "object"},
+    "initial_inventory": {"type": "array", "items": {"type": "object"}},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

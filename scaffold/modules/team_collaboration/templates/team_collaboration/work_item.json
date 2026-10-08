@@ -1,0 +1,11 @@
+{
+  "cycle_id": "cycle_id",
+  "work_item_id": "work_item_id",
+  "type": "PROOF",
+  "owner_member_id": "member_id",
+  "title": "Exact bounded task",
+  "expected_artifact": "Root-relative artifact expected from this task",
+  "success_criterion": "Observable condition that counts as success",
+  "stop_rule": "Condition or budget at which this route stops"
+}
+

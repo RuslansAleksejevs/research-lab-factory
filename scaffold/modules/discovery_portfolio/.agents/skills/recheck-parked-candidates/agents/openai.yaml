@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recheck Parked Candidates"
+  short_description: "Test exact reopen triggers against new evidence"
+  default_prompt: "Use $recheck-parked-candidates to reassess exact parked-candidate triggers without assuming a new model is sufficient."

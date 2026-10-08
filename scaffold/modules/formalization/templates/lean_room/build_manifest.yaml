@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "record_type": "lean_build_run",
+  "case_id": null,
+  "problem_id": null,
+  "run_id": null,
+  "run_kind": null,
+  "runner_id": null,
+  "started_at": null,
+  "finished_at": null,
+  "room_state_check": {
+    "state": null,
+    "state_artifact": null,
+    "state_artifact_sha256": null,
+    "checked_at": null,
+    "state_sequence": null,
+    "state_binding_still_current_at_finish": null,
+    "control_bindings": []
+  },
+  "contract": {
+    "artifact": null,
+    "sha256": null
+  },
+  "target_binding": {
+    "target_id": null,
+    "target_artifact": null,
+    "target_sha256": null,
+    "obligation_ids": [],
+    "obligation_artifact": null,
+    "obligation_sha256": null
+  },
+  "clean_build": {
+    "fresh_build_root": null,
+    "dirty_input_detected": null,
+    "network_disabled": null,
+    "dependency_fetch_performed": false,
+    "unrecorded_generated_source_detected": null,
+    "sandbox_backend": null,
+    "logical_command_schemas": {}
+  },
+  "environment": {
+    "operating_system": null,
+    "architecture": null,
+    "lean_version_output": null,
+    "lake_version_output": null,
+    "elan_version_output": null,
+    "lean_toolchain": null,
+    "binary_bindings": {},
+    "environment_allowlist": [],
+    "trusted_boundary_notes": []
+  },
+  "input_bindings": {
+    "source_tree_inventory": null,
+    "source_tree_inventory_sha256": null,
+    "source_tree_sha256_before": null,
+    "bound_files": [],
+    "lr0_snapshot_id": null,
+    "lr1_snapshot_id": null,
+    "lean_toolchain_sha256": null,
+    "lakefile_sha256": null,
+    "lake_manifest_sha256": null,
+    "dependencies": []
+  },
+  "commands": [],
+  "command_results": [],
+  "log": {
+    "artifact": null,
+    "sha256": null,
+    "complete_untruncated": null
+  },
+  "declaration_checks": [],
+  "forbidden_construct_scan": {
+    "scanner_version": null,
+    "paths_scanned": [],
+    "findings": [],
+    "authorized_findings": [],
+    "passed": null
+  },
+  "axiom_reports": [],
+  "output_bindings": {
+    "source_tree_sha256_after": null,
+    "source_tree_unchanged": null,
+    "build_artifacts": []
+  },
+  "gates": {
+    "LR2": null,
+    "LR3": null
+  },
+  "result": null,
+  "failure_class": null,
+  "failure_summary": null
+}

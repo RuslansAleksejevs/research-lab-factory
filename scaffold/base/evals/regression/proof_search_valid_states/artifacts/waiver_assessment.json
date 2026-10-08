@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "record_type": "redirected_wave_waiver_assessment",
+  "problem_id": "eval-valid-exhausted-waiver",
+  "target_id": "EVAL-TARGET-EXHAUSTION-v1",
+  "target_sha256": "43a6052952a0c513f18c5bbcd87b71bb41615957495aa23200b578fcc6bda7fd",
+  "initial_wave_manifest": "evals/regression/proof_search_valid_states/artifacts/initial_wave_manifest.json",
+  "initial_wave_manifest_sha256": "c9cd4da7474d66709db7ddb3b005d81d1bd0f0da7f18699cddcb97abfca45268",
+  "impossibility_claim": "The exact fixture contract exposes only one admissible mechanism.",
+  "operator_assessments": [
+    {"operator": "REPRESENTATION_CHANGE", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "STRUCTURAL_DECOMPOSITION", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "INVARIANT_OBSTRUCTION", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "DUALITY_ADJUNCTION", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "LOCAL_TO_GLOBAL", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "MINIMAL_WITNESS", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "COMPUTATIONAL_MICROEXPERIMENT", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "HYPOTHESIS_ABLATION", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "SOURCE_THEOREM_MINING", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "CHECKER_FORMALIZATION", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."},
+    {"operator": "SYNTHESIS_NEW_COMPATIBILITY", "status": "UNAVAILABLE", "reason": "Excluded by the deliberately single-mechanism fixture contract."}
+  ]
+}

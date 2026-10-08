@@ -1,0 +1,4 @@
+interface:
+  display_name: "External Research Bridge"
+  short_description: "Optional bounded Claude terminal session"
+  default_prompt: "Use $run-external-research-bridge to formulate one ambitious private Claude research round and run it through the optional terminal adapter."
