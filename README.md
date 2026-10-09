@@ -1,9 +1,15 @@
 # Research Lab Factory
 
-Build a separate research laboratory for each substantial project. The laboratory
-keeps its question, sources, attempts, failed routes, results and next steps
-alongside the work, so a later chat can pick up where the previous one stopped.
-The factory creates the workspace; the research happens inside that workspace.
+## What this does
+
+The factory creates a separate workspace (a folder) in Codex for your research project. The laboratory keeps sources, attempts, results and next steps so you can continue the work in later chats. Describe your task, and Codex sets up the laboratory for you.
+
+## Download and start
+
+[**Download ZIP**](https://github.com/RuslansAleksejevs/research-lab-factory/releases/download/v0.1.0-alpha.1/research-lab-factory-v0.1.0-alpha.1.zip), unzip it and open the extracted folder as a project in Codex. Describe your task and ask: **"Create a research laboratory for this task."** Open the new laboratory folder created next to the factory as a separate Codex project, and work there.
+
+**Using GitHub's buttons:** on this repository's main page, click **Code** above the file list, then **Download ZIP**. This downloads the current repository; the direct link above downloads the fixed release.
+
 
 This is the first experimental release, **v0.1.0-alpha.1**. Try it, inspect what helps, and report
 what gets in the way. Tests check software behavior and record consistency; they
@@ -21,9 +27,7 @@ See [related projects and alternative workflows](COMPARISON.md) for a survey of 
 
 ## Quick start
 
-The tested setup is **macOS, Python 3.9 or 3.14, and Codex**. Download the
-source ZIP from the release page and unpack it into an ordinary folder. New laboratories are created next
-to it, so use a location where you can create folders.
+The tested setup is **macOS, Python 3.9 or 3.14, and Codex**. Unpack the ZIP into an ordinary folder. New laboratories are created next to it, so use a location where you can create folders.
 
 1. Open the factory folder as a Codex project.
 2. Describe your research question and attach any draft, notes or sources.
